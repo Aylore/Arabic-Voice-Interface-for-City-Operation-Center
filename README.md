@@ -32,6 +32,7 @@
 
 * please create your own branch before starting anything 
 >> git branch [branch_name]    // for creatinig a new branch
+<br>
 >> git checkout [branch_name]  // for moving to the selected branch 
 
 ### TO push 
