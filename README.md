@@ -31,15 +31,15 @@
 >>> for example : `khaloud_EDA.ipynb`
 
 * please create your own branch before starting anything 
->> git branch [branch_name]    // for creatinig a new branch
-<br>
->> git checkout [branch_name]  // for moving to the selected branch 
+>> git branch [branch_name]    ### -- for creatinig a new branch
+
+>> git checkout [branch_name]  ### -- for moving to the selected branch 
 
 ### TO push 
 
 >> git add [file_name] or .     
 >> git commit -m"push title"
->> git push --set-upstream origin [branch_name] // to request a merge request between your branch and the main
+>> git push --set-upstream origin [branch_name] ### -- to request a merge request between your branch and the main
 
 
 
