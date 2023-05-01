@@ -9,6 +9,21 @@
 ## Please clone this repo with the desired folder structure that we will be working with 
 
 
+
+# TO DO 
+
+- [ ] Speech to text model 
+- [ ] Text Encoder
+- [ ] Information Extraction
+- [ ] API call to get the answers
+- [ ] Text to speech
+- [ ] Creating dashboard 
+
+## Future work
+
+- [ ] Deployment 
+
+
 ## Some Guides
 
 * for the `notebooks` folder the naming convention will be as following 
