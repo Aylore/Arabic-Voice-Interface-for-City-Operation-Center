@@ -2,7 +2,7 @@ import os
 import openai
 
 
-my_key = "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"
+my_key = os.environ.get("OPENAI_KEY")
 
 # Load your API key from an environment variable or secret management service
 openai.api_key = my_key
