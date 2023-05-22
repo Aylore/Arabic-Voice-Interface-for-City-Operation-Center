@@ -117,4 +117,5 @@ class AudioRecorder:
         wf.setsampwidth(sample_width)
         wf.setframerate(self.RATE)
         wf.writeframes(data)
+
         wf.close()
