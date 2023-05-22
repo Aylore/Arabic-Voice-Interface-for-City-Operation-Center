@@ -1,3 +1,5 @@
+__pycache__
 utils/google_model/google_secret_key.json
 utils/google_model/args.json
 dataset/samples/
+
