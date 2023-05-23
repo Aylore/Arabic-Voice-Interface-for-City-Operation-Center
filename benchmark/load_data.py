@@ -17,7 +17,7 @@ from benchmark.metrics import STTEvaluationMetrics
 
 # recs = os.listdir("benchmark/records-20230522T205605Z-001/records/")
 
-
+eng_recs = os.listdir("benchmark/eng_records/")
 def mp3_to_wav(src , dst):
     # files
     
@@ -27,27 +27,28 @@ def mp3_to_wav(src , dst):
     sound.export( dst, format="wav")
 
 
-
-# for rec in recs:
-#     mp3_to_wav(parent_path + rec , "benchmark/wav_recs/" + str(rec[:-4])  + ".wav" )
-
-
-wav_recs = os.listdir("benchmark/wav_recs/")
+# eng_parent_path = "benchmark/eng_records/"
+# for rec in eng_recs:
+#     mp3_to_wav(eng_parent_path + rec , "benchmark/eng_wav/" + str(rec[:-4])  + ".wav" )
 
 
-# res = []
+# wav_recs = os.listdir("benchmark/wav_recs/")
 
-# for wav_rec in wav_recs:
-#     cur_res = google_demo.predict(path="benchmark/wav_recs/" + wav_rec )
-#     res.append(( wav_rec , cur_res ))
+eng_recs = os.listdir("benchmark/eng_wav/")
+res = []
+
+for wav_rec in eng_recs:
+    cur_res = google_demo.predict(path="benchmark/eng_wav/" + wav_rec )
+    res.append(( wav_rec , cur_res ))
     
 
-
+df_eng = pd.DataFrame(res , columns=["audio" , "pred"])
 
 df_eval = pd.read_csv("benchmark/google_bench.csv" , index_col=0)
 
 
 
+r = google_demo.predict(path="benchmark/eng_wav/" + "9.wav" )
 
 # Instantiate the STTEvaluationMetrics object
 eval_metrics = STTEvaluationMetrics()
