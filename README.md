@@ -54,5 +54,11 @@ After trying the models with different post procesing techinques we came to thes
 > Based on the previous results of pros and cons we advise to use Azure speech to text
 
 
+# Progress
+
+* Implemented three online Speech to text models and evaluated them.
+* Added Voice Recorder module
+* Added Google and azure translator API scripts
+
 
  
