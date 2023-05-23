@@ -3,3 +3,6 @@ utils/google_model/google_secret_key.json
 utils/google_model/args.json
 dataset/samples/
 
+benchmark/records-20230522T205605Z-001
+
+benchmark/wav_recs

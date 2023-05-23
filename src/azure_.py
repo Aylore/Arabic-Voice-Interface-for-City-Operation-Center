@@ -2,7 +2,7 @@ from utils.record_audio import AudioRecorder
 from utils.azure_models.azure_speech_to_text import Azure_stt_model
 
 # define path
-path = "utils/audio_samples/audio1.wav"
+path = "dataset/samples/sample_1.wav"
 
 # record a voice
 recorder = AudioRecorder()

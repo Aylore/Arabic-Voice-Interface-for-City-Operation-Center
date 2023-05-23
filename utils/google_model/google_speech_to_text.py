@@ -1,5 +1,3 @@
-# import os 
-# from google.cloud import speech_v1p1beta1 as speech
 from utils.record_audio import AudioRecorder
 
 
@@ -10,64 +8,6 @@ from utils.record_audio import AudioRecorder
 # os.environ['GOOGLE_APPLICATION_CREDENTIALS']= 'utils/google/google_secret_key.json'
 
 
-
-
-
-
-
-# def transcribe_speech(audio_file_path , user_input = False):
-#     client = speech.SpeechClient()
-    
-
-#     if user_input:
-
-#         audio = AudioRecorder()
-#         sample = audio.record_to_file("dataset/samples/sample_3.wav")
-#         audio_file_path = "dataset/samples/sample_3.wav"
-#     else :
-#         audio_file_path = "dataset/samples/sample_2.wav"
-
-
-#     # Read the audio file
-#     with open(audio_file_path, "rb") as audio_file:
-#         audio_data = audio_file.read()
-
-#     # Configure speech recognition request
-#     audio = speech.RecognitionAudio(content=audio_data)
-#     config = speech.RecognitionConfig(
-#         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
-        
-#         language_code="ar-EG",
-#         alternative_language_codes=["en-US"],
-
-
-#     )
-
-#     # Perform speech recognition
-#     response = client.recognize(config=config, audio=audio)
-#     # print(response.results)
-#     # Process the response
-#     for result in response.results:
-#         # print("Words: {}".format(result.alternatives[0].words[0].word))
-
-#         # print(f"First lang : {result}")
-
-#         print("Transcript: {}".format(result.alternatives[0].transcript[::-1]))
-
-# # Provide the path to your audio file
-# # audio_file_path = "dataset/samples/sample_2.wav"
-
-# # # Call the function to transcribe the speech
-# # transcribe_speech(audio_file_path = audio_file_path)
-
-
-
-
-
-
-
-
-#################################################################
 
 
 
@@ -106,7 +46,7 @@ class GoogleSpeechToText(SpeechToText):
         # Process the response
         for result in response.results:
             print("Transcript: {}".format(result.alternatives[0].transcript[::-1]))
-
+            return result.alternatives[0].transcript[::-1]
 
 
     def record_to_file(self, file_path):
