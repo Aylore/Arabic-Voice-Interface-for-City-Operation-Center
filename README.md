@@ -13,9 +13,9 @@
 ### Evaluation Criteria:
 To determine the most suitable model for the task at hand, the following criteria were taken into account:
 
-**Accuracy**: The ability of the model to provide accurate predictions on the given task using `WER` and `CER`.
-**Performance**: The computational efficiency and speed of the model during training and inference.
-**Ease of Use**: The simplicity and ease of integration and deployment of the model.
+1. **Accuracy**: The ability of the model to provide accurate predictions on the given task using `WER` and `CER`.
+2. **Performance**: The computational efficiency and speed of the model during training and inference.
+3. **Ease of Use**: The simplicity and ease of integration and deployment of the model.
 
 
 ### Dataset Used in evaluation 
@@ -49,6 +49,7 @@ We used the dataset given [here](https://drive.google.com/drive/folders/1r313U2M
 After trying the models with different post procesing techinques we came to these results :
 * Google speech to text and Azure consume almost the same time.
 * Both doesn't do great when there is a pause in the record.
+* For ease of use there is no much difference between them.
 
 
 > Based on the previous results of pros and cons we advise to use Azure speech to text
