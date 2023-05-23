@@ -1,26 +1,37 @@
-def translate_text(target, text):
-    """Translates text into the target language.
-
-    Target must be an ISO 639-1 language code.
-    See https://g.co/cloud/translate/v2/translate-reference#supported_languages
-    """
-    from google.cloud import translate_v2 as translate
-    import os
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
+from google.cloud import translate_v2 as translate
+import os
 
 
-    translate_client = translate.Client()
+class TextTranslator:
+    def __init__(self):
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
+        self.translate_client = translate.Client()
 
-    if isinstance(text, bytes):
-        text = text.decode("utf-8")
+    def translate(self, target, text):
+        if isinstance(text, bytes):
+            text = text.decode("utf-8")
 
-    # Text can also be a sequence of strings, in which case this method
-    # will return a sequence of results for each text.
-    result = translate_client.translate(text, target_language=target)
+        result = self.translate_client.translate(text, target_language=target)
 
-    print("Text: {}".format(result["input"]))
-    print("Translation: {}".format(result["translatedText"]))
-    print("Detected source language: {}".format(result["detectedSourceLanguage"]))
+        translation = Translation(result["input"], result["translatedText"], result["detectedSourceLanguage"])
+        return translation
 
 
+class Translation:
+    def __init__(self, input_text, translated_text, detected_source_language):
+        self.input_text = input_text
+        self.translated_text = translated_text
+        self.detected_source_language = detected_source_language
+
+
+
+target_language = "ar-EG"   ## [ar-EG , en-US]
+text_to_translate = "Hello, how are you?"
+
+translator = TextTranslator()
+translation = translator.translate(target_language, text_to_translate)
+
+print("Text: {}".format(translation.input_text))
+print("Translation: {}".format(translation.translated_text))
+print("Detected source language: {}".format(translation.detected_source_language))
 

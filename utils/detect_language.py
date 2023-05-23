@@ -1,19 +1,31 @@
-
-def detect_lang(text):
-    """Detects the text's language."""
-    from google.cloud import translate_v2 as translate
-    import os
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
-
-    translate_client = translate.Client()
-
-    # Text can also be a sequence of strings, in which case this method
-    # will return a sequence of results for each text.
-    result = translate_client.detect_language(text)
-
-    print(f"Text: {text}")
-    print("Confidence: {}".format(result["confidence"]))
-    print("Language: {}".format(result["language"]))
+from google.cloud import translate_v2 as translate
+import os
 
 
+class LanguageDetector:
+    def __init__(self):
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
+        self.translate_client = translate.Client()
 
+    def detect_language(self, text):
+        result = self.translate_client.detect_language(text)
+
+        detection = LanguageDetection(text, result["confidence"], result["language"])
+        return detection
+
+
+class LanguageDetection:
+    def __init__(self, text, confidence, language):
+        self.text = text
+        self.confidence = confidence
+        self.language = language
+
+
+# text_to_detect = "Hello, how are you?"
+
+# detector = LanguageDetector()
+# detection = detector.detect_language(text_to_detect)
+
+# print("Text: {}".format(detection.text))
+# print("Confidence: {}".format(detection.confidence))
+# print("Language: {}".format(detection.language))
