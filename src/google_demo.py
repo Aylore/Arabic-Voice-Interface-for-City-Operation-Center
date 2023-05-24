@@ -1,9 +1,14 @@
 from utils.google_model.google_speech_to_text import GoogleSpeechToText 
 
-stt = GoogleSpeechToText()
 
 
-stt.record_to_file("dataset/samples/sample_5.wav")
+def predict(path , record = False):
+    stt = GoogleSpeechToText()
+    if record:
+        stt.record_to_file(path)
 
 
-stt.transcribe_speech("dataset/samples/sample_2.wav")
+    return stt.transcribe_speech(path)
+
+
+# predict("dataset/samples/sample_1.wav")

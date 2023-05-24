@@ -7,7 +7,7 @@ class Azure_stt_model:
     
     def __init__(self):
         # Set up the subscription info for the Speech Service:
-        self.__speech_key, self.__service_region = os.getenv('azure_stt_key'), "eastus"
+        self.__speech_key, self.__service_region = os.getenv('AZURE_KEY'), "eastus"
         
         # Create an instance of a speech config with specified subscription key and service region.
         self.speech_config = speechsdk.SpeechConfig(subscription=self.__speech_key, region=self.__service_region)
