@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+#from google.cloud import bigquery
+
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] ="%APPDATA%\gcloud\application_default_credentials.json"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +42,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'rest_framework',
+    'speech_app',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -116,7 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-
+#BASE_DIR = { BASE_DIR / 'static'}
+#STATIC_ROOT = 'static_root'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
