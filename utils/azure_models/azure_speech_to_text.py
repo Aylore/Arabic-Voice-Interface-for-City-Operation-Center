@@ -15,7 +15,7 @@ class Azure_stt_model:
         # identifying the language in an audio source 
         self.auto_detect_source_language_config = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(languages=["en-US", "ar-EG"])
         
-    def predict(self, path : str) -> str:
+    def predict(self, path: str) -> str:
         """path: Path to audio file"""
         
         # recognize speech from an audio file

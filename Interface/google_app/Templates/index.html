@@ -1,0 +1,28 @@
+<!-- myapp/hello.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<fieldset>
+    <legend>Arabic-Voice-Interface-for-City-Operation-Center</legend>
+
+    <head>
+        <title>Arabic Dialect Classification</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+
+    <body>
+
+        <h1>Speech-to-Text Transcription</h1>
+
+        <form action="{% url 'transcribe' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="audio">Upload Audio:</label>
+            <input type="file" name="audio" id="audio" accept="audio/*" required><br>
+            <input type="submit" value="Transcribe">
+        </form>
+
+        <textarea>{{ transcript }}</textarea>
+
+    </body>
+
+</fieldset>

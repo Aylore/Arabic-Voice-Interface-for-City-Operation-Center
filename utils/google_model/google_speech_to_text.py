@@ -23,14 +23,19 @@ class SpeechToText:
 class GoogleSpeechToText(SpeechToText):
     def __init__(self, google_api_key=None):
         self.google_api_key = google_api_key
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
 
-    def transcribe_speech(self, audio_file_path):
+        # You will need the absolute path to be properly used when running django server
+        os.environ[
+            "GOOGLE_APPLICATION_CREDENTIALS"
+        ] = '/Users/aleedo/Coding/ITI/9-Months/Final Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json'
+
+    def transcribe_speech(self, audio_file_path = None, audio_data=None):
         client = speech.SpeechClient()
 
         # Read the audio file
-        with open(audio_file_path, "rb") as audio_file:
-            audio_data = audio_file.read()
+        if not audio_data:
+            with open(audio_file_path, "rb") as audio_file:
+                audio_data = audio_file.read()
 
         # Configure speech recognition request
         audio = speech.RecognitionAudio(content=audio_data)
