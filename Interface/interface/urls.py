@@ -18,7 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
-from speech_app.views import Index, transcribe
+from google_app.views import Index, transcribe
 
 urlpatterns = [
     path("admin/", admin.site.urls),

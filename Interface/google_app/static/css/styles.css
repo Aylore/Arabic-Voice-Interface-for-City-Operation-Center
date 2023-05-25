@@ -42,3 +42,12 @@ body {
   border: 1px solid rgb(67, 67, 67);
  }
 
+ textarea{
+    padding: 3px;
+    margin-top: 0.6rem;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: left;
+    width: 98%; 
+}
+
