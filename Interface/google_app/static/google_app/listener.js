@@ -4,6 +4,10 @@ const recognition = new SpeechRecognition();
 
 recordButton.addEventListener('click', () => {
 recognition.start();
+
+const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/transcribe_audio/');
+            xhr.send();
 });
 
 stopBtn.addEventListener('click', () => {

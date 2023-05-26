@@ -2,6 +2,7 @@ __pycache__
 utils/google_model/google_secret_key.json
 utils/google_model/args.json
 dataset/samples/
+utils/audio_samples/
 
 benchmark/records-20230522T205605Z-001
 benchmark/wav_recs

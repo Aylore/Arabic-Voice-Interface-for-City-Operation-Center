@@ -16,18 +16,14 @@
 
         <!-- Just Record -->
         <h1>Speech to Text Live</h1>
-        
+
+        <form action="{% url 'transcribe_audio' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <button id="record-button">Start Recording</button>
+        </form>
         <textarea id="transcription-textarea" rows="10" cols="50">{{ live_transcript }}</textarea>
+        
         <br>
-        <button id="record-button">Start Recording</button>
-
-        <!-- 3 Buttons Record -->
-        <h1>Speech-to-Text With Stop</h1>
-
-        <button id="record-btn">Record</button>
-        <button id="stop-btn" disabled>Stop</button>
-        <button id="play-btn" disabled>Play</button>
-        <audio id="audio" controls></audio>
 
         <!-- Upload File -->
         <h1>Speech-to-Text Transcription From File</h1>
