@@ -17,14 +17,18 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path,include
-from google_app.views import Index, transcribe
+from django.urls import path, include
+from google_app.views import Index, transcribe, transcribe_audio
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('', Index, name='index'),
+    # path('', Index, name='index'),
     path('transcribe/', transcribe, name='transcribe'),
+    path('', transcribe_audio, name='transcribe_audio'),
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
