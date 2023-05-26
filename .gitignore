@@ -1,0 +1,15 @@
+__pycache__
+utils/google_model/google_secret_key.json
+utils/google_model/args.json
+dataset/samples/
+
+benchmark/records-20230522T205605Z-001
+benchmark/wav_recs
+
+benchmark/eng_records.zip
+benchmark/eng_records/
+benchmark/eng_wav.7z
+benchmark/eng_wav/
+
+benchmark/wav_recs.zip
+

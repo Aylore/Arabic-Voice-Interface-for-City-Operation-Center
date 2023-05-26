@@ -1,0 +1,6 @@
+azure-cognitiveservices-speech
+wave
+pyaudio
+
+
+google-cloud-speech
