@@ -12,3 +12,4 @@ if __name__ == '__main__':
 
     print(f"Original text: {input_text1}, Translated Text:", translated_text1)
     print(f"Original text: {input_text2}, Translated Text:", translated_text2)
+

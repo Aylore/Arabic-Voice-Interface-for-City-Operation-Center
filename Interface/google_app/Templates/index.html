@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 
+
 <fieldset>
     <legend>Arabic-Voice-Interface-for-City-Operation-Center</legend>
 
@@ -10,6 +11,7 @@
             Arabic-Voice-Interface-for-City-Operation-Center
         </title>
         <link rel="stylesheet" href="{% static 'google_app/styles.css' %}">
+
     </head>
 
     <body>
@@ -28,6 +30,7 @@
         <!-- Upload File -->
         <h1>Speech-to-Text Transcription From File</h1>
 
+
         <form action="{% url 'transcribe' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <label for="audio">Upload Audio:</label>
@@ -36,6 +39,7 @@
         </form>
 
         <!-- Show Transcription -->
+
         <textarea>{{ transcript }}</textarea>
 
     </body>
@@ -43,5 +47,6 @@
     <!-- Scripts -->
     <script src="{% static 'google_app/listener.js' %}"></script>
     <script src="{% static 'google_app/3-buttons.js' %}"></script>
+
 
 </fieldset>

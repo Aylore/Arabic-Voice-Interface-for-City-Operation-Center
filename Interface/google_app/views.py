@@ -11,7 +11,9 @@ import io, os
 import time
 
 
+
 trans = Translator()
+
 
 
 def Index(request):
@@ -42,3 +44,4 @@ def transcribe_audio(request):
         live_transcript = predict_live()
         return render(request, "index.html", {"live_transcript": live_transcript})
     return render(request, "index.html")
+
