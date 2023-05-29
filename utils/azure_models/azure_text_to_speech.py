@@ -1,4 +1,5 @@
 import azure.cognitiveservices.speech as speechsdk
+import os
 
 class AzureTextToSpeech:
     def __init__(self, azure_key, azure_region):
@@ -25,7 +26,7 @@ class AzureTextToSpeech:
             print("Speech synthesis failed:", result.reason)
 
 # Usage example:
-azure_key = 'd00c5e9dd3624f1ba3a648e83f47f4d3'
+azure_key = os.environ["azure_tts_key"]
 azure_region = 'eastus'
 
 # Create an instance of the AzureTextToSpeech class
