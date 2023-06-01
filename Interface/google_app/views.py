@@ -6,6 +6,7 @@ from django.conf import settings
 from src.google_demo import predict
 from src.azure_demo import predict_live
 from src.azure_trans_demo import Translator
+from utils.azure_models.azure_speech_to_text import Azure_stt_model
 from .helper import save_audio_file, delete_audio_file
 import io, os
 import time
@@ -22,15 +23,18 @@ def transcribe(request):
     if request.method == "POST" and request.FILES.get("audio"):
         audio_file = request.FILES["audio"]
 
-        USE_AZURE = True
+        USE_AZURE = False
 
         if USE_AZURE:
+            # Transcript of the same language
             audio_path = save_audio_file(audio_file)
             transcript = Azure_stt_model().predict(path=audio_path)
             delete_audio_file(audio_path)
         else:
             audio_data = audio_file.read()
-            transcript = predict(audio_data=audio_data)
+            # Translated to English
+            transcript = Translator().translate_text(predict(audio_data=audio_data)[::-1])
+
 
         return render(request, "index.html", {"transcript": transcript})
 
@@ -39,6 +43,7 @@ def transcribe(request):
 
 def transcribe_audio(request):
     if request.method == "POST":
+        # Live transcript of the same language
         live_transcript = predict_live()
         return render(request, "index.html", {"live_transcript": live_transcript})
     return render(request, "index.html")
