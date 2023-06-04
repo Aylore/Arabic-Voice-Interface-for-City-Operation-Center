@@ -13,6 +13,3 @@ def predict(path=None, audio_data=None, record=False):
 
 
 # print(predict('utils/audio_samples/audio1.wav'))
-
-
-

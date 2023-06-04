@@ -1,6 +1,4 @@
 azure-cognitiveservices-speech
 wave
-pyaudio=0.2.13
-
-
+pyaudio
 google-cloud-speech

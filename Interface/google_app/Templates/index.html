@@ -1,18 +1,35 @@
-<!-- myapp/hello.html -->
 {% load static %}
 
 <!DOCTYPE html>
+
+
 <fieldset>
     <legend>Arabic-Voice-Interface-for-City-Operation-Center</legend>
 
     <head>
-        <title>Arabic Dialect Classification</title>
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>
+            Arabic-Voice-Interface-for-City-Operation-Center
+        </title>
+        <link rel="stylesheet" href="{% static 'google_app/styles.css' %}">
+
     </head>
 
     <body>
 
-        <h1>Speech-to-Text Transcription</h1>
+        <!-- Just Record -->
+        <h1>Speech to Text Live</h1>
+
+        <form action="{% url 'transcribe_audio' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <button id="record-button">Start Recording</button>
+        </form>
+        <textarea id="transcription-textarea" rows="10" cols="50">{{ live_transcript }}</textarea>
+        
+        <br>
+
+        <!-- Upload File -->
+        <h1>Speech-to-Text Transcription From File</h1>
+
 
         <form action="{% url 'transcribe' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
@@ -21,8 +38,15 @@
             <input type="submit" value="Transcribe">
         </form>
 
+        <!-- Show Transcription -->
+
         <textarea>{{ transcript }}</textarea>
 
     </body>
+
+    <!-- Scripts -->
+    <script src="{% static 'google_app/listener.js' %}"></script>
+    <script src="{% static 'google_app/3-buttons.js' %}"></script>
+
 
 </fieldset>
