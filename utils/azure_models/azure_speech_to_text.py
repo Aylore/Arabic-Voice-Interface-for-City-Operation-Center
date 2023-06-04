@@ -25,7 +25,6 @@ class Azure_stt_model:
     def predict(self, path: str) -> str:
         """path: Path to audio file"""
 
-
         # recognize speech from an audio file
         audio_config = speechsdk.audio.AudioConfig(filename=path)
 
@@ -38,7 +37,6 @@ class Azure_stt_model:
 
         # getting results
         result = speech_recognizer.recognize_once()
-
 
         # returning results
         if result.reason == speechsdk.ResultReason.RecognizedSpeech:
@@ -72,4 +70,3 @@ class Azure_stt_model:
 if __name__ == '__main__':
     print(Azure_stt_model().predict_live())
     # print(Azure_stt_model().predict_live())
-

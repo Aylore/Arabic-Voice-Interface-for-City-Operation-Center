@@ -9,5 +9,4 @@ openai.api_key = my_key
 
 audio_file= open("utils/audio_smaples/audio1.wav", "rb")
 
-
 transcript = openai.Audio.transcribe("whisper-1", audio_file)

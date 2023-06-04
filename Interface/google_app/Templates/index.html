@@ -2,7 +2,10 @@
 
 <!DOCTYPE html>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> amgadooz
 <fieldset>
     <legend>Arabic-Voice-Interface-for-City-Operation-Center</legend>
 
@@ -11,7 +14,10 @@
             Arabic-Voice-Interface-for-City-Operation-Center
         </title>
         <link rel="stylesheet" href="{% static 'google_app/styles.css' %}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> amgadooz
     </head>
 
     <body>
@@ -24,13 +30,20 @@
             <button id="record-button">Start Recording</button>
         </form>
         <textarea id="transcription-textarea" rows="10" cols="50">{{ live_transcript }}</textarea>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> amgadooz
         <br>
 
         <!-- Upload File -->
         <h1>Speech-to-Text Transcription From File</h1>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> amgadooz
         <form action="{% url 'transcribe' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <label for="audio">Upload Audio:</label>
@@ -39,14 +52,20 @@
         </form>
 
         <!-- Show Transcription -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> amgadooz
         <textarea>{{ transcript }}</textarea>
 
     </body>
 
     <!-- Scripts -->
     <script src="{% static 'google_app/listener.js' %}"></script>
+<<<<<<< HEAD
     <script src="{% static 'google_app/3-buttons.js' %}"></script>
 
+=======
+>>>>>>> amgadooz
 
 </fieldset>
