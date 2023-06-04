@@ -21,9 +21,4 @@ if __name__ == '__main__':
     translated_text2 = translator.translate_text(input_text2)
 
     print(f"Original text: {input_text1}, Translated Text:", translated_text1)
-<<<<<<< HEAD
     print(f"Original text: {input_text2}, Translated Text:", translated_text2)
-
-=======
-    print(f"Original text: {input_text2}, Translated Text:", translated_text2)
->>>>>>> amgadooz
