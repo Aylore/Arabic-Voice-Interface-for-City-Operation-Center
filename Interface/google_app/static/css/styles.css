@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: cursive;
+    background: #ffffff;
+  }
+
+ input,
+    textarea {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+  }
+
+  label {
+    line-height: 1.9rem;
+  }
+
+  button {
+   transform: translate(2.2%);
+   padding: 3px;
+   margin-top: 0.6rem;
+   font-family: cursive;
+   font-weight: bold;
+   width: 30%;
+  }
+
+ fieldset {
+   padding: 20px 40px;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 10px;
+
+ }
+ button-container {
+  display: flex;
+  gap : 3
+ }
+
+ text {
+  border: 1px solid rgb(67, 67, 67);
+ }
+
+ textarea{
+    padding: 3px;
+    margin-top: 0.6rem;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: left;
+    width: 98%; 
+}
+
