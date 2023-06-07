@@ -1,12 +1,9 @@
 import random
 from utils.chatbot.train_chatterbot import amg_chatbot
 
-
-
 def get_answer(question):
     answer = amg_chatbot.get_response(question)
     return answer
-
 
 def make_conversation():
     welcome = "bot: Welcome I am your chatbot virtual assistant, How may I help you?"
@@ -34,4 +31,5 @@ def make_conversation():
 if __name__ == "__main__":
     question = "last online time of the third device"
     answer = get_answer(question)
+    print(answer)
     make_conversation()

@@ -1,0 +1,21 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBJB6fklqWmZxaXFsbCwC1mB5s": "utter_list_devices",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBJB6fklqWmZxaXEvAqNKSktSieBQdBMyLBQAJ5z1M": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbUsMzk1PrGkpCgzqbQktbi2NhYAUrAghA==": "utter_device_attributes",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbUsMzk1PrGkpCgzqbQktbiWgHmlJSWpRfGY2ogxORYA40RDlA==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhKDUxJTMvPb4sMac0tbY2FgDTUh7E": "utter_reading_value",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhKDUxJTMvPb4sMac0tZaAWaUlJalF8ahaCJkYCwC8Zj5U": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohuSizJDM5MSezpDK+uCSxpLS4tjYWAHUvIRI=": "utter_criticality_status",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohuSizJDM5MSezpDK+uCSxpLS4loCBpSUlqUXxWPQRZXYsAMqRRT4=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhKDU3vywxJ74kMze1tjYWALX3HnI=": "utter_removal_time",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhKDU3vywxJ74kMze1loBRpSUlqUXxKDoImBcLAA2YPV4=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvyA1Lz4ltSwzObW4tjYWALUpHmI=": "utter_open_devices",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvyA1Lz4ltSwzObW4loBRpSUlqUXxKDoImBcLAAROPS4=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbUsMzk1vrgksaS0uLY2FgDT6h7h": "utter_device_status",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbUsMzk1vrgksaS0uJaAWaUlJalF8ahaCJkYCwDK+z6r": "action_listen",
+    "eJwtitEJwCAMBVfJAJ3AVUoJoq8QsFoS64+4ewPt3x13+1wbzVsxOKYurQaaH3CNFwL9UsQ6qr+PQf2R6toDKaJ5PptyKs2QOWNIgq11vGRNI7c=": "utter_reason_for_closed_devices",
+    "eJyVjdEJwCAQQ1dxgE7gKqUcoikIVsvd6Y+4e4X2t5T+JeQlWftYTD8ZjZzXWLI1/RaU3QFrHpOiKPJkq4AnE/O0ag3DyYz3wuRTEQQKaNFDxsduVQXTe/3P03YBuw5NLQ==": "action_listen"
+  }
+}

@@ -1,0 +1,95 @@
+version: "3.1"
+
+stories:
+- story: Open Devices
+  steps:
+  - intent: open_devices
+  - action: utter_open_devices
+
+- story: Device Status
+  steps:
+  - intent: device_status
+  - action: utter_device_status
+
+- story: Criticality Status
+  steps:
+  - intent: criticality_status
+  - action: utter_criticality_status
+
+- story: Reason for Closed Devices
+  steps:
+  - intent: reason_for_closed_devices
+  - action: utter_reason_for_closed_devices
+
+- story: Reading Value
+  steps:
+  - intent: reading_value
+  - action: utter_reading_value
+
+- story: Device Attributes
+  steps:
+  - intent: device_attributes
+  - action: utter_device_attributes
+
+- story: Removal Time
+  steps:
+  - intent: removal_time
+  - action: utter_removal_time
+
+- story: List Devices
+  steps:
+  - intent: list_devices
+  - action: utter_list_devices
+
+
+
+- story: Get Result ID
+  steps:
+  - intent: get_result_id
+  - action: utter_get_result_id
+
+- story: Get Result Name
+  steps:
+  - intent: get_result_name
+  - action: utter_get_result_name
+
+- story: Get Result Device Name
+  steps:
+  - intent: get_result_device_name
+  - action: utter_get_result_device_name
+
+- story: Get Result Device ID
+  steps:
+  - intent: get_result_device_id
+  - action: utter_get_result_device_id
+
+- story: Get Result Domain ID
+  steps:
+  - intent: get_result_domain_id
+  - action: utter_get_result_domain_id
+
+- story: Get Result Device Attribute
+  steps:
+  - intent: get_result_device_attribute
+  - action: utter_get_result_device_attribute
+
+- story: Get Result Longitude
+  steps:
+  - intent: get_result_longitude
+  - action: utter_get_result_longitude
+
+- story: Get Result Latitude
+  steps:
+  - intent: get_result_latitude
+  - action: utter_get_result_latitude
+
+- story: Get Result Generation Time
+  steps:
+  - intent: get_result_generation_time
+  - action: utter_get_result_generation_time
+
+- story: Check Result Opened
+  steps:
+  - intent: check_result_opened
+  - action: utter_check_result_opened
+

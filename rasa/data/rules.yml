@@ -1,0 +1,94 @@
+version: "3.1"
+
+rules:
+- rule: Open Devices Rule
+  steps:
+  - intent: open_devices
+  - action: utter_open_devices
+
+- rule: Device Status Rule
+  steps:
+  - intent: device_status
+  - action: utter_device_status
+
+- rule: Criticality Status Rule
+  steps:
+  - intent: criticality_status
+  - action: utter_criticality_status
+
+- rule: Reason for Closed Devices Rule
+  steps:
+  - intent: reason_for_closed_devices
+  - action: utter_reason_for_closed_devices
+
+- rule: Reading Value Rule
+  steps:
+  - intent: reading_value
+  - action: utter_reading_value
+
+- rule: Device Attributes Rule
+  steps:
+  - intent: device_attributes
+  - action: utter_device_attributes
+
+- rule: Removal Time Rule
+  steps:
+  - intent: removal_time
+  - action: utter_removal_time
+
+- rule: List Devices Rule
+  steps:
+  - intent: list_devices
+  - action: utter_list_devices
+
+
+
+- rule: Respond to get_result_id
+  steps:
+  - intent: get_result_id
+  - action: utter_get_result_id
+
+- rule: Respond to get_result_name
+  steps:
+  - intent: get_result_name
+  - action: utter_get_result_name
+
+- rule: Respond to get_result_device_name
+  steps:
+  - intent: get_result_device_name
+  - action: utter_get_result_device_name
+
+- rule: Respond to get_result_device_id
+  steps:
+  - intent: get_result_device_id
+  - action: utter_get_result_device_id
+
+- rule: Respond to get_result_domain_id
+  steps:
+  - intent: get_result_domain_id
+  - action: utter_get_result_domain_id
+
+- rule: Respond to get_result_device_attribute
+  steps:
+  - intent: get_result_device_attribute
+  - action: utter_get_result_device_attribute
+
+- rule: Respond to get_result_longitude
+  steps:
+  - intent: get_result_longitude
+  - action: utter_get_result_longitude
+
+- rule: Respond to get_result_latitude
+  steps:
+  - intent: get_result_latitude
+  - action: utter_get_result_latitude
+
+- rule: Respond to get_result_generation_time
+  steps:
+  - intent: get_result_generation_time
+  - action: utter_get_result_generation_time
+
+- rule: Respond to check_result_opened
+  steps:
+  - intent: check_result_opened
+  - action: utter_check_result_opened

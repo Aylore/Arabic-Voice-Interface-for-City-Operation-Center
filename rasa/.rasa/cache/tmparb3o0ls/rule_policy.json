@@ -1,0 +1,16 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Water_Management_open\"}}]": "Water_Management_open_answer",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Water_Management_open\"}}, {\"prev_action\": {\"action_name\": \"Water_Management_open_answer\"}, \"user\": {\"intent\": \"Water_Management_open\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

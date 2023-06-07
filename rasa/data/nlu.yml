@@ -1,0 +1,95 @@
+version: "3.1"
+
+nlu:
+- intent: open_devices
+  examples: |
+    - Which devices are open in the 'Water Management' domain?
+    - Which devices are currently open in the 'Water Management' domain?
+- intent: device_status
+  examples: |
+    - Are the devices in the 'Water Management' domain open or not?
+    - Are the devices open in the 'Water Management' domain?
+- intent: criticality_status
+  examples: |
+    - What is the criticality status of the devices in the 'Water Management' domain?
+    - Check the criticality status of devices in the 'Water Management' domain.
+- intent: reason_for_closed_devices
+  examples: |
+    - For the closed devices in the 'Water Management' domain, what is the reason?
+    - What is the reason for the closed devices in the 'Water Management' domain?
+- intent: reading_value
+  examples: |
+    - What is the reading value of the devices in the 'Water Management' domain?
+    - Check the reading value of devices in the 'Water Management' domain.
+- intent: device_attributes
+  examples: |
+    - What are the device attributes in the 'Water Management' domain?
+    - Provide device attributes of devices in the 'Water Management' domain.
+- intent: removal_time
+  examples: |
+    - For the removed devices in the 'Water Management' domain, what is the removal time?
+    - What is the removal time of the devices removed from the 'Water Management' domain?
+- intent: list_devices
+  examples: |
+    - List all the devices in the 'Water Management' domain.
+    - Provide a list of devices in the 'Water Management' domain.
+
+- intent: get_result_id
+  examples: |
+    - What is the ID of the result?
+    - Can you tell me the result ID?
+    - Give me the ID associated with the result.
+
+- intent: get_result_name
+  examples: |
+    - What is the name associated with the result?
+    - Provide me the name linked to the result.
+    - Tell me the result's name.
+
+- intent: get_device_name
+  examples: |
+    - What is the device name mentioned in the result?
+    - Give me the name of the device in the result.
+    - Provide the device name from the result.
+
+- intent: get_device_id
+  examples: |
+    - What is the device ID specified in the result?
+    - Tell me the ID of the device in the result.
+    - Provide the device ID from the result.
+
+- intent: get_domain_id
+  examples: |
+    - What is the domain ID provided in the result?
+    - Tell me the ID of the domain in the result.
+    - Provide the domain ID from the result.
+
+- intent: get_device_attribute
+  examples: |
+    - What is the device attribute mentioned in the result?
+    - Give me the attribute of the device in the result.
+    - Provide the device attribute from the result.
+
+- intent: get_device_longitude
+  examples: |
+    - What is the longitude of the device mentioned in the result?
+    - Tell me the longitude of the device in the result.
+    - Provide the device's longitude from the result.
+
+- intent: get_device_latitude
+  examples: |
+    - What is the latitude of the device mentioned in the result?
+    - Tell me the latitude of the device in the result.
+    - Provide the device's latitude from the result.
+
+- intent: get_generation_time
+  examples: |
+    - When was the generation time of the result?
+    - Tell me the result's generation time.
+    - Provide the generation time from the result.
+
+- intent: check_result_opened
+  examples: |
+    - Is the result marked as opened?
+    - Tell me if the result is open.
+    - Provide the status of the result.

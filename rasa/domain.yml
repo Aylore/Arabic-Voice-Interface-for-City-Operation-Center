@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+  - open_devices
+  - device_status
+  - criticality_status
+  - reason_for_closed_devices
+  - reading_value
+  - device_attributes
+  - removal_time
+  - list_devices
+  - get_result_id
+  - get_result_name
+  - get_result_device_name
+  - get_result_device_id
+  - get_result_domain_id
+  - get_result_device_attribute
+  - get_result_longitude
+  - get_result_latitude
+  - get_result_generation_time
+  - check_result_opened
+
+responses:
+  utter_open_devices:
+    - text: "The device 'test1' is open in the 'Water Management' domain."
+  utter_device_status:
+    - text: "The device 'test1' is open in the 'Water Management' domain."
+  utter_criticality_status:
+    - text: "The device 'test1' has a criticality status of 'Critical'."
+  utter_reason_for_closed_devices:
+    - text: "There are no closed devices in the 'Water Management' domain."
+  utter_reading_value:
+    - text: "The reading value of the device 'test1' is 'NONE'."
+  utter_device_attributes:
+    - text: "The device attributes of the device 'test1' are 'NONE'."
+  utter_removal_time:
+    - text: "There are no removed devices in the 'Water Management' domain."
+  utter_list_devices:
+    - text: "The devices in the 'Water Management' domain are 'test1'."
+
+
+  utter_get_result_id:
+    - text: "The ID of the result is [833]."
+  utter_get_result_name:
+    - text: "The name associated with the result is [testWithNourhan]."
+  utter_get_result_device_name:
+    - text: "The device name mentioned in the result is [test1]."
+  utter_get_result_device_id:
+    - text: "The device ID specified in the result is [23]."
+  utter_get_result_domain_id:
+    - text: "The domain ID provided in the result is [2]."
+  utter_get_result_device_attribute:
+    - text: "The device attribute mentioned in the result is [NONE]."
+  utter_get_result_longitude:
+    - text: "The longitude of the device mentioned in the result is [28]."
+  utter_get_result_latitude:
+    - text: "The latitude of the device mentioned in the result is [29]."
+  utter_get_result_generation_time:
+    - text: "The generation time of the result was ['20230529T08:24:5744+00:00']."
+  utter_check_result_opened:
+    - text: "Yes, the result is marked as [true] (opened)."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

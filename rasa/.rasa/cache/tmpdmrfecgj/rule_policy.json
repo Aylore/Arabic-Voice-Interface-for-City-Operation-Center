@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"criticality_status\"}}]": "utter_criticality_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"criticality_status\"}}, {\"prev_action\": {\"action_name\": \"utter_criticality_status\"}, \"user\": {\"intent\": \"criticality_status\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reading_value\"}}]": "utter_reading_value",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reading_value\"}}, {\"prev_action\": {\"action_name\": \"utter_reading_value\"}, \"user\": {\"intent\": \"reading_value\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"list_devices\"}}]": "utter_list_devices",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"list_devices\"}}, {\"prev_action\": {\"action_name\": \"utter_list_devices\"}, \"user\": {\"intent\": \"list_devices\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"removal_time\"}}]": "utter_removal_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"removal_time\"}}, {\"prev_action\": {\"action_name\": \"utter_removal_time\"}, \"user\": {\"intent\": \"removal_time\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"device_status\"}}]": "utter_device_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"device_status\"}}, {\"prev_action\": {\"action_name\": \"utter_device_status\"}, \"user\": {\"intent\": \"device_status\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"device_attributes\"}}]": "utter_device_attributes",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"device_attributes\"}}, {\"prev_action\": {\"action_name\": \"utter_device_attributes\"}, \"user\": {\"intent\": \"device_attributes\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"open_devices\"}}]": "utter_open_devices",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"open_devices\"}}, {\"prev_action\": {\"action_name\": \"utter_open_devices\"}, \"user\": {\"intent\": \"open_devices\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reason_for_closed_devices\"}}]": "utter_reason_for_closed_devices",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reason_for_closed_devices\"}}, {\"prev_action\": {\"action_name\": \"utter_reason_for_closed_devices\"}, \"user\": {\"intent\": \"reason_for_closed_devices\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart"
+    ]
+  }
+}
