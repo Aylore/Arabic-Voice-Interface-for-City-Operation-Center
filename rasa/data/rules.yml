@@ -1,94 +1,207 @@
 version: "3.1"
 
 rules:
-- rule: Open Devices Rule
+- rule: Respond to get domain count
   steps:
-  - intent: open_devices
-  - action: utter_open_devices
-
-- rule: Device Status Rule
+  - intent: get_domain_count
+  - action: utter_get_domain_count
+  
+- rule: Respond to get domain ID
   steps:
-  - intent: device_status
-  - action: utter_device_status
+  - intent: get_domain_id
+  - action: utter_get_domain_id
 
-- rule: Criticality Status Rule
+- rule: Respond to check alert status
   steps:
-  - intent: criticality_status
-  - action: utter_criticality_status
+  - intent: check_alert_status
+  - action: utter_check_alert_status
 
-- rule: Reason for Closed Devices Rule
+- rule: Respond to get domain ID associated with alert
   steps:
-  - intent: reason_for_closed_devices
-  - action: utter_reason_for_closed_devices
+  - intent: get_domain_id_associated_alert
+  - action: utter_get_domain_id_associated_alert
 
-- rule: Reading Value Rule
+- rule: Respond to get closure reason for alert
   steps:
-  - intent: reading_value
-  - action: utter_reading_value
+  - intent: get_closure_reason
+  - action: utter_get_closure_reason
 
-- rule: Device Attributes Rule
+- rule: Respond to get message ID of alert
   steps:
-  - intent: device_attributes
-  - action: utter_device_attributes
+  - intent: get_message_id
+  - action: utter_get_message_id
 
-- rule: Removal Time Rule
+- rule: Respond to get last update of alert
   steps:
-  - intent: removal_time
-  - action: utter_removal_time
+  - intent: get_last_update
+  - action: utter_get_last_update
 
-- rule: List Devices Rule
+- rule: Respond to get vertical ID of alert
   steps:
-  - intent: list_devices
-  - action: utter_list_devices
+  - intent: get_vertical_id
+  - action: utter_get_vertical_id
 
-
-
-- rule: Respond to get_result_id
+- rule: Respond to get SOP IDs of alert
   steps:
-  - intent: get_result_id
-  - action: utter_get_result_id
+  - intent: get_sop_ids
+  - action: utter_get_sop_ids
 
-- rule: Respond to get_result_name
+- rule: Respond to get device attribute of alert
   steps:
-  - intent: get_result_name
-  - action: utter_get_result_name
+  - intent: get_device_attribute
+  - action: utter_get_device_attribute
 
-- rule: Respond to get_result_device_name
+- rule: Respond to get criticality level of alert
   steps:
-  - intent: get_result_device_name
-  - action: utter_get_result_device_name
+  - intent: get_criticality_level
+  - action: utter_get_criticality_level
 
-- rule: Respond to get_result_device_id
+- rule: Respond to get reading value of alert
   steps:
-  - intent: get_result_device_id
-  - action: utter_get_result_device_id
+  - intent: get_reading_value
+  - action: utter_get_reading_value
 
-- rule: Respond to get_result_domain_id
+- rule: Respond to get removal time of alert
   steps:
-  - intent: get_result_domain_id
-  - action: utter_get_result_domain_id
+  - intent: get_removal_time
+  - action: utter_get_removal_time
 
-- rule: Respond to get_result_device_attribute
+- rule: Respond to get generation time of alert
   steps:
-  - intent: get_result_device_attribute
-  - action: utter_get_result_device_attribute
+  - intent: get_generation_time
+  - action: utter_get_generation_time
 
-- rule: Respond to get_result_longitude
+- rule: Respond to get dataset instances
   steps:
-  - intent: get_result_longitude
-  - action: utter_get_result_longitude
+  - intent: get_dataset_instances
+  - action: utter_get_dataset_instances
 
-- rule: Respond to get_result_latitude
+- rule: Respond to get dataset ratio
   steps:
-  - intent: get_result_latitude
-  - action: utter_get_result_latitude
+  - intent: get_dataset_ratio
+  - action: utter_get_dataset_ratio
 
-- rule: Respond to get_result_generation_time
+- rule: Respond to get ratio of numerical features to categorical features
   steps:
-  - intent: get_result_generation_time
-  - action: utter_get_result_generation_time
+  - intent: get_ratio_num_to_cat
+  - action: utter_get_ratio_num_to_cat
 
-- rule: Respond to check_result_opened
+- rule: Respond to get total missing values in dataset
   steps:
-  - intent: check_result_opened
-  - action: utter_check_result_opened
+  - intent: get_total_missing_values
+  - action: utter_get_total_missing_values
+
+- rule: Respond to get average missing values per instance
+  steps:
+  - intent: get_avg_missing_values
+  - action: utter_get_avg_missing_values
+
+- rule: Respond to get number of categorical features in dataset
+  steps:
+  - intent: get_num_cat_features
+  - action: utter_get_num_cat_features
+
+- rule: Respond to get sum of symbols in dataset
+  steps:
+  - intent: get_sum_symbols
+  - action: utter_get_sum_symbols
+
+- rule: Respond to get average number of symbols in dataset
+  steps:
+  - intent: get_avg_symbols
+  - action: utter_get_avg_symbols
+
+- rule: Respond to get standard deviation of symbols in dataset
+  steps:
+  - intent: get_std_symbols
+  - action: utter_get_std_symbols
+
+- rule: Respond to get number of stationary features in dataset
+  steps:
+  - intent: get_num_stati_features
+  - action: utter_get_num_stati_features
+
+- rule: Respond to get number of nonstationary features in dataset
+  steps:
+  - intent: get_num_non_stati_features
+  - action: utter_get_num_non_stati_features
+
+- rule: Respond to get number of first differences in dataset
+  steps:
+  - intent: get_num_first_differences
+  - action: utter_get_num_first_differences
+
+- rule: Respond to get number of second differences in dataset
+  steps:
+  - intent: get_num_second_differences
+  - action: utter_get_num_second_differences
+
+- rule: Respond to get number of lagged features in dataset
+  steps:
+  - intent: get_num_lagged_features
+  - action: utter_get_num_lagged_features
+
+- rule: Respond to get PACF in dataset
+  steps:
+  - intent: get_pacf
+  - action: utter_get_pacf
+
+- rule: Respond to get sampling rate in dataset
+  steps:
+  - intent: get_sampling_rate
+  - action: utter_get_sampling_rate
+
+- rule: Respond to get fractal dimension of dataset
+  steps:
+  - intent: get_fractal_dimension
+  - action: utter_get_fractal_dimension
+
+- rule: Respond to check control KPI enabled status
+  steps:
+  - intent: check_control_kpi_enabled
+  - action: utter_check_control_kpi_enabled
+
+- rule: Respond to describe control KPI
+  steps:
+  - intent: describe_control_kpi
+  - action: utter_describe_control_kpi
+
+- rule: Respond to get expression used to calculate control KPI
+  steps:
+  - intent: get_expression_control_kpi
+  - action: utter_get_expression_control_kpi
+
+- rule: Respond to get output attribute of control KPI
+  steps:
+  - intent: get_output_attribute_control_kpi
+  - action: utter_get_output_attribute_control_kpi
+
+- rule: Respond to get calendar unit of control KPI
+  steps:
+  - intent: get_calendar_unit_control_kpi
+  - action: utter_get_calendar_unit_control_kpi
+
+- rule: Respond to get created time of control KPI
+  steps:
+  - intent: get_created_time_control_kpi
+  - action: utter_get_created_time_control_kpi
+
+- rule: Respond to get created by of control KPI
+  steps:
+  - intent: get_created_by_control_kpi
+  - action: utter_get_created_by_control_kpi
+
+- rule: Respond to get last modified by of control KPI
+  steps:
+  - intent: get_last_modified_by_control_kpi
+  - action: utter_get_last_modified_by_control_kpi
+
+- rule: Respond to get last modified time of control KPI
+  steps:
+  - intent: get_last_modified_time_control_kpi
+  - action: utter_get_last_modified_time_control_kpi
+
+- rule: Respond to get last calculated time of control KPI
+  steps:
+  - intent: get_last_calculated_time_control_kpi
+  - action: utter_get_last_calculated_time_control_kpi
