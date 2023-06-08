@@ -45,87 +45,87 @@ intents:
 
 responses:
   utter_get_domain_count:
-  - text: "The domain count for [domainName] is XYZ."
+  - text: "The domain count of the [domainName] is [domainCount]."
   utter_get_domain_id:
-  - text: "The domain ID for [domainName] is XYZ."
+  - text: "The domain ID of the [domainName]  domain is [domainId]."
   utter_check_alert_status:
-  - text: "The alert [alertName] is currently [status]."
+  - text: "The alert [alertName] is currently [opened]."
   utter_get_domain_id_associated_alert:
-  - text: "The domain ID associated with the alert [alertName] is XYZ."
+  - text: "The domain ID associated with the alert [alertName] is [domainId]."
   utter_get_closure_reason:
-  - text: "The closure reason for the alert [alertName] is XYZ."
+  - text: "The closure reason for the alert is [closureReason]."
   utter_get_message_id:
-  - text: "The message ID of the alert [alertName] is XYZ."
+  - text: "The message ID of the alert is [messageId]."
   utter_get_last_update:
-  - text: "The last update to the alert [alertName] was on XYZ."
+  - text: "The last update to the alert [alertName] was on [lastUpdatedDate]."
   utter_get_vertical_id:
-  - text: "The vertical ID of the alert [alertName] is XYZ."
+  - text: "The vertical ID of the alert is [verticalId]."
   utter_get_sop_ids:
-  - text: "The SOP IDs associated with the alert [alertName] are XYZ."
+  - text: "The SOP IDs associated with the alert are [sopIds]."
   utter_get_device_attribute:
-  - text: "The device attribute of the alert [alertName] is XYZ."
+  - text: "The device attribute of the alert is [deviceAttribute]."
   utter_get_criticality_level:
-  - text: "The criticality level of the alert [alertName] is XYZ."
+  - text: "The criticality level of the alert [alertName] is [criticality]"
   utter_get_reading_value:
-  - text: "The reading value associated with the alert [alertName] is XYZ."
+  - text: "The reading value associated with the alert [alertName] is [readingValue]"
   utter_get_removal_time:
-  - text: "The removal time scheduled for the alert [alertName] is XYZ."
+  - text: "The removal time scheduled for the alert [alertName] is [removalTime]"
   utter_get_generation_time:
-  - text: "The alert [alertName] was generated on XYZ."
+  - text: "The alert [alertName] was generated on [generationTime]"
   utter_get_dataset_instances:
-  - text: "The dataset for job [Job] and asset [Asset] contains XYZ instances."
+  - text: "The dataset for job [Job] and asset [Asset] contains [num_instances] instances."
   utter_get_dataset_ratio:
-  - text: "The dataset ratio for job [Job] and asset [Asset] is XYZ."
+  - text: "The dataset ratio for job [Job] and asset [Asset] is [dataset_ratio]."
   utter_get_ratio_num_to_cat:
-  - text: "The ratio of numerical features to categorical features for job [Job] and asset [Asset] is XYZ."
+  - text: "The ratio of numerical features to categorical features for job [Job] and asset [Asset] is [ratio_num_to_cat]."
   utter_get_total_missing_values:
-  - text: "The dataset for job [Job] and asset [Asset] has a total of XYZ missing values."
+  - text: "The dataset for job [Job] and asset [Asset] has a total of  [total_missing_Values] missing values."
   utter_get_avg_missing_values:
-  - text: "The average number of missing values per instance for job [Job] and asset [Asset] is XYZ."
+  - text: "The average number of missing values per instance for job [Job] and asset [Asset] is [avg_missing_values]"
   utter_get_num_cat_features:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ categorical features."
+  - text: "The dataset for job [Job] and asset [Asset] has [num_cat] categorical features."
   utter_get_sum_symbols:
-  - text: "The sum of symbols in the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The sum of symbols in the dataset for job [Job] and asset [Asset] is [sum_symbols]."
   utter_get_avg_symbols:
-  - text: "The average number of symbols in the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The average number of symbols in the dataset for job [Job] and asset [Asset] is [avg_symbols]."
   utter_get_std_symbols:
-  - text: "The standard deviation of symbols in the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The standard deviation of symbols in the dataset for job [Job] and asset [Asset] is [std_symbols]."
   utter_get_num_stati_features:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ stationary features."
+  - text: "The dataset for job [Job] and asset [Asset] has  [num_stati_features] stationary features."
   utter_get_num_non_stati_features:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ nonstationary features."
+  - text: "The dataset for job [Job] and asset [Asset] has  [num_non_stati_features] nonstationary features."
   utter_get_num_first_differences:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ first differences."
+  - text: "The dataset for job [Job] and asset [Asset] has [num_1st_diff] first differences."
   utter_get_num_second_differences:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ second differences."
+  - text: "The dataset for job [Job] and asset [Asset] has [num_2st_diff] second differences."
   utter_get_num_lagged_features:
-  - text: "The dataset for job [Job] and asset [Asset] has XYZ lagged features."
+  - text: "The dataset for job [Job] and asset [Asset] has [num_lagged_features] lagged features."
   utter_get_pacf:
-  - text: "The partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset] is [pacf]."
   utter_get_sampling_rate:
-  - text: "The sampling rate used in the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The sampling rate used in the dataset for job [Job] and asset [Asset] is [sampling_rate]."
   utter_get_fractal_dimension:
-  - text: "The fractal dimension of the dataset for job [Job] and asset [Asset] is XYZ."
+  - text: "The fractal dimension of the dataset for job [Job] and asset [Asset] is [fractal_dim]."
   utter_check_control_kpi_enabled:
-  - text: "The control KPI [control_kpi] is [status]."
+  - text: "The control KPI [control_kpi] is [is_enabled]."
   utter_describe_control_kpi:
-  - text: "The control KPI [control_kpi] is a metric used to measure [description]."
+  - text: "[description]."
   utter_get_expression_control_kpi:
   - text: "The expression used to calculate the control KPI [control_kpi] is [expression]."
   utter_get_output_attribute_control_kpi:
-  - text: "The output of the control KPI [control_kpi] calculation is stored in the attribute [attribute]."
+  - text: "The output of the control KPI [control_kpi] calculation is stored in the attribute [output_attribute_id]."
   utter_get_calendar_unit_control_kpi:
-  - text: "The control KPI [control_kpi] uses [unit] as the unit of time in its calendar."
+  - text: "the unit of time used in the control KPI [control_kpi]  calendar is [calendar_unit]"
   utter_get_created_time_control_kpi:
-  - text: "The control KPI [control_kpi] was created on [time]."
+  - text: "the control KPI [control_kpi] was created at [created_at]"
   utter_get_created_by_control_kpi:
-  - text: "The control KPI [control_kpi] was created by [creator]."
+  - text: "The control KPI [control_kpi] was created by [created_by]."
   utter_get_last_modified_by_control_kpi:
-  - text: "The control KPI [control_kpi] was last modified by [modifier]."
+  - text: "The control KPI [control_kpi] was last modified by [last_modified_by]."
   utter_get_last_modified_time_control_kpi:
-  - text: "The control KPI [control_kpi] was last modified on [time]."
+  - text: "The control KPI [control_kpi] was last modified on [last_modified_at]."
   utter_get_last_calculated_time_control_kpi:
-  - text: "The control KPI [control_kpi] was last calculated on [time]."
+  - text: "The control KPI [control_kpi] was last calculated on [last_calculated_at]."
 
 session_config:
   session_expiration_time: 60

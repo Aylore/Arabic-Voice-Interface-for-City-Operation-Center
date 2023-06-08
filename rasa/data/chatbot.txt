@@ -400,11 +400,15 @@ The site name of the first device is 'site1'.
 What is the last online time of the third device?
 The last online time of the third device is '20230528T17:45:00Z[UTC]'.
 
+#  Alerts/counts URL: /api/gateway/alert-management/alerts/counts
+
 What is the domain count of the [domainName]?
 The domain count of the [domainName] is [domainCount].
 
 What is the domain ID of the [domainName]?
 The domain ID of the [domainName]  domain is [domainId].
+
+# Alerts/by-ids-and-state/{pageNum}/{pageSize}  URL: api/gateway/alert-management/alerts/by-ids-and-state/0/2
 
 Is the alert [alertName] currently open?
 [opened].
@@ -442,6 +446,7 @@ The removal time scheduled for the alert is [removalTime].
 When was the alert  [alertName] generated?
 The alert was generated on [generationTime].
 
+# Data_quality/meta_features/{supervised_job_id}/{asset_id} URL: /api/gateway/advanced_analytics/data_quality/meta_features/17/60 
 
 How many instances are present in the dataset for job [Job] and asset [Asset]?
 The number of instances in the dataset for job [Job] and asset [Asset] is [num_instances].
@@ -494,6 +499,8 @@ The sampling rate used in the dataset for job [Job] and asset [Asset] is [sampli
 What is the fractal dimension of the dataset for job [Job] and asset [Asset]?
 The fractal dimension of the dataset for job [Job] and asset [Asset] is [fractal_dim].
 
+# Control_kpi/{id} URL: /api/gateway/control_kpi/1 
+
 is the control KPI [control_kpi] enabled or not?
 [is_enabled]
 
@@ -523,5 +530,3 @@ the control KPI [control_kpi] was last modified at [last_modified_at]
 
 When was the control KPI [control_kpi] last calculated?
 the control KPI [control_kpi] was last calculated at [last_calculated_at]
-
-
