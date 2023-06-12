@@ -21,11 +21,12 @@ class LanguageDetection:
         self.language = language
 
 
-# text_to_detect = "Hello, how are you?"
+if __name__ == "__main__":
+    text_to_detect = "Hello, how are you?"
 
-# detector = LanguageDetector()
-# detection = detector.detect_language(text_to_detect)
+    detector = LanguageDetector()
+    detection = detector.detect_language(text_to_detect)
 
-# print("Text: {}".format(detection.text))
-# print("Confidence: {}".format(detection.confidence))
-# print("Language: {}".format(detection.language))
+    print("Text: {}".format(detection.text))
+    print("Confidence: {}".format(detection.confidence))
+    print("Language: {}".format(detection.language))
