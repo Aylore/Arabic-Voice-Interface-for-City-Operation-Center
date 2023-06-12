@@ -38,7 +38,7 @@ class RasaChatbot:
                             print("Bot:", bot_response)
                             break
 
-    def get_text(self, text):
+    def response(self, text):
         response = self.send_message(text)
         bot_response = response[0]["text"]
         return bot_response

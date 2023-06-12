@@ -2,5 +2,3 @@ azure-cognitiveservices-speech
 wave
 pyaudio
 google-cloud-speech
-ChatterBot==1.0.5
-chatterbot-corpus==1.2.0

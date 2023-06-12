@@ -1,19 +1,14 @@
 # speechtotextapp/views.py
 
-from google.cloud import speech_v1p1beta1 as speech
 from django.shortcuts import render
 from django.conf import settings
-from src.google_demo import predict
-from src.azure_demo import predict_live
-from src.azure_trans_demo import Translator
-from src.final_pipeline import come_on
-from utils.azure_models.azure_speech_to_text import Azure_stt_model
+from final_pipeline import main
 from .helper import save_audio_file, delete_audio_file
 import io, os
 import time
 
 
-trans = Translator()
+# trans = Translator()
 
 
 def Index(request):
@@ -46,6 +41,6 @@ def transcribe_audio(request):
     if request.method == "POST":
         # Live transcript of the same language
         # live_transcript = predict_live()
-        live_transcript = come_on()
+        live_transcript = main()
         return render(request, "index.html", {"live_transcript": live_transcript})
     return render(request, "index.html")
