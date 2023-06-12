@@ -50,7 +50,6 @@ class Azure_stt_model:
             if cancellation_details.reason == speechsdk.CancellationReason.Error:
                 print("Error details: {}".format(cancellation_details.error_details))
 
-
     def predict_live(self):
         audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
 
@@ -60,13 +59,15 @@ class Azure_stt_model:
             auto_detect_source_language_config=self.auto_detect_source_language_config,
             audio_config=audio_config,
         )
+        print("--Start Talking---")
+
         result = speech_recognizer.recognize_once()
 
-        print('--Start Talking---')
         if result.reason == speechsdk.ResultReason.RecognizedSpeech:
             print("Text generated")
             return result.text
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(Azure_stt_model().predict_live())
     # print(Azure_stt_model().predict_live())

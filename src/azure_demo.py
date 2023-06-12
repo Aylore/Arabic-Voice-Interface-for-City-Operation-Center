@@ -9,6 +9,7 @@ def predict_live():
     live_transcript = Azure_stt_model().predict_live()
     return live_transcript
 
+
 def demo():
     # record a voice
     recorder = AudioRecorder()
@@ -24,5 +25,6 @@ def demo():
     # printing (inversed to be shown in terminal)
     print(f"Text in audio: {text}")
 
-if __name__ == '__main__':
-    predict_live()
+
+if __name__ == "__main__":
+    print(predict_live())
