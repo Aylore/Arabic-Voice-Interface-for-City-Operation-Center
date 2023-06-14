@@ -37,7 +37,7 @@ class AzureSpeechToText(SpeechToText):
             speech_config=self.speech_config,
             auto_detect_source_language_config=self.auto_detect_source_language_config,
             audio_config=audio_config,
-            )
+        )
 
         return speech_recognizer
 
@@ -45,7 +45,7 @@ class AzureSpeechToText(SpeechToText):
         if self.live:
             print("--Start Talking---")
         else:
-            print('--Record Uploaded--')
+            print("--Record Uploaded--")
 
         result = speech_recognizer.recognize_once()
 
@@ -81,6 +81,9 @@ class AzureSpeechToText(SpeechToText):
 
 
 if __name__ == "__main__":
-    # print(AzureSpeechToText().transcribe())
-    path = "utils/audio_samples/audio1.wav"
-    print(AzureSpeechToText(path=path).transcribe())
+    live = True
+    if live:
+        print(AzureSpeechToText().transcribe())
+    else:
+        path = "utils/audio_samples/audio1.wav"
+        print(AzureSpeechToText(path=path).transcribe())

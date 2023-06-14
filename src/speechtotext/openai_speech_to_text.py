@@ -4,6 +4,7 @@ import openai
 
 class OpenAISpeechToText:
     def __init__(self, file_path):
+        # Load your API key from an environment variable or secret management service
         self.key = os.environ.get("OPENAI_KEY")
         self.file_path = file_path
 
@@ -22,7 +23,6 @@ class OpenAISpeechToText:
 
 
 if __name__ == '__main__':
-    # Load your API key from an environment variable or secret management service
     file_path = "utils/audio_smaples/audio1.wav"
     print(OpenAISpeechToText(file_path).transcribe())
 
