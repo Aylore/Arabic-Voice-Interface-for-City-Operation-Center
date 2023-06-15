@@ -4,314 +4,323 @@ stories:
 - story: Get domain count
   steps:
   - intent: get_domain_count
-  - action: utter_get_domain_count
+  - action: action_domain_count
 
 - story: Get domain ID
   steps:
   - intent: get_domain_id
-  - action: utter_get_domain_id
+  - action: action_get_domain_id
 
 - story: by_alert_id alert status
   steps:
   - intent: by_alert_id_alert_status
-  - action: utter_by_alert_id_alert_status
+  - action: action_by_alert_id_alert_status
 
 - story: by_alert_id domain ID associated with alert
   steps:
   - intent: by_alert_id_domain_id_associated_alert
-  - action: utter_by_alert_id_domain_id_associated_alert
+  - action: action_by_alert_id_domain_id_associated_alert
 
-- story: by_alert_id closure reason for alert
+- story: by_alert_id_closure_reason
   steps:
   - intent: by_alert_id_closure_reason
-  - action: utter_by_alert_id_closure_reason
+  - action: action_by_alert_closure_reason
+  - slot_was_set:
+    - closureReason: "Bigger than five"
 
-- story: by_alert_id message ID of alert
-  steps:
-  - intent: by_alert_id_message_id
-  - action: utter_by_alert_id_message_id
+# # - story: by_alert_id closure reason for alert
+# #   steps:
+# #   - intent: by_alert_id_closure_reason
+# #   - slot_was_set:
+# #     - alertId: true
+# #   - action: utter_by_alert_id_closure_reason
 
-- story: by_alert_id last update of alert
-  steps:
-  - intent: by_alert_id_last_update
-  - action: utter_by_alert_id_last_update
+# - story: by_alert_id message ID of alert
+#   steps:
+#   - intent: by_alert_id_message_id
+#   - action: utter_by_alert_id_message_id
 
-- story: by_alert_id vertical ID of alert
-  steps:
-  - intent: by_alert_id_vertical_id
-  - action: utter_by_alert_id_vertical_id
+# - story: by_alert_id last update of alert
+#   steps:
+#   - intent: by_alert_id_last_update
+#   - action: utter_by_alert_id_last_update
 
-- story: by_alert_id SOP IDs of alert
-  steps:
-  - intent: by_alert_id_sop_ids
-  - action: utter_by_alert_id_sop_ids
+# - story: by_alert_id vertical ID of alert
+#   steps:
+#   - intent: by_alert_id_vertical_id
+#   - action: utter_by_alert_id_vertical_id
 
-- story: by_alert_id device attribute of alert
-  steps:
-  - intent: by_alert_id_device_attribute
-  - action: utter_by_alert_id_device_attribute
+# - story: by_alert_id SOP IDs of alert
+#   steps:
+#   - intent: by_alert_id_sop_ids
+#   - action: utter_by_alert_id_sop_ids
 
-- story: by_alert_id criticality level of alert
-  steps:
-  - intent: by_alert_id_criticality_level
-  - action: utter_by_alert_id_criticality_level
+# - story: by_alert_id device attribute of alert
+#   steps:
+#   - intent: by_alert_id_device_attribute
+#   - action: utter_by_alert_id_device_attribute
 
-- story: by_alert_id reading value of alert
-  steps:
-  - intent: by_alert_id_reading_value
-  - action: utter_by_alert_id_reading_value
+# - story: by_alert_id criticality level of alert
+#   steps:
+#   - intent: by_alert_id_criticality_level
+#   - action: utter_by_alert_id_criticality_level
 
-- story: by_alert_id removal time of alert
-  steps:
-  - intent: by_alert_id_removal_time
-  - action: utter_by_alert_id_removal_time
+# - story: by_alert_id reading value of alert
+#   steps:
+#   - intent: by_alert_id_reading_value
+#   - action: utter_by_alert_id_reading_value
 
-- story: by_alert_id generation time of alert
-  steps:
-  - intent: by_alert_id_generation_time
-  - action: utter_by_alert_id_generation_time
+# - story: by_alert_id removal time of alert
+#   steps:
+#   - intent: by_alert_id_removal_time
+#   - action: utter_by_alert_id_removal_time
 
-- story: meta_features dataset instances
-  steps:
-  - intent: meta_features_dataset_instances
-  - action: utter_meta_features_dataset_instances
+# - story: by_alert_id generation time of alert
+#   steps:
+#   - intent: by_alert_id_generation_time
+#   - action: utter_by_alert_id_generation_time
 
-- story: meta_features dataset ratio
-  steps:
-  - intent: meta_features_dataset_ratio
-  - action: utter_meta_features_dataset_ratio
+# - story: meta_features dataset instances
+#   steps:
+#   - intent: meta_features_dataset_instances
+#   - action: utter_meta_features_dataset_instances
 
-- story: meta_features ratio of numerical features to categorical features
-  steps:
-  - intent: meta_features_ratio_num_to_cat
-  - action: utter_meta_features_ratio_num_to_cat
+# - story: meta_features dataset ratio
+#   steps:
+#   - intent: meta_features_dataset_ratio
+#   - action: utter_meta_features_dataset_ratio
 
-- story: meta_features total missing values in dataset
-  steps:
-  - intent: meta_features_total_missing_values
-  - action: utter_meta_features_total_missing_values
+# - story: meta_features ratio of numerical features to categorical features
+#   steps:
+#   - intent: meta_features_ratio_num_to_cat
+#   - action: utter_meta_features_ratio_num_to_cat
 
-- story: meta_features average missing values per instance
-  steps:
-  - intent: meta_features_avg_missing_values
-  - action: utter_meta_features_avg_missing_values
+# - story: meta_features total missing values in dataset
+#   steps:
+#   - intent: meta_features_total_missing_values
+#   - action: utter_meta_features_total_missing_values
 
-- story: meta_features number of categorical features in dataset
-  steps:
-  - intent: meta_features_num_cat_features
-  - action: utter_meta_features_num_cat_features
+# - story: meta_features average missing values per instance
+#   steps:
+#   - intent: meta_features_avg_missing_values
+#   - action: utter_meta_features_avg_missing_values
 
-- story: meta_features sum of symbols in dataset
-  steps:
-  - intent: meta_features_sum_symbols
-  - action: utter_meta_features_sum_symbols
+# - story: meta_features number of categorical features in dataset
+#   steps:
+#   - intent: meta_features_num_cat_features
+#   - action: utter_meta_features_num_cat_features
 
-- story: meta_features average number of symbols in dataset
-  steps:
-  - intent: meta_features_avg_symbols
-  - action: utter_meta_features_avg_symbols
+# - story: meta_features sum of symbols in dataset
+#   steps:
+#   - intent: meta_features_sum_symbols
+#   - action: utter_meta_features_sum_symbols
 
-- story: meta_features standard deviation of symbols in dataset
-  steps:
-  - intent: meta_features_std_symbols
-  - action: utter_meta_features_std_symbols
+# - story: meta_features average number of symbols in dataset
+#   steps:
+#   - intent: meta_features_avg_symbols
+#   - action: utter_meta_features_avg_symbols
 
-- story: meta_features number of stationary features in dataset
-  steps:
-  - intent: meta_features_num_stati_features
-  - action: utter_meta_features_num_stati_features
+# - story: meta_features standard deviation of symbols in dataset
+#   steps:
+#   - intent: meta_features_std_symbols
+#   - action: utter_meta_features_std_symbols
 
-- story: meta_features number of nonstationary features in dataset
-  steps:
-  - intent: meta_features_num_non_stati_features
-  - action: utter_meta_features_num_non_stati_features
+# - story: meta_features number of stationary features in dataset
+#   steps:
+#   - intent: meta_features_num_stati_features
+#   - action: utter_meta_features_num_stati_features
 
-- story: meta_features number of first differences in dataset
-  steps:
-  - intent: meta_features_num_first_differences
-  - action: utter_meta_features_num_first_differences
+# - story: meta_features number of nonstationary features in dataset
+#   steps:
+#   - intent: meta_features_num_non_stati_features
+#   - action: utter_meta_features_num_non_stati_features
 
-- story: meta_features number of second differences in dataset
-  steps:
-  - intent: meta_features_num_second_differences
-  - action: utter_meta_features_num_second_differences
+# - story: meta_features number of first differences in dataset
+#   steps:
+#   - intent: meta_features_num_first_differences
+#   - action: utter_meta_features_num_first_differences
 
-- story: meta_features number of lagged features in dataset
-  steps:
-  - intent: meta_features_num_lagged_features
-  - action: utter_meta_features_num_lagged_features
+# - story: meta_features number of second differences in dataset
+#   steps:
+#   - intent: meta_features_num_second_differences
+#   - action: utter_meta_features_num_second_differences
 
-- story: meta_features PACF in dataset
-  steps:
-  - intent: meta_features_pacf
-  - action: utter_meta_features_pacf
+# - story: meta_features number of lagged features in dataset
+#   steps:
+#   - intent: meta_features_num_lagged_features
+#   - action: utter_meta_features_num_lagged_features
 
-- story: meta_features sampling rate in dataset
-  steps:
-  - intent: meta_features_sampling_rate
-  - action: utter_meta_features_sampling_rate
+# - story: meta_features PACF in dataset
+#   steps:
+#   - intent: meta_features_pacf
+#   - action: utter_meta_features_pacf
 
-- story: meta_features fractal dimension of dataset
-  steps:
-  - intent: meta_features_fractal_dimension
-  - action: utter_meta_features_fractal_dimension
+# - story: meta_features sampling rate in dataset
+#   steps:
+#   - intent: meta_features_sampling_rate
+#   - action: utter_meta_features_sampling_rate
 
-- story: Check control KPI enabled status
-  steps:
-  - intent: check_control_kpi_enabled
-  - action: utter_check_control_kpi_enabled
+# - story: meta_features fractal dimension of dataset
+#   steps:
+#   - intent: meta_features_fractal_dimension
+#   - action: utter_meta_features_fractal_dimension
 
-- story: Describe control KPI
-  steps:
-  - intent: describe_control_kpi
-  - action: utter_describe_control_kpi
+# - story: Check control KPI enabled status
+#   steps:
+#   - intent: check_control_kpi_enabled
+#   - action: utter_check_control_kpi_enabled
 
-- story: Get expression used to calculate control KPI
-  steps:
-  - intent: get_expression_control_kpi
-  - action: utter_get_expression_control_kpi
+# - story: Describe control KPI
+#   steps:
+#   - intent: describe_control_kpi
+#   - action: utter_describe_control_kpi
 
-- story: Get output attribute of control KPI
-  steps:
-  - intent: get_output_attribute_control_kpi
-  - action: utter_get_output_attribute_control_kpi
+# - story: Get expression used to calculate control KPI
+#   steps:
+#   - intent: get_expression_control_kpi
+#   - action: utter_get_expression_control_kpi
 
-- story: Get calendar unit of control KPI
-  steps:
-  - intent: get_calendar_unit_control_kpi
-  - action: utter_get_calendar_unit_control_kpi
+# - story: Get output attribute of control KPI
+#   steps:
+#   - intent: get_output_attribute_control_kpi
+#   - action: utter_get_output_attribute_control_kpi
 
-- story: Get created time of control KPI
-  steps:
-  - intent: get_created_time_control_kpi
-  - action: utter_get_created_time_control_kpi
+# - story: Get calendar unit of control KPI
+#   steps:
+#   - intent: get_calendar_unit_control_kpi
+#   - action: utter_get_calendar_unit_control_kpi
 
-- story: Get created by of control KPI
-  steps:
-  - intent: get_created_by_control_kpi
-  - action: utter_get_created_by_control_kpi
+# - story: Get created time of control KPI
+#   steps:
+#   - intent: get_created_time_control_kpi
+#   - action: utter_get_created_time_control_kpi
 
-- story: Get last modified by of control KPI
-  steps:
-  - intent: get_last_modified_by_control_kpi
-  - action: utter_get_last_modified_by_control_kpi
+# - story: Get created by of control KPI
+#   steps:
+#   - intent: get_created_by_control_kpi
+#   - action: utter_get_created_by_control_kpi
 
-- story: Get last modified time of control KPI
-  steps:
-  - intent: get_last_modified_time_control_kpi
-  - action: utter_get_last_modified_time_control_kpi
+# - story: Get last modified by of control KPI
+#   steps:
+#   - intent: get_last_modified_by_control_kpi
+#   - action: utter_get_last_modified_by_control_kpi
 
-- story: Get last calculated time of control KPI
-  steps:
-  - intent: get_last_calculated_time_control_kpi
-  - action: utter_get_last_calculated_time_control_kpi
+# - story: Get last modified time of control KPI
+#   steps:
+#   - intent: get_last_modified_time_control_kpi
+#   - action: utter_get_last_modified_time_control_kpi
 
-- story: wm device open status
-  steps:
-  - intent: wm_device_open_status
-  - action: utter_wm_device_open_status
+# - story: Get last calculated time of control KPI
+#   steps:
+#   - intent: get_last_calculated_time_control_kpi
+#   - action: utter_get_last_calculated_time_control_kpi
 
-- story: wm criticality status
-  steps:
-  - intent: wm_criticality_status
-  - action: utter_wm_criticality_status
+# - story: wm device open status
+#   steps:
+#   - intent: wm_device_open_status
+#   - action: utter_wm_device_open_status
 
-- story: wm closure reason
-  steps:
-  - intent: wm_closure_reason
-  - action: utter_wm_closure_reason
+# - story: wm criticality status
+#   steps:
+#   - intent: wm_criticality_status
+#   - action: utter_wm_criticality_status
 
-- story: wm reading value
-  steps:
-  - intent: wm_reading_value
-  - action: utter_wm_reading_value
+# - story: wm closure reason
+#   steps:
+#   - intent: wm_closure_reason
+#   - action: utter_wm_closure_reason
 
-- story: wm device attributes
-  steps:
-  - intent: wm_device_attributes
-  - action: utter_wm_device_attributes
+# - story: wm reading value
+#   steps:
+#   - intent: wm_reading_value
+#   - action: utter_wm_reading_value
 
-- story: wm removal time
-  steps:
-  - intent: wm_removal_time
-  - action: utter_wm_removal_time
+# - story: wm device attributes
+#   steps:
+#   - intent: wm_device_attributes
+#   - action: utter_wm_device_attributes
 
-- story: wm device ID
-  steps:
-  - intent: wm_device_id
-  - action: utter_wm_device_id
+# - story: wm removal time
+#   steps:
+#   - intent: wm_removal_time
+#   - action: utter_wm_removal_time
 
-- story: wm device name
-  steps:
-  - intent: wm_device_name
-  - action: utter_wm_device_name
+# - story: wm device ID
+#   steps:
+#   - intent: wm_device_id
+#   - action: utter_wm_device_id
 
-- story: wm device longitude
-  steps:
-  - intent: wm_device_longitude
-  - action: utter_wm_device_longitude
+# - story: wm device name
+#   steps:
+#   - intent: wm_device_name
+#   - action: utter_wm_device_name
 
-- story: wm device latitude
-  steps:
-  - intent: wm_device_latitude
-  - action: utter_wm_device_latitude
+# - story: wm device longitude
+#   steps:
+#   - intent: wm_device_longitude
+#   - action: utter_wm_device_longitude
 
-- story: wm generation time
-  steps:
-  - intent: wm_generation_time
-  - action: utter_wm_generation_time
+# - story: wm device latitude
+#   steps:
+#   - intent: wm_device_latitude
+#   - action: utter_wm_device_latitude
 
-- story: By domain id device status inquiry
-  steps:
-  - intent: by_domain_id_device_status
-  - action: utter_by_domain_id_device_open_status
+# - story: wm generation time
+#   steps:
+#   - intent: wm_generation_time
+#   - action: utter_wm_generation_time
 
-- story: By domain id criticality status inquiry
-  steps:
-  - intent: by_domain_id_criticality_status
-  - action: utter_by_domain_id_criticality_status
+# - story: By domain id device status inquiry
+#   steps:
+#   - intent: by_domain_id_device_status
+#   - action: utter_by_domain_id_device_open_status
 
-- story: By domain id closure reason inquiry
-  steps:
-  - intent: by_domain_id_closure_reason
-  - action: utter_by_domain_id_closure_reason
+# - story: By domain id criticality status inquiry
+#   steps:
+#   - intent: by_domain_id_criticality_status
+#   - action: utter_by_domain_id_criticality_status
 
-- story: By domain id reading value inquiry
-  steps:
-  - intent: by_domain_id_reading_value
-  - action: utter_by_domain_id_reading_value
+# - story: By domain id closure reason inquiry
+#   steps:
+#   - intent: by_domain_id_closure_reason
+#   - action: utter_by_domain_id_closure_reason
 
-- story: By domain id device attributes inquiry
-  steps:
-  - intent: by_domain_id_device_attributes
-  - action: utter_by_domain_id_device_attributes
+# - story: By domain id reading value inquiry
+#   steps:
+#   - intent: by_domain_id_reading_value
+#   - action: utter_by_domain_id_reading_value
 
-- story: By domain id removal time inquiry
-  steps:
-  - intent: by_domain_id_removal_time
-  - action: utter_by_domain_id_removal_time
+# - story: By domain id device attributes inquiry
+#   steps:
+#   - intent: by_domain_id_device_attributes
+#   - action: utter_by_domain_id_device_attributes
 
-- story: By domain id device ID inquiry
-  steps:
-  - intent: by_domain_id_device_id
-  - action: utter_by_domain_id_device_id
+# - story: By domain id removal time inquiry
+#   steps:
+#   - intent: by_domain_id_removal_time
+#   - action: utter_by_domain_id_removal_time
 
-- story: By domain id device name inquiry
-  steps:
-  - intent: by_domain_id_device_name
-  - action: utter_by_domain_id_device_name
+# - story: By domain id device ID inquiry
+#   steps:
+#   - intent: by_domain_id_device_id
+#   - action: utter_by_domain_id_device_id
 
-- story: By domain id device longitude inquiry
-  steps:
-  - intent: by_domain_id_device_longitude
-  - action: utter_by_domain_id_device_longitude
+# - story: By domain id device name inquiry
+#   steps:
+#   - intent: by_domain_id_device_name
+#   - action: utter_by_domain_id_device_name
 
-- story: By domain id device latitude inquiry
-  steps:
-  - intent: by_domain_id_device_latitude
-  - action: utter_by_domain_id_device_latitude
+# - story: By domain id device longitude inquiry
+#   steps:
+#   - intent: by_domain_id_device_longitude
+#   - action: utter_by_domain_id_device_longitude
 
-- story: By domain id generation time inquiry
-  steps:
-  - intent: by_domain_id_generation_time
-  - action: utter_by_domain_id_generation_time
+# - story: By domain id device latitude inquiry
+#   steps:
+#   - intent: by_domain_id_device_latitude
+#   - action: utter_by_domain_id_device_latitude
+
+# - story: By domain id generation time inquiry
+#   steps:
+#   - intent: by_domain_id_generation_time
+#   - action: utter_by_domain_id_generation_time

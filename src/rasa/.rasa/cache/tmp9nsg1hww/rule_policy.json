@@ -1,0 +1,18 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"by_alert_id_closure_reason\"}}]": "action_alert_closure_reason",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"by_alert_id_closure_reason\"}}, {\"prev_action\": {\"action_name\": \"action_alert_closure_reason\"}, \"user\": {\"intent\": \"by_alert_id_closure_reason\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_domain_count\"}}]": "action_domain_count",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_domain_count\"}}, {\"prev_action\": {\"action_name\": \"action_domain_count\"}, \"user\": {\"intent\": \"get_domain_count\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}
