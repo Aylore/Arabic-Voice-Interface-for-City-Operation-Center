@@ -1,101 +1,101 @@
 #  Alerts/counts URL: /api/gateway/alert-management/alerts/counts
 
-What is the domain count of the [domainName]?
-The domain count of the [domainName] is [domainCount].
+What is the domain count of the [domain_name]?
+The domain count of the [domain_name] is [domain_count].
 
-What is the domain ID of the [domainName]?
-The domain ID of the [domainName]  domain is [domainId].
+What is the domain ID of the [domain_name]?
+The domain ID of the [domain_name]  domain is [domain_id].
 
-# Alerts/by-id URL: /api/gateway/alert-management/alerts/ by-id?alertId=2 
+# Alerts/by-id URL: /api/gateway/alert-management/alerts/ by-id?alert_id=2 
 
-Is the alert with id [alertId] currently open?
+Is the alert with id [alert_id] currently open?
 [opened].
 
-What is the domain ID associated with the alert with id [alertId]?
-The domain ID associated with the alert with id [alertId] is [domainId].
+What is the domain ID associated with the alert with id [alert_id]?
+The domain ID associated with the alert with id [alert_id] is [domain_id].
 
-What is the closure reason for the alert with id [alertId]?
-The closure reason for the alert is [closureReason].
+What is the closure reason for the alert with id [alert_id]?
+The closure reason for the alert is [closure_reason].
 
-What is the message ID of the alert with id [alertId]?
-The message ID of the alert is [messageId].
+What is the message ID of the alert with id [alert_id]?
+The message ID of the alert is [message_id].
 
-When was the last update made to the alert with id [alertId]?
-The last update to the alert with id [alertId] was on [lastUpdatedDate].
+When was the last update made to the alert with id [alert_id]?
+The last update to the alert with id [alert_id] was on [last_updatd_date].
 
-What is the vertical ID of the alert with id [alertId]?
-The vertical ID of the alert is [verticalId].
+What is the vertical ID of the alert with id [alert_id]?
+The vertical ID of the alert is [vertical_id].
 
-Which standard operating procedure (SOP) IDs are associated with the alert with id [alertId]?
-The SOP IDs associated with the alert are [sopIds].
+Which standard operating procedure (SOP) IDs are associated with the alert with id [alert_id]?
+The SOP IDs associated with the alert are [sop_ids].
 
-What is the device attribute of the alert with id [alertId] ?
-The device attribute of the alert is [deviceAttribute].
+What is the device attribute of the alert with id [alert_id] ?
+The device attribute of the alert is [device_attribute].
 
-What is the criticality level of the alert with id [alertId] ?
+What is the criticality level of the alert with id [alert_id] ?
 The criticality level of the alert is [criticality].
 
-What is the reading value associated with the alert with id [alertId] ?
-The reading value associated with the alert is [readingValue].
+What is the reading value associated with the alert with id [alert_id] ?
+The reading value associated with the alert is [reading_value].
 
-When is the removal time scheduled for the alert with id [alertId]?
-The removal time scheduled for the alert is [removalTime].
+When is the removal time scheduled for the alert with id [alert_id]?
+The removal time scheduled for the alert is [removal_time].
 
-When was the alert with id [alertId] generated?
-The alert was generated on [generationTime].
+When was the alert with id [alert_id] generated?
+The alert was generated on [generation_time].
 
 # Data_quality/meta_features/{supervised_job_id}/{asset_id} URL: /api/gateway/advanced_analytics/data_quality/meta_features/17/60 
 
-How many instances are present in the dataset for job [Job] and asset [Asset]?
-The number of instances in the dataset for job [Job] and asset [Asset] is [num_instances].
+How many instances are present in the dataset for job [job_id]?
+The number of instances in the dataset for job [job_id] is [num_instances].
 
-What is the dataset ratio for job [Job] and asset [Asset]?
-The dataset ratio for job [Job] and asset [Asset] is [dataset_ratio].
+What is the dataset ratio for job [job_id]?
+The dataset ratio for job [job_id] is [dataset_ratio].
 
-What is the ratio of numerical features to categorical features for job [Job] and asset [Asset]?
-The ratio of numerical features to categorical features for job [Job] and asset [Asset] is [ratio_num_to_cat].
+What is the ratio of numerical features to categorical features for job [job_id]?
+The ratio of numerical features to categorical features for job [job_id] is [ratio_num_to_cat].
 
-How many missing values are there in the dataset for job [Job] and asset [Asset] in total?
-There are [total_missing_Values] missing values in the dataset for job [Job] and asset [Asset] in total.
+How many missing values are there in the dataset for job [job_id] in total?
+There are [total_missing_Values] missing values in the dataset for job [job_id] in total.
 
-What is the average number of missing values per instance for job [Job] and asset [Asset]?
-The average number of missing values per instance for job [Job] and asset [Asset] is [avg_missing_values] .
+What is the average number of missing values per instance for job [job_id]?
+The average number of missing values per instance for job [job_id] is [avg_missing_values] .
 
-How many categorical features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_cat] categorical features in the dataset for job [Job] and asset [Asset].
+How many categorical features are there in the dataset for job [job_id]?
+There are [num_cat] categorical features in the dataset for job [job_id].
 
-What is the sum of symbols in the dataset for job [Job] and asset [Asset]?
-The sum of symbols in the dataset for job [Job] and asset [Asset] is [sum_symbols].
+What is the sum of symbols in the dataset for job [job_id]?
+The sum of symbols in the dataset for job [job_id] is [sum_symbols].
 
-What is the average number of symbols in the dataset for job [Job] and asset [Asset]?
-The average number of symbols in the dataset for job [Job] and asset [Asset] is [avg_symbols].
+What is the average number of symbols in the dataset for job [job_id]?
+The average number of symbols in the dataset for job [job_id] is [avg_symbols].
 
-What is the standard deviation of symbols in the dataset for job [Job] and asset [Asset]?
-The standard deviation of symbols in the dataset for job [Job] and asset [Asset] is [std_symbols].
+What is the standard deviation of symbols in the dataset for job [job_id]?
+The standard deviation of symbols in the dataset for job [job_id] is [std_symbols].
 
-How many stationary features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_stati_features] stationary features in the dataset for job [Job] and asset [Asset].
+How many stationary features are there in the dataset for job [job_id]?
+There are [num_stati_features] stationary features in the dataset for job [job_id].
 
-How many nonstationary features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_non_stati_features] nonstationary features in the dataset for job [Job] and asset [Asset].
+How many nonstationary features are there in the dataset for job [job_id]?
+There are [num_non_stati_features] nonstationary features in the dataset for job [job_id].
 
-How many first differences are there in the dataset for job [Job] and asset [Asset]?
-There are [num_1st_diff] first differences in the dataset for job [Job] and asset [Asset].
+How many first differences are there in the dataset for job [job_id]?
+There are [num_1st_diff] first differences in the dataset for job [job_id].
 
-How many second differences are there in the dataset for job [Job] and asset [Asset]?
-There are [num_2st_diff] second differences in the dataset for job [Job] and asset [Asset].
+How many second differences are there in the dataset for job [job_id]?
+There are [num_2st_diff] second differences in the dataset for job [job_id].
 
-How many lagged features are present in the dataset for job [Job] and asset [Asset]?
-There are [num_lagged_features] lagged features present in the dataset for job [Job] and asset [Asset].
+How many lagged features are present in the dataset for job [job_id]?
+There are [num_lagged_features] lagged features present in the dataset for job [job_id].
 
-What is the partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset]?
-The partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset] is [pacf].
+What is the partial autocorrelation function (PACF) in the dataset for job [job_id]?
+The partial autocorrelation function (PACF) in the dataset for job [job_id] is [pacf].
 
-What is the sampling rate used in the dataset for job [Job] and asset [Asset]?
-The sampling rate used in the dataset for job [Job] and asset [Asset] is [sampling_rate].
+What is the sampling rate used in the dataset for job [job_id]?
+The sampling rate used in the dataset for job [job_id] is [sampling_rate].
 
-What is the fractal dimension of the dataset for job [Job] and asset [Asset]?
-The fractal dimension of the dataset for job [Job] and asset [Asset] is [fractal_dim].
+What is the fractal dimension of the dataset for job [job_id]?
+The fractal dimension of the dataset for job [job_id] is [fractal_dim].
 
 # Control_kpi/{id} URL: /api/gateway/control_kpi/1 
 
@@ -129,7 +129,7 @@ the control KPI [control_kpi] was last modified at [last_modified_at]
 When was the control KPI [control_kpi] last calculated?
 the control KPI [control_kpi] was last calculated at [last_calculated_at]
 
-#  Alerts/{pageNum}/{PageSize} URL: /api/gateway/alert-management/alerts/0/5?domainId=2 
+#  Alerts/{pageNum}/{PageSize} URL: /api/gateway/alert-management/alerts/0/5?domain_id=2 
 
 "Are the devices in the Water Management domain open or not?"
 "The devices the Water Management domain are [opened]."
@@ -138,16 +138,16 @@ the control KPI [control_kpi] was last calculated at [last_calculated_at]
 "The devices in the Water Management domain have a criticality status of [criticality]."
 
 "For the closed devices in the Water Management domain, what is the reason?"
-"The closure reason for devices in the Water Management domain is [closureReason]."
+"The closure reason for devices in the Water Management domain is [closure_reason]."
 
 "What is the reading value of the devices in the Water Management domain?"
-"The reading value of the device in the Water Management domain is [readingValue]"
+"The reading value of the device in the Water Management domain is [reading_value]"
 
 "What are the device attributes in the Water Management domain?"
-"the device attributes of the device in the Water Management domain is [deviceAttribute]"
+"the device attributes of the device in the Water Management domain is [device_attribute]"
 
 "For the removed devices in the Water Management domain, what is the removal time?"
-"The removal time for the device in the Water Management domain is [removalTime]"
+"The removal time for the device in the Water Management domain is [removal_time]"
 
 " What is the ID of the device in Water Management domain?"
 "The ID of the device in the Water Management domain is [id]"
@@ -156,45 +156,45 @@ the control KPI [control_kpi] was last calculated at [last_calculated_at]
 " The name associated with the device in Water Management domai is [name]."
 
 " What is the longitude of the device in Water Management domain?"
-" The longitude of the device mentioned in the result is [deviceLongitude]."
+" The longitude of the device mentioned in the result is [device_longitude]."
 
 " What is the latitude of the device in Water Management domain?"
-" The latitude of the device mentioned in the result is [deviceLatitude]."
+" The latitude of the device mentioned in the result is [device_latitude]."
 
 " What is the  generation time of the device in Water Management domain?"
-" The generation time of the result was [generationTime]." 
+" The generation time of the result was [generation_time]." 
 
-# “Alerts/latest-open” URL: /api/gateway/alert-management/alerts/latest-open?domainId=1 
+# “Alerts/latest-open” URL: /api/gateway/alert-management/alerts/latest-open?domain_id=1 
 
-"Are the devices in the domain [domainId] open or not?"
-"The devices the domain [domainId] are [opened]."
+"Are the devices in the domain [domain_id] open or not?"
+"The devices the domain [domain_id] are [opened]."
 
-"What is the criticality status of the devices in the domain [domainId]?"
-"The devices in the domain [domainId] have a criticality status of [criticality]."
+"What is the criticality status of the devices in the domain [domain_id]?"
+"The devices in the domain [domain_id] have a criticality status of [criticality]."
 
-"For the closed devices in the domain [domainId], what is the reason?"
-"The closure reason for devices in the domain [domainId] is [closureReason]."
+"For the closed devices in the domain [domain_id], what is the reason?"
+"The closure reason for devices in the domain [domain_id] is [closure_reason]."
 
-"What is the reading value of the devices in the domain [domainId]?"
-"The reading value of the device in the domain [domainId] is [readingValue]"
+"What is the reading value of the devices in the domain [domain_id]?"
+"The reading value of the device in the domain [domain_id] is [reading_value]"
 
-"What are the device attributes in the domain [domainId]?"
-"the device attributes of the device in the domain [domainId] is [deviceAttribute]"
+"What are the device attributes in the domain [domain_id]?"
+"the device attributes of the device in the domain [domain_id] is [device_attribute]"
 
-"For the removed devices in the domain [domainId], what is the removal time?"
-"The removal time for the device in the domain [domainId] is [removalTime]"
+"For the removed devices in the domain [domain_id], what is the removal time?"
+"The removal time for the device in the domain [domain_id] is [removal_time]"
 
-" What is the ID of the device in the domain [domainId]?"
-"The ID of the device in the domain [domainId] is [id]"
+" What is the ID of the device in the domain [domain_id]?"
+"The ID of the device in the domain [domain_id] is [id]"
 
-" What is the name associated with the device in the domain [domainId]?"
+" What is the name associated with the device in the domain [domain_id]?"
 " The name associated with the device in Water Management domai is [name]."
 
-" What is the longitude of the device in the domain [domainId]?"
-" The longitude of the device mentioned in the result is [deviceLongitude]."
+" What is the longitude of the device in the domain [domain_id]?"
+" The longitude of the device mentioned in the result is [device_longitude]."
 
-" What is the latitude of the device in the domain [domainId]?"
-" The latitude of the device mentioned in the result is [deviceLatitude]."
+" What is the latitude of the device in the domain [domain_id]?"
+" The latitude of the device mentioned in the result is [device_latitude]."
 
-" What is the  generation time of the device in the domain [domainId]?"
-" The generation time of the result was [generationTime]." 
+" What is the  generation time of the device in the domain [domain_id]?"
+" The generation time of the result was [generation_time]." 

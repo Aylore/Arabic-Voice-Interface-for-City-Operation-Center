@@ -234,11 +234,11 @@ What is the site name of the device?
 The site name of the device is not specified (null).
 
 
-What is the criticality percentage of [deviceid]
-The criticality percentage of [deviceid] is [100]
+What is the criticality percentage of [device_id]
+The criticality percentage of [device_id] is [100]
 
 Is [deivceid] critical?
-[Yes/No] [deviceid] is critical 
+[Yes/No] [device_id] is critical 
 
 
 Is the device opened or closed?
@@ -402,11 +402,11 @@ The last online time of the third device is '20230528T17:45:00Z[UTC]'.
 
 #  Alerts/counts URL: /api/gateway/alert-management/alerts/counts
 
-What is the domain count of the [domainName]?
-The domain count of the [domainName] is [domainCount].
+What is the domain count of the [domain_name]?
+The domain count of the [domain_name] is [domain_count].
 
-What is the domain ID of the [domainName]?
-The domain ID of the [domainName]  domain is [domainId].
+What is the domain ID of the [domain_name]?
+The domain ID of the [domain_name]  domain is [domain_id].
 
 # Alerts/by-ids-and-state/{pageNum}/{pageSize}  URL: api/gateway/alert-management/alerts/by-ids-and-state/0/2
 
@@ -414,90 +414,90 @@ Is the alert [alertName] currently open?
 [opened].
 
 What is the domain ID associated with the alert [alertName]?
-The domain ID associated with the alert [alertName] is [domainId].
+The domain ID associated with the alert [alertName] is [domain_id].
 
 What is the closure reason for the alert [alertName]?
-The closure reason for the alert is [closureReason].
+The closure reason for the alert is [closure_reason].
 
 What is the message ID of the alert [alertName]?
-The message ID of the alert is [messageId].
+The message ID of the alert is [message_id].
 
 When was the last update made to the alert [alertName]?
-The last update to the alert [alertName] was on [lastUpdatedDate].
+The last update to the alert [alertName] was on [last_updatd_date].
 
 What is the vertical ID of the alert [alertName]?
-The vertical ID of the alert is [verticalId].
+The vertical ID of the alert is [vertical_id].
 
 Which standard operating procedure (SOP) IDs are associated with the alert [alertName]?
-The SOP IDs associated with the alert are [sopIds].
+The SOP IDs associated with the alert are [sop_ids].
 
 What is the device attribute of the alert [alertName] ?
-The device attribute of the alert is [deviceAttribute].
+The device attribute of the alert is [device_attribute].
 
 What is the criticality level of the alert [alertName] ?
 The criticality level of the alert is [criticality].
 
 What is the reading value associated with the alert [alertName] ?
-The reading value associated with the alert is [readingValue].
+The reading value associated with the alert is [reading_value].
 
 When is the removal time scheduled for the alert [alertName]?
-The removal time scheduled for the alert is [removalTime].
+The removal time scheduled for the alert is [removal_time].
 
 When was the alert  [alertName] generated?
-The alert was generated on [generationTime].
+The alert was generated on [generation_time].
 
 # Data_quality/meta_features/{supervised_job_id}/{asset_id} URL: /api/gateway/advanced_analytics/data_quality/meta_features/17/60 
 
-How many instances are present in the dataset for job [Job] and asset [Asset]?
-The number of instances in the dataset for job [Job] and asset [Asset] is [num_instances].
+How many instances are present in the dataset for job [job_id] and asset [Asset]?
+The number of instances in the dataset for job [job_id] and asset [Asset] is [num_instances].
 
-What is the dataset ratio for job [Job] and asset [Asset]?
-The dataset ratio for job [Job] and asset [Asset] is [dataset_ratio].
+What is the dataset ratio for job [job_id] and asset [Asset]?
+The dataset ratio for job [job_id] and asset [Asset] is [dataset_ratio].
 
-What is the ratio of numerical features to categorical features for job [Job] and asset [Asset]?
-The ratio of numerical features to categorical features for job [Job] and asset [Asset] is [ratio_num_to_cat].
+What is the ratio of numerical features to categorical features for job [job_id] and asset [Asset]?
+The ratio of numerical features to categorical features for job [job_id] and asset [Asset] is [ratio_num_to_cat].
 
-How many missing values are there in the dataset for job [Job] and asset [Asset] in total?
-There are [total_missing_Values] missing values in the dataset for job [Job] and asset [Asset] in total.
+How many missing values are there in the dataset for job [job_id] and asset [Asset] in total?
+There are [total_missing_Values] missing values in the dataset for job [job_id] and asset [Asset] in total.
 
-What is the average number of missing values per instance for job [Job] and asset [Asset]?
-The average number of missing values per instance for job [Job] and asset [Asset] is [avg_missing_values] .
+What is the average number of missing values per instance for job [job_id] and asset [Asset]?
+The average number of missing values per instance for job [job_id] and asset [Asset] is [avg_missing_values] .
 
-How many categorical features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_cat] categorical features in the dataset for job [Job] and asset [Asset].
+How many categorical features are there in the dataset for job [job_id] and asset [Asset]?
+There are [num_cat] categorical features in the dataset for job [job_id] and asset [Asset].
 
-What is the sum of symbols in the dataset for job [Job] and asset [Asset]?
-The sum of symbols in the dataset for job [Job] and asset [Asset] is [sum_symbols].
+What is the sum of symbols in the dataset for job [job_id] and asset [Asset]?
+The sum of symbols in the dataset for job [job_id] and asset [Asset] is [sum_symbols].
 
-What is the average number of symbols in the dataset for job [Job] and asset [Asset]?
-The average number of symbols in the dataset for job [Job] and asset [Asset] is [avg_symbols].
+What is the average number of symbols in the dataset for job [job_id] and asset [Asset]?
+The average number of symbols in the dataset for job [job_id] and asset [Asset] is [avg_symbols].
 
-What is the standard deviation of symbols in the dataset for job [Job] and asset [Asset]?
-The standard deviation of symbols in the dataset for job [Job] and asset [Asset] is [std_symbols].
+What is the standard deviation of symbols in the dataset for job [job_id] and asset [Asset]?
+The standard deviation of symbols in the dataset for job [job_id] and asset [Asset] is [std_symbols].
 
-How many stationary features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_stati_features] stationary features in the dataset for job [Job] and asset [Asset].
+How many stationary features are there in the dataset for job [job_id] and asset [Asset]?
+There are [num_stati_features] stationary features in the dataset for job [job_id] and asset [Asset].
 
-How many nonstationary features are there in the dataset for job [Job] and asset [Asset]?
-There are [num_non_stati_features] nonstationary features in the dataset for job [Job] and asset [Asset].
+How many nonstationary features are there in the dataset for job [job_id] and asset [Asset]?
+There are [num_non_stati_features] nonstationary features in the dataset for job [job_id] and asset [Asset].
 
-How many first differences are there in the dataset for job [Job] and asset [Asset]?
-There are [num_1st_diff] first differences in the dataset for job [Job] and asset [Asset].
+How many first differences are there in the dataset for job [job_id] and asset [Asset]?
+There are [num_1st_diff] first differences in the dataset for job [job_id] and asset [Asset].
 
-How many second differences are there in the dataset for job [Job] and asset [Asset]?
-There are [num_2st_diff] second differences in the dataset for job [Job] and asset [Asset].
+How many second differences are there in the dataset for job [job_id] and asset [Asset]?
+There are [num_2st_diff] second differences in the dataset for job [job_id] and asset [Asset].
 
-How many lagged features are present in the dataset for job [Job] and asset [Asset]?
-There are [num_lagged_features] lagged features present in the dataset for job [Job] and asset [Asset].
+How many lagged features are present in the dataset for job [job_id] and asset [Asset]?
+There are [num_lagged_features] lagged features present in the dataset for job [job_id] and asset [Asset].
 
-What is the partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset]?
-The partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset] is [pacf].
+What is the partial autocorrelation function (PACF) in the dataset for job [job_id] and asset [Asset]?
+The partial autocorrelation function (PACF) in the dataset for job [job_id] and asset [Asset] is [pacf].
 
-What is the sampling rate used in the dataset for job [Job] and asset [Asset]?
-The sampling rate used in the dataset for job [Job] and asset [Asset] is [sampling_rate].
+What is the sampling rate used in the dataset for job [job_id] and asset [Asset]?
+The sampling rate used in the dataset for job [job_id] and asset [Asset] is [sampling_rate].
 
-What is the fractal dimension of the dataset for job [Job] and asset [Asset]?
-The fractal dimension of the dataset for job [Job] and asset [Asset] is [fractal_dim].
+What is the fractal dimension of the dataset for job [job_id] and asset [Asset]?
+The fractal dimension of the dataset for job [job_id] and asset [Asset] is [fractal_dim].
 
 # Control_kpi/{id} URL: /api/gateway/control_kpi/1 
 

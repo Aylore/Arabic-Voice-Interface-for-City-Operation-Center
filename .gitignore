@@ -16,3 +16,6 @@ benchmark/wav_recs.zip
 
 utils/chatbot/test.py
 .DS_Store
+src/rasa/models
+src/rasa/.rasa
+try

@@ -14,8 +14,6 @@ language: en
 pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
-  - name: CRFEntityExtractor
-    epochs: 200
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
@@ -23,6 +21,7 @@ pipeline:
     max_ngram: 4
   - name: DIETClassifier
     epochs: 200
+    constrain_similarities: true
   - name: EntitySynonymMapper
     epochs: 200
   - name: ResponseSelector
