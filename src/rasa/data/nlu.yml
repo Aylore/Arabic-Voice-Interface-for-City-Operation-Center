@@ -288,64 +288,65 @@ nlu:
       - Can you provide the last calculation time of the control KPI [3](control_kpi)?
       - What is the timestamp of the last calculation of the control KPI [3](control_kpi)?
       - Show me the last calculation time of the control KPI [3](control_kpi)
-  - intent: domain_device_open_status
+  - intent: domain_device_open_status ### Domain Name End Point
     examples: |
-      - Are the devices in the (Water Management)[domain_name] domain open or not?
-      - Are the devices open in the (Energy Management)[domain_name] domain?
-      - What is the open status of devices in the (Water Management)[domain_name] domain?
-      - Are the devices in the (Energy Management)[domain_name] domain currently open?
-      - Open status of devices in the (Security Management)[domain_name] domain?
+      - Are the devices in the [Water Management](domain_name) domain open or not?
+      - Are the devices open in the [Energy Management](domain_name) domain?
+      - What is the open status of devices in the [Security Management](domain_name) domain?
+      - Are the devices in the [Energy Management](domain_name) domain currently open?
+      - Open status of devices in the [Energy Management](domain_name) domain?
   - intent: domain_criticality_status
     examples: |
-      - What is the criticality status of the devices in the (Water Management)[domain_name] domain?
-      - What is the criticality of devices in the (Security Management)[domain_name] domain?
-      - Criticality status of devices in the (Energy Management)[domain_name] domain?
+      - What is the criticality status of the devices in the [Water Management](domain_name) domain?
+      - What is the criticality of devices in the [Security Management](domain_name) domain?
+      - Criticality status of devices in the [Energy Management](domain_name) domain?
+      - How critical are the devices in the [Energy Management](domain_name) domain?
   - intent: domain_closure_reason
     examples: |
-      - For the closed devices in the (Water Management)[domain_name] domain, what is the reason?
-      - What is the closure reason for devices in the (Energy Management)[domain_name] domain?
-      - Reason for closure of devices in the (Security Management)[domain_name] domain?
-      - Closure reason of devices in the (Water Management)[domain_name] domain?
+      - For the closed devices in the [Water Management](domain_name) domain, what is the reason?
+      - What is the closure reason for devices in the [Energy Management](domain_name) domain?
+      - Reason for closure of devices in the [Security Management](domain_name) domain?
+      - Closure reason of devices in the [Security Management](domain_name) domain?
   - intent: domain_reading_value
     examples: |
-      - What is the reading value of the devices in the (Energy Management)[domain_name] domain?
-      - Reading value of devices in the (Water Management)[domain_name] domain?
-      - Reading value of the devices in the (Security Management)[domain_name] domain?
+      - What is the reading value of the devices in the [Energy Management](domain_name) domain?
+      - Reading value of devices in the [Water Management](domain_name) domain?
+      - Reading value of the devices in the [Security Management](domain_name) domain?
   - intent: domain_device_attributes
     examples: |
-      - What are the device attributes in the (Water Management)[domain_name] domain?
-      - Device attributes of devices in the (Security Management)[domain_name] domain?
-      - Device attributes in the (Energy Management)[domain_name] domain?
+      - What are the device attributes in the [Water Management](domain_name) domain?
+      - Device attributes of devices in the [Energy Management](domain_name) domain?
+      - Device attributes in the [Security Management](domain_name) domain?
   - intent: domain_removal_time
     examples: |
-      - For the removed devices in the (Security Management)[domain_name] domain, what is the removal time?
-      - What is the removal time for devices in the (Water Management)[domain_name] domain?
-      - Removal time of devices in the (Energy Management)[domain_name] domain?
+      - For the removed devices in the [Energy Management](domain_name) domain, what is the removal time?
+      - What is the removal time for devices in the [Water Management](domain_name) domain?
+      - Removal time of devices in the [Security Management](domain_name) domain?
   - intent: domain_device_id
     examples: |
-      - What is the ID of the device in (Energy Management)[domain_name] domain?
-      - ID of the device in the (Security Management)[domain_name] domain?
-      - Device ID in the (Water Management)[domain_name] domain?
+      - What is the ID of the device in [Energy Management](domain_name) domain?
+      - ID of the device in the [Energy Management](domain_name) domain?
+      - Device ID in the [Security Management](domain_name) domain?
   - intent: domain_device_name
     examples: |
-      - What is the name associated with the device in (Energy Management)[domain_name] domain?
-      - Name of the device in the (Security Management)[domain_name] domain?
-      - Device name in the (Water Management)[domain_name] domain?
+      - What is the name associated with the device in [Energy Management](domain_name) domain?
+      - Name of the device in the [Energy Management](domain_name) domain?
+      - Device name in the [Security Management](domain_name) domain?
   - intent: domain_device_longitude
     examples: |
-      - What is the longitude of the device in (Water Management)[domain_name] domain?
-      - Longitude of the device in the (Security Management)[domain_name] domain?
-      - Device longitude in the (Energy Management)[domain_name] domain?
+      - What is the longitude of the device in [Water Management](domain_name) domain?
+      - Longitude of the device in the [Security Management](domain_name) domain?
+      - Device longitude in the [Energy Management](domain_name) domain?
   - intent: domain_device_latitude
     examples: |
-      - What is the latitude of the device in (Security Management)[domain_name] domain?
-      - Latitude of the device in the (Water Management)[domain_name] domain?
-      - Device latitude in the (Energy Management)[domain_name] domain?
+      - What is the latitude of the device in [Energy Management](domain_name) domain?
+      - Latitude of the device in the [Water Management](domain_name) domain?
+      - Device latitude in the [Security Management](domain_name) domain?
   - intent: domain_generation_time
     examples: |
-      - What is the generation time of the device in (Water Management)[domain_name] domain?
-      - Generation time of the device in the (Security Management)[domain_name] domain?
-      - Device generation time in the (Energy Management)[domain_name] domain?
+      - What is the generation time of the device in [Water Management](domain_name) domain?
+      - Generation time of the device in the [Energy Management](domain_name) domain?
+      - Device generation time in the [Security Managementt](domain_name) domain?
   - intent: by_domain_id_device_status #### Last Endpoint
     examples: |
       - Are the devices in the domain with id [3](domain_id) open or not?

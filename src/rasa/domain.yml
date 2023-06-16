@@ -148,7 +148,7 @@ responses:
   - text: "The control KPI {control_kpi} was last modified on {last_modified_at}."
   utter_get_last_calculated_time_control_kpi:
   - text: "The control KPI {control_kpi} was last calculated on {last_calculated_at}."
-  utter_domain_device_status:
+  utter_domain_device_open_status:
   - text: "The devices in the {domain_name} domain are {opened}."
   utter_domain_criticality_status:
   - text: "The devices in the {domain_name} domain have a criticality status of {criticality}."

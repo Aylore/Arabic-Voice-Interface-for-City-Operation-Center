@@ -15,12 +15,11 @@ stories:
     steps:
       - intent: by_alert_id_alert_status
       - action: action_by_alert_id_alert_status
+
   - story: by_alert_id_closure_reason
     steps:
       - intent: by_alert_id_closure_reason
       - action: action_by_alert_closure_reason
-      - slot_was_set:
-          - closure_reason: "Bigger than five"
   
   - story: by_alert_id domain ID associated with alert
     steps:

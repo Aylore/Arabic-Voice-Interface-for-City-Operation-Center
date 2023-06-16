@@ -85,7 +85,7 @@ class ActionGetdomain_id(Action):
             return []
 
         dispatcher.utter_message(
-            response="utter_get_domain_count",
+            response="utter_get_domain_id",
             domain_name=domain_name,
             domain_id=domain_id,
         )
@@ -2231,7 +2231,7 @@ class device_name(Action):
             return []
 
         response = requests.get(
-            f"http://127.0.0.1:8000/count/domain_name={domain_name}"
+            f"http://127.0.0.1:8000/domain_name={domain_name}"
         )
 
         if response.status_code == 200:
