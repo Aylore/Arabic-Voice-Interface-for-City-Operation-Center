@@ -1,5 +1,5 @@
 __pycache__
-utils/google_model/google_secret_key.json
+google_secret_key.json
 utils/google_model/args.json
 dataset/samples/
 dataset/google_tts/
@@ -13,5 +13,9 @@ benchmark/eng_records/
 benchmark/eng_wav.7z
 benchmark/eng_wav/
 benchmark/wav_recs.zip
+
+utils/chatbot/test.py
 .DS_Store
-.rasa/
+src/rasa/models
+src/rasa/.rasa
+try

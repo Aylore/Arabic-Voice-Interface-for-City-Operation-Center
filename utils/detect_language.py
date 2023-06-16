@@ -4,7 +4,10 @@ import os
 
 class LanguageDetector:
     def __init__(self):
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
+        os.environ[
+            "GOOGLE_APPLICATION_CREDENTIALS"
+        ] = '/Users/aleedo/Coding/ITI/9-Months/Final Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json'
+
         self.translate_client = translate.Client()
 
     def detect_language(self, text):
@@ -21,11 +24,12 @@ class LanguageDetection:
         self.language = language
 
 
-# text_to_detect = "Hello, how are you?"
+if __name__ == "__main__":
+    text_to_detect = "Hello, how are you?"
 
-# detector = LanguageDetector()
-# detection = detector.detect_language(text_to_detect)
+    detector = LanguageDetector()
+    detection = detector.detect_language(text_to_detect)
 
-# print("Text: {}".format(detection.text))
-# print("Confidence: {}".format(detection.confidence))
-# print("Language: {}".format(detection.language))
+    print("Text: {}".format(detection.text))
+    print("Confidence: {}".format(detection.confidence))
+    print("Language: {}".format(detection.language))
