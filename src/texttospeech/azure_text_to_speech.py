@@ -9,7 +9,7 @@ class AzureTextToSpeech(TextToSpeech):
         self,
         text,
         speech_synthesis_language="ar-EG",
-        speech_synthesis_voice_name="ar-EG-ShakirNeural",
+        speech_synthesis_voice_name="ar-EG-SalmaNeural",
         output_file=None,
     ):
         self.__speech_key, self.__service_region = os.getenv("AZURE_KEY"), "eastus"
@@ -23,7 +23,7 @@ class AzureTextToSpeech(TextToSpeech):
             self.speech_synthesis_voice_name = "en-US-JennyNeural"  # Arabic voice
         if self.language == "ar":
             self.speech_synthesis_language = "ar-EG"  # Arabic language
-            self.speech_synthesis_voice_name = "ar-EG-ShakirNeural"
+            self.speech_synthesis_voice_name = "ar-EG-SalmaNeural"
 
     def preprocess(self):
         speech_config = speechsdk.SpeechConfig(
@@ -61,14 +61,14 @@ class AzureTextToSpeech(TextToSpeech):
 
 if __name__ == "__main__":
     # Create an instance of the AzureTextToSpeech class
-    arabic_input_text = "اهلا انا شاكر، كيف يمكنني مساعدتك"
+    arabic_input_text = "اهلا انا سلمى كيف يمكنني مساعدتك"
     english_input_text = "Hello, My name is Jenny. How may I help you?"
 
     tts_arabic = AzureTextToSpeech(arabic_input_text).read_aloud()
     tts_english = AzureTextToSpeech(english_input_text).read_aloud()
 
     # # Provide the Arabic text you want to convert to speech
-    # input_text = "اهلا انا شاكر، كيف يمكنني مساعدتك"
+    # input_text = "اهلا انا سلمى كيف يمكنني مساعدتك"
 
     # # Specify the output file path
     # output_file_path = "output.wav"
