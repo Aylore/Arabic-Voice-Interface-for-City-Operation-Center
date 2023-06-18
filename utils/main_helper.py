@@ -1,13 +1,17 @@
 from utils.detect_language import LanguageDetector
-from src.translation.azure_translator import AzureTranslator
+# from src.translation.azure_translator import AzureTranslator
+from src.translation.google_translator import GoogleTranslator
+from utils.word2num import words_to_numbers
 
 def assert_english(question):
     detected_language = LanguageDetector().detect_language(question).language
+    question = question.lower()
     if detected_language != "en":
-        question = AzureTranslator().translate(question)
+        question = GoogleTranslator().translate(question)
+        question = words_to_numbers(question)
     return detected_language, question
 
 def assert_user_language(detected_language, answer):
     if detected_language != "en":
-        answer = AzureTranslator().translate(answer)
+        answer = GoogleTranslator().translate(answer)
     return answer

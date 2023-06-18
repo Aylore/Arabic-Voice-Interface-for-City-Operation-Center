@@ -1,8 +1,8 @@
 version: "3.1"
 
 nlu:
-  # Define the intent and examples 
-  - intent: get_domain_count    ### First Endpoint 
+  # Define the intent and examples
+  - intent: get_domain_count ### First Endpoint
     examples: |
       - What is the domain count of the [Cleaning Car](domain_name) domain?
       - How many domains are there for the [Piston Car](domain_name) domain?
@@ -10,108 +10,120 @@ nlu:
       - Number of domains in the [Piston Car](domain_name) domain?
       - Total domains in the [Security Vehicles](domain_name) domain?
       - Count of [Parent Domain](domain_name) domains?
+      - (domain_name)ما هو عدد نطاقات نطاق [تنظيف السيارة] (domain_name)؟
+      - (domain_name)كم عدد المجالات الموجودة لنطاق [سيارة المكبس] (domain_name)؟
+      - (domain_name)توفير عدد النطاقات لمجال [تنظيف السيارة] (domain_name).
+      - (domain_name)[عدد المجالات في مجال [تنظيف السيارة (domain_name)؟
+      - (domain_nameإجمالي المجالات في مجال [مركبات الأمن] (domain_name)؟
+      - عدد نطاقات [المجال الرئيسي](domain_name) (domain_name)؟
   - intent: get_domain_id
     examples: |
-      - What is the domain ID of the [Cleaning Car](domain_name)?
-      - Can you tell me the ID of the [Piston Car](domain_name) domain?
-      - Provide the ID for the [Security Vehicles](domain_name) domain
-      - ID of the [Cleaning Car](domain_name) domain?
-      - [Piston Car](domain_name) domain ID?
-      - Tell me the ID for [Parent Domain](domain_name) domain
+      - What is the domain id of the [Cleaning Car](domain_name)?
+      - Can you tell me the id of the [Piston Car](domain_name) domain?
+      - Provide the id for the [Security Vehicles](domain_name) domain
+      - id of the [Cleaning Car](domain_name) domain?
+      - [Piston Car](domain_name) domain id?
+      - Tell me the id for [Parent Domain](domain_name) domain
+      - ما هو معرف المجال الخاص ب [تنظيف السيارة] (domain_name)؟
+      - هل يمكن أن تخبرني معرف نطاق [سيارة المكبس] (domain_name)؟
+      - توفير معرف لمجال [مركبات الأمن] (domain_name)
+      - معرف المجال [تنظيف السيارة] (domain_name)؟
+      - [مكبس السيارة] (domain_name) معرف المجال؟
+      - قل لي معرف المجال [المجال الأصل] (domain_name)
   - intent: by_alert_id_alert_status ### Second Endpoint
     examples: |
-      - Is the alert with id [1234](alert_id) currently open?
-      - Can you confirm if the alert with id [53431](alert_id) is open?
-      - What is the status of the alert with id [77343](alert_id)?
-      - Provide the current status of the alert with id [103434](alert_id).
-      - Is the alert with id [989838](alert_id) active?
-      - Status of the alert with id [34343](alert_id)?
+      - Is the alert id [1234](alert_id) currently open?
+      - Can you confirm if the alert id [53431](alert_id) is open?
+      - What is the status of the alert id [77343](alert_id)?
+      - Provide the current status of the alert id [103434](alert_id).
+      - Is the alert id [989838](alert_id) active?
+      - Status of the alert id [34343](alert_id)?
   - intent: by_alert_id_closure_reason
     examples: |
-      - What is the closure reason for the alert with id [1234](alert_id)?
-      - Can you tell me the closure reason for the alert with id [567](alert_id)?
+      - What is the closure reason for the alert id [1234](alert_id)?
+      - Can you tell me the closure reason for the alert id [567](alert_id)?
       - What is the status of alert id [9876](alert_id)?
       - Can you provide details for alert id [5555](alert_id)?
   - intent: by_alert_id_associated_domain
     examples: |
-      - What is the domain ID associated with the alert with id [13431](alert_id)?
-      - Provide the domain ID linked to the alert with id [91134](alert_id)
-      - Domain ID for the alert with id [23412](alert_id)?
-      - Which domain is associated with the alert with id [531423](alert_id)?
-      - Tell me the domain ID for alert with id [54523](alert_id).
-      - Alert with id [33534](alert_id) domain ID?
+      - What is the domain id associated with the alert id [13431](alert_id)?
+      - Provide the domain id linked to the alert id [91134](alert_id)
+      - Domain id for the alert id [23412](alert_id)?
+      - Which domain is associated with the alert id [531423](alert_id)?
+      - Tell me the domain id for alert id [54523](alert_id).
+      - Alert id [33534](alert_id) domain id?
   - intent: by_alert_id_message_id
     examples: |
-      - What is the message ID of the alert with id [5555](alert_id)?
-      - Provide the message ID associated with the alert with id [5555](alert_id)
-      - Message ID for the alert with id [5555](alert_id)?
-      - Which message is linked to the alert with id [5555](alert_id)?
-      - Tell me the message ID for alert with id [5555](alert_id) alert
-      - Alert with id [5555](alert_id) message ID?
+      - What is the message id of the alert id [5555](alert_id)?
+      - Provide the message id associated with the alert id [5555](alert_id)
+      - Message id for the alert id [5555](alert_id)?
+      - Which message is linked to the alert id [5555](alert_id)?
+      - Tell me the message id for alert id [5555](alert_id) alert
+      - Alert id [5555](alert_id) message id?
   - intent: by_alert_id_last_update
     examples: |
-      - When was the last update made to the alert with id [5555](alert_id)?
-      - Can you tell me the date of the last update for the alert with id [5555](alert_id)?
-      - Last update date for the alert with id [5555](alert_id)?
-      - When was the alert with id [5555](alert_id) last updated?
-      - Date of the latest update for alert with id [5555](alert_id) ?
-      - Tell me the last update date for alert with id [5555](alert_id)
+      - When was the last update made to the alert id [5555](alert_id)?
+      - Can you tell me the date of the last update for the alert id [5555](alert_id)?
+      - Last update date for the alert id [5555](alert_id)?
+      - When was the alert id [5555](alert_id) last updated?
+      - Date of the latest update for alert id [5555](alert_id) ?
+      - Tell me the last update date for alert id [5555](alert_id)
   - intent: by_alert_id_vertical_id
     examples: |
-      - What is the vertical ID of the alert with id [5555](alert_id)?
-      - Provide the vertical ID associated with the alert with id [5555](alert_id)
-      - Vertical ID for the alert with id [5555](alert_id)?
-      - Which vertical is linked to the alert with id [5555](alert_id)?
-      - Tell me the vertical ID for alert with id [5555](alert_id)
-      - Alert with id [5555](alert_id) vertical ID?
+      - What is the vertical id of the alert id [5555](alert_id)?
+      - Provide the vertical id associated with the alert id [5555](alert_id)
+      - Vertical id for the alert id [5555](alert_id)?
+      - Which vertical is linked to the alert id [5555](alert_id)?
+      - Tell me the vertical id for alert id [5555](alert_id)
+      - Alert id [5555](alert_id) vertical id?
   - intent: by_alert_id_sop_ids
     examples: |
-      - Which standard operating procedure (SOP) IDs are associated with the alert with id [5555][5555](alert_id)?
-      - Can you list the SOP IDs linked to the alert with id [5555](alert_id)?
-      - SOP IDs for the alert with id ([5555]alert_id)?
-      - Provide the SOP IDs for alert with id [5555](alert_id) 
-      - Tell me the SOP IDs associated for alert with id [5555](alert_id)
-      - Alert with id [5555](alert_id) SOP IDs?
+      - Which standard operating procedure (SOP) ids are associated with the alert id [5555][5555](alert_id)?
+      - Can you list the SOP ids linked to the alert id [5555](alert_id)?
+      - SOP ids for the alert id ([5555]alert_id)?
+      - Provide the SOP ids for alert id [5555](alert_id) 
+      - Tell me the SOP ids associated for alert id [5555](alert_id)
+      - Alert id [5555](alert_id) SOP ids?
   - intent: by_alert_id_device_attribute
     examples: |
-      - What is the device attribute of the alert with id [5555](alert_id)?
-      - Provide the device attribute for the alert with id [5555](alert_id)
-      - Device attribute for the alert with id [5555](alert_id)?
-      - Which device attribute is associated with the alert with id (alert_id)?
-      - Tell me the device attribute for alert with id [5555](alert_id). 
-      - Alert with id [5555](alert_id) device attribute?
+      - What is the device attribute of the alert id [5555](alert_id)?
+      - Provide the device attribute for the alert id [5555](alert_id)
+      - Device attribute for the alert id [5555](alert_id)?
+      - Which device attribute is associated with the alert id (alert_id)?
+      - Tell me the device attribute for alert id [5555](alert_id). 
+      - Alert id [5555](alert_id) device attribute?
   - intent: by_alert_id_criticality_level
     examples: |
-      - What is the criticality level of the alert with id [5555](alert_id)?
-      - Can you tell me the criticality level for the alert with id [5555](alert_id)?
-      - Criticality level of the alert with id [5555](alert_id)?
-      - Which criticality level is assigned to the alert with id [5555](alert_id)?
-      - Tell me the criticality level for alert with id [5555](alert_id). 
-      - Alert with id [5555](alert_id) criticality level?
+      - What is the criticality level of the alert id [5555](alert_id)?
+      - Can you tell me the criticality level for the alert id [5555](alert_id)?
+      - Criticality level of the alert id [5555](alert_id)?
+      - Which criticality level is assigned to the alert id [5555](alert_id)?
+      - Tell me the criticality level for alert id [5555](alert_id). 
+      - Alert id [5555](alert_id) criticality level?
   - intent: by_alert_id_reading_value
     examples: |
-      - What is the reading value associated with the alert with id [5555](alert_id)?
-      - Provide the reading value for the alert with id [5555](alert_id)
-      - Reading value for the alert with id [5555](alert_id)?
-      - Tell me the reading value for alert with id [5555](alert_id)
-      - Value of the reading associated for alert with id [5555](alert_id)?
-      - Alert with id [5555](alert_id) reading value?
+      - What is the reading value associated with the alert id [5555](alert_id)?
+      - Provide the reading value for the alert id [5555](alert_id)
+      - Reading value for the alert id [5555](alert_id)?
+      - Tell me the reading value for alert id [5555](alert_id)
+      - Value of the reading associated for alert id [5555](alert_id)?
+      - Alert id [5555](alert_id) reading value?
   - intent: by_alert_id_removal_time
     examples: |
-      - When is the removal time scheduled for the alert with id [5555](alert_id)?
-      - Can you tell me the scheduled removal time for the alert with id [5555](alert_id)?
-      - Removal time for the alert with id [5555](alert_id)?
-      - When is the with id [5555](alert_id) alert going to be removed?
-      - Tell me the removal time for alert with id [5555](alert_id).
-      - Alert with id [5555](alert_id) removal time?
+      - When is the removal time scheduled for the alert id [5555](alert_id)?
+      - Can you tell me the scheduled removal time for the alert id [5555](alert_id)?
+      - Removal time for the alert id [5555](alert_id)?
+      - When is the id [5555](alert_id) alert going to be removed?
+      - Tell me the removal time for alert id [5555](alert_id).
+      - Alert id [5555](alert_id) removal time?
   - intent: by_alert_id_generation_time
     examples: |
-      - When was the alert with id [5555](alert_id) generated?
-      - Can you provide the generation time of the alert with id [5555](alert_id)?
-      - Generation time of the alert with id [5555](alert_id)?
-      - When was the with id [5555](alert_id) alert created?
-      - Tell me the generation time for alert with id (alert_id) 
-      - Alert with id [5555](alert_id) generation time?
+      - When was the alert id [5555](alert_id) generated?
+      - Can you provide the generation time of the alert id [5555](alert_id)?
+      - Generation time of the alert id [5555](alert_id)?
+      - When was the id [5555](alert_id) alert created?
+      - Tell me the generation time for alert id (alert_id) 
+      - Alert id [5555](alert_id) generation time?
   - intent: meta_features_dataset_instances ##### 3rd Endpoint
     examples: |
       - How many instances are present in the dataset for job [1](job_id)?
@@ -324,9 +336,9 @@ nlu:
       - Removal time of devices in the [Security Management](domain_name) domain?
   - intent: domain_device_id
     examples: |
-      - What is the ID of the device in [Energy Management](domain_name) domain?
-      - ID of the device in the [Energy Management](domain_name) domain?
-      - Device ID in the [Security Management](domain_name) domain?
+      - What is the id of the device in [Energy Management](domain_name) domain?
+      - id of the device in the [Energy Management](domain_name) domain?
+      - Device id in the [Security Management](domain_name) domain?
   - intent: domain_device_name
     examples: |
       - What is the name associated with the device in [Energy Management](domain_name) domain?
@@ -349,78 +361,78 @@ nlu:
       - Device generation time in the [Security Managementt](domain_name) domain?
   - intent: by_domain_id_device_status #### Last Endpoint
     examples: |
-      - Are the devices in the domain with id [3](domain_id) open or not?
-      - What is the status of the devices in the domain with id [3](domain_id)?
-      - Are the devices in the domain with id [3](domain_id) currently active?
-      - Are the devices in the domain with id [3](domain_id) operational?
-      - Can you tell me if the devices in the domain with id [3](domain_id) are online or offline?
+      - Are the devices in the domain id [3](domain_id) open or not?
+      - What is the status of the devices in the domain id [3](domain_id)?
+      - Are the devices in the domain id [3](domain_id) currently active?
+      - Are the devices in the domain id [3](domain_id) operational?
+      - Can you tell me if the devices in the domain id [3](domain_id) are online or offline?
   - intent: by_domain_id_criticality_status
     examples: |
-      - What is the criticality status of the devices in the domain with id [3](domain_id)?
-      - Are the devices in the domain with id [3](domain_id) classified as critical?
-      - How important are the devices in the domain with id [3](domain_id)?
-      - Do the devices in the domain with id [3](domain_id) have any critical issues?
-      - Are there any high-priority devices in the domain with id [3](domain_id)?
+      - What is the criticality status of the devices in the domain id [3](domain_id)?
+      - Are the devices in the domain id [3](domain_id) classified as critical?
+      - How important are the devices in the domain id [3](domain_id)?
+      - Do the devices in the domain id [3](domain_id) have any critical issues?
+      - Are there any high-priority devices in the domain id [3](domain_id)?
   - intent: by_domain_id_closure_reason
     examples: |
-      - For the closed devices in the domain with id [3](domain_id), what is the reason?
-      - Can you provide the closure reason for the devices in the domain with id [3](domain_id)?
-      - Why were the devices in the domain with id [3](domain_id) closed?
-      - What caused the devices in the domain with id [3](domain_id) to be marked as closed?
-      - Is there any specific explanation for closing the devices in the domain with id [3](domain_id)?
+      - For the closed devices in the domain id [3](domain_id), what is the reason?
+      - Can you provide the closure reason for the devices in the domain id [3](domain_id)?
+      - Why were the devices in the domain id [3](domain_id) closed?
+      - What caused the devices in the domain id [3](domain_id) to be marked as closed?
+      - Is there any specific explanation for closing the devices in the domain id [3](domain_id)?
   - intent: by_domain_id_reading_value
     examples: |
-      - What is the reading value of the devices in the domain with id [3](domain_id)?
-      - Can you provide the current readings for the devices in the domain with id [3](domain_id)?
-      - What are the sensor readings for the devices in the domain with id [3](domain_id)?
-      - Give me the latest readings of the devices in the domain with id [3](domain_id).
-      - I'm interested in knowing the measured values of the devices in the domain with id [3](domain_id).
+      - What is the reading value of the devices in the domain id [3](domain_id)?
+      - Can you provide the current readings for the devices in the domain id [3](domain_id)?
+      - What are the sensor readings for the devices in the domain id [3](domain_id)?
+      - Give me the latest readings of the devices in the domain id [3](domain_id).
+      - I'm interested in knowing the measured values of the devices in the domain id [3](domain_id).
   - intent: by_domain_id_device_attributes
     examples: |
-      - What are the device attributes in the domain with id [3](domain_id)?
-      - Can you list the characteristics of the devices in the domain with id [3](domain_id)?
-      - What information is available about the devices in the domain with id [3](domain_id)?
-      - Provide details about the attributes of the devices in the domain with id [3](domain_id).
-      - I want to know the specific properties of the devices in the domain with id [3](domain_id).
+      - What are the device attributes in the domain id [3](domain_id)?
+      - Can you list the characteristics of the devices in the domain id [3](domain_id)?
+      - What information is available about the devices in the domain id [3](domain_id)?
+      - Provide details about the attributes of the devices in the domain id [3](domain_id).
+      - I want to know the specific properties of the devices in the domain id [3](domain_id).
   - intent: by_domain_id_removal_time
     examples: |
-      - For the removed devices in the domain with id [3](domain_id), what is the removal time?
-      - When were the devices in the domain with id [3](domain_id) removed?
-      - Can you tell me the timestamp when the devices in the domain with id [3](domain_id) were taken out?
-      - Provide the time of removal for the devices in the domain with id [3](domain_id).
-      - I need to know the exact moment the devices in the domain with id [3](domain_id) were removed.
+      - For the removed devices in the domain id [3](domain_id), what is the removal time?
+      - When were the devices in the domain id [3](domain_id) removed?
+      - Can you tell me the timestamp when the devices in the domain id [3](domain_id) were taken out?
+      - Provide the time of removal for the devices in the domain id [3](domain_id).
+      - I need to know the exact moment the devices in the domain id [3](domain_id) were removed.
   - intent: by_domain_id_device_id
     examples: |
-      - What is the ID of the device in the domain with id [3](domain_id)?
-      - Provide me with the device ID in the domain with id [3](domain_id).
-      - Can you give me the unique identifier of the device in the domain with id [3](domain_id)?
-      - I'm looking for the device ID associated with the domain with id [3](domain_id).
-      - What is the specific identification number of the device in the domain with id [3](domain_id)?
+      - What is the id of the device in the domain id [3](domain_id)?
+      - Provide me with the device id in the domain id [3](domain_id).
+      - Can you give me the unique identifier of the device in the domain id [3](domain_id)?
+      - I'm looking for the device id associated with the domain id [3](domain_id).
+      - What is the specific identification number of the device in the domain id [3](domain_id)?
   - intent: by_domain_id_device_name
     examples: |
-      - What is the name associated with the device in the domain with id [3](domain_id)?
-      - Give me the device name in the domain with id [3](domain_id).
-      - Can you provide the assigned name of the device in the domain with id [3](domain_id)?
-      - I want to know the label or title of the device in the domain with id [3](domain_id).
-      - What is the specific name given to the device in the domain with id [3](domain_id)?
+      - What is the name associated with the device in the domain id [3](domain_id)?
+      - Give me the device name in the domain id [3](domain_id).
+      - Can you provide the assigned name of the device in the domain id [3](domain_id)?
+      - I want to know the label or title of the device in the domain id [3](domain_id).
+      - What is the specific name given to the device in the domain id [3](domain_id)?
   - intent: by_domain_id_device_longitude
     examples: |
-      - What is the longitude of the device in the domain with id [3](domain_id)?
-      - Provide me with the geographic longitude of the device in the domain with id [3](domain_id).
-      - Can you give me the precise longitude coordinates of the device in the domain with id [3](domain_id)?
-      - I need the specific longitudinal position of the device in the domain with id [3](domain_id).
-      - What is the longitude value associated with the device in the domain with id [3](domain_id)?
+      - What is the longitude of the device in the domain id [3](domain_id)?
+      - Provide me with the geographic longitude of the device in the domain id [3](domain_id).
+      - Can you give me the precise longitude coordinates of the device in the domain id [3](domain_id)?
+      - I need the specific longitudinal position of the device in the domain id [3](domain_id).
+      - What is the longitude value associated with the device in the domain id [3](domain_id)?
   - intent: by_domain_id_device_latitude
     examples: |
-      - What is the latitude of the device in the domain with id [3](domain_id)?
-      - Provide me with the geographic latitude of the device in the domain with id [3](domain_id).
-      - Can you give me the precise latitude coordinates of the device in the domain with id [3](domain_id)?
-      - I need the specific latitudinal position of the device in the domain with id [3](domain_id).
-      - What is the latitude value associated with the device in the domain with id [3](domain_id)?
+      - What is the latitude of the device in the domain id [3](domain_id)?
+      - Provide me with the geographic latitude of the device in the domain id [3](domain_id).
+      - Can you give me the precise latitude coordinates of the device in the domain id [3](domain_id)?
+      - I need the specific latitudinal position of the device in the domain id [3](domain_id).
+      - What is the latitude value associated with the device in the domain id [3](domain_id)?
   - intent: by_domain_id_generation_time
     examples: |
-      - What is the generation time of the device in the domain with id [3](domain_id)?
-      - Provide me with the timestamp when the device in the domain with id [3](domain_id) was generated.
-      - Can you give me the time when the device in the domain with id [3](domain_id) was created?
-      - I'm interested in knowing the moment the device in the domain with id [3](domain_id) was generated.
-      - What is the specific time of generation for the device in the domain with id [3](domain_id)?
+      - What is the generation time of the device in the domain id [3](domain_id)?
+      - Provide me with the timestamp when the device in the domain id [3](domain_id) was generated.
+      - Can you give me the time when the device in the domain id [3](domain_id) was created?
+      - I'm interested in knowing the moment the device in the domain id [3](domain_id) was generated.
+      - What is the specific time of generation for the device in the domain id [3](domain_id)?

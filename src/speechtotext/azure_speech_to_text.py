@@ -1,6 +1,7 @@
 import azure.cognitiveservices.speech as speechsdk
 from src.speechtotext.base import SpeechToText
 import os
+from utils.word2num import words_to_numbers
 
 
 # Model class
@@ -15,6 +16,9 @@ class AzureSpeechToText(SpeechToText):
         self.speech_config = speechsdk.SpeechConfig(
             subscription=self.__speech_key, region=self.__service_region
         )
+
+        # Enable number parsing
+        self.speech_config.output_format = speechsdk.OutputFormat.Simple
 
         # identifying the language in an audio source
         self.auto_detect_source_language_config = (
@@ -49,15 +53,20 @@ class AzureSpeechToText(SpeechToText):
 
         result = speech_recognizer.recognize_once()
 
+        # Parse numbers using the NumberParser class and replace with integer values
+
+        final_result = words_to_numbers(result.text.lower())
+        print(final_result)
+
         # returning results
         if self.live:
             if result.reason == speechsdk.ResultReason.RecognizedSpeech:
                 print("Text generated")
-                return result.text
+                return final_result
         else:
             if result.reason == speechsdk.ResultReason.RecognizedSpeech:
                 print("Text generated")
-                return result.text
+                return final_result
             elif result.reason == speechsdk.ResultReason.NoMatch:
                 print(
                     "No speech could be recognized: {}".format(result.no_match_details)

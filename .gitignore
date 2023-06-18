@@ -18,4 +18,6 @@ utils/chatbot/test.py
 .DS_Store
 src/rasa/models
 src/rasa/.rasa
-try
+src/rasa/data/text_data
+try.py
+

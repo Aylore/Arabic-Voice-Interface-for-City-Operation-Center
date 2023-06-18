@@ -77,21 +77,21 @@ responses:
   utter_by_alert_id_associated_domain:
     - text: "The domain ID associated with the alert with id {alert_id} is {domain_id}."
   utter_by_alert_id_message_id:
-    - text: "The message ID of the alert is {message_id}."
+    - text: "The message ID of the alert id {alert_id} is {message_id}."
   utter_by_alert_id_last_update:
     - text: "The last update to the alert with id {alert_id} was on {last_updated_date}."
   utter_by_alert_id_vertical_id:
-    - text: "The vertical ID of the alert is {vertical_id}."
+    - text: "The vertical ID of the alert id {alert_id} is {vertical_id}."
   utter_by_alert_id_sop_ids:
-    - text: "The SOP IDs associated with the alert are {sop_ids}."
+    - text: "The SOP IDs associated with the alert id {alert_id} are {sop_ids}."
   utter_by_alert_id_device_attribute:
-    - text: "The device attribute of the alert is {device_attribute}."
+    - text: "The device attribute of the alert id {alert_id} is {device_attribute}."
   utter_by_alert_id_criticality_level:
-    - text: "The criticality level of the alert with id {alert_id} is {criticality}"
+    - text: "The criticality level of the alert id {alert_id} is {criticality}"
   utter_by_alert_id_reading_value:
-    - text: "The reading value associated with the alert with id {alert_id} is {reading_value}"
+    - text: "The reading value associated with the alert {alert_id} id is {reading_value}"
   utter_by_alert_id_removal_time:
-    - text: "The removal time scheduled for the alert with id {alert_id} is {removal_time}"
+    - text: "The removal time scheduled for the alert {alert_id} id is {removal_time}"
   utter_by_alert_id_generation_time:
     - text: "The alert with id {alert_id} was generated on {generation_time}"
   utter_meta_features_dataset_instances:
@@ -129,69 +129,69 @@ responses:
   utter_meta_features_fractal_dimension:
     - text: "The fractal dimension of the dataset for job {job_id} is {fractal_dim}."
   utter_check_control_kpi_enabled:
-  - text: "The control KPI {control_kpi} is {is_enabled}."
+    - text: "The control KPI {control_kpi} is {is_enabled}."
   utter_describe_control_kpi:
-  - text: "{description}."
+    - text: "The control KPI {control_kpi} description is {description}."
   utter_get_expression_control_kpi:
-  - text: "The expression used to calculate the control KPI {control_kpi} is {expression}."
+    - text: "The expression used to calculate the control KPI {control_kpi} is {expression}."
   utter_get_output_attribute_control_kpi:
-  - text: "The output of the control KPI {control_kpi} calculation is stored in the attribute {output_attribute_id}."
+    - text: "The output of the control KPI {control_kpi} calculation is stored in the attribute {output_attribute_id}."
   utter_get_calendar_unit_control_kpi:
-  - text: "the unit of time used in the control KPI {control_kpi}  calendar is {calendar_unit}"
+    - text: "the unit of time used in the control KPI {control_kpi}  calendar is {calendar_unit}"
   utter_get_created_time_control_kpi:
-  - text: "the control KPI {control_kpi} was created at {created_at}"
+    - text: "the control KPI {control_kpi} was created at {created_at}"
   utter_get_created_by_control_kpi:
-  - text: "The control KPI {control_kpi} was created by {created_by}."
+    - text: "The control KPI {control_kpi} was created by {created_by}."
   utter_get_last_modified_by_control_kpi:
-  - text: "The control KPI {control_kpi} was last modified by {last_modified_by}."
+    - text: "The control KPI {control_kpi} was last modified by {last_modified_by}."
   utter_get_last_modified_time_control_kpi:
-  - text: "The control KPI {control_kpi} was last modified on {last_modified_at}."
+    - text: "The control KPI {control_kpi} was last modified on {last_modified_at}."
   utter_get_last_calculated_time_control_kpi:
-  - text: "The control KPI {control_kpi} was last calculated on {last_calculated_at}."
+    - text: "The control KPI {control_kpi} was last calculated on {last_calculated_at}."
   utter_domain_device_open_status:
-  - text: "The devices in the {domain_name} domain are {opened}."
+    - text: "The devices in the {domain_name} domain are {opened}."
   utter_domain_criticality_status:
-  - text: "The devices in the {domain_name} domain have a criticality status of {criticality}."
+    - text: "The devices in the {domain_name} domain have a criticality status of {criticality}."
   utter_domain_closure_reason:
-  - text: "The closure reason for devices in the {domain_name} domain is {closure_reason}."
+    - text: "The closure reason for devices in the {domain_name} domain is {closure_reason}."
   utter_domain_reading_value:
-  - text: "The reading value of the device in the {domain_name} domain is {reading_value}."
+    - text: "The reading value of the device in the {domain_name} domain is {reading_value}."
   utter_domain_device_attributes:
-  - text: "The device attributes of the device in the {domain_name} domain are {device_attribute}."
+    - text: "The device attributes of the device in the {domain_name} domain are {device_attribute}."
   utter_domain_removal_time:
-  - text: "The removal time for the device in the {domain_name} domain is {removal_time}."
+    - text: "The removal time for the device in the {domain_name} domain is {removal_time}."
   utter_domain_device_id:
-  - text: "The ID of the device in the {domain_name} domain is {device_id}."
+    - text: "The ID of the device in the {domain_name} domain is {device_id}."
   utter_domain_device_name:
-  - text: "The name associated with the device in the {domain_name} domain is {device_name}."
+    - text: "The name associated with the device in the {domain_name} domain is {device_name}."
   utter_domain_device_longitude:
-  - text: "The longitude of the device mentioned in the result is {device_longitude}."
+    - text: "The longitude of the device mentioned in the domain {domain_name} is {device_longitude}."
   utter_domain_device_latitude:
-  - text: "The latitude of the device mentioned in the result is {device_latitude}."
+    - text: "The latitude of the device mentioned in the domain {domain_name} is {device_latitude}."
   utter_domain_generation_time:
-  - text: "The generation time of the result was {generation_time}."
+    - text: "The generation time in the domain {domain_name} was {generation_time}."
   utter_by_domain_id_device_status:
-  - text: "The devices in the domain {domain_id} are {opened}."
+    - text: "The devices in the domain {domain_id} are {opened}."
   utter_by_domain_id_criticality_status:
-  - text: "The devices in the domain {domain_id} have a criticality status of {criticality}."
+    - text: "The devices in the domain {domain_id} have a criticality status of {criticality}."
   utter_by_domain_id_closure_reason:
-  - text: "The closure reason for devices in the domain {domain_id} is {closure_reason}."
+    - text: "The closure reason for devices in the domain {domain_id} is {closure_reason}."
   utter_by_domain_id_reading_value:
-  - text: "The reading value of the device in the domain {domain_id} is {reading_value}."
+    - text: "The reading value of the device in the domain {domain_id} is {reading_value}."
   utter_by_domain_id_device_attributes:
-  - text: "The device attributes of the device in the domain {domain_id} is {device_attribute}."
+    - text: "The device attributes of the device in the domain {domain_id} is {device_attribute}."
   utter_by_domain_id_removal_time:
-  - text: "The removal time for the device in the domain {domain_id} is {removal_time}."
+    - text: "The removal time for the device in the domain {domain_id} is {removal_time}."
   utter_by_domain_id_device_id:
-  - text: "The ID of the device in the domain {domain_id} is {device_id}."
+    - text: "The ID of the device in the domain {domain_id} is {device_id}."
   utter_by_domain_id_device_name:
-  - text: "The name associated with the device in the domain {domain_id} is {device_name}."
+    - text: "The name associated with the device in the domain {domain_id} is {device_name}."
   utter_by_domain_id_device_longitude:
-  - text: "The longitude of the device mentioned in the result is {device_longitude}."
+    - text: "The longitude of the device mentioned in the domain {domain_id}  is {device_longitude}."
   utter_by_domain_id_device_latitude:
-  - text: "The latitude of the device mentioned in the result is {device_latitude}."
+    - text: "The latitude of the device mentioned in the domain {domain_id} {is {device_latitude}."
   utter_by_domain_id_generation_time:
-  - text: "The generation time of the result was {generation_time}."
+    - text: "The generation time of the domain {domain_id} was {generation_time}."
 
 entities:
   - alert_id
@@ -552,7 +552,6 @@ actions:
   - action_by_domain_id_device_longitude
   - action_by_domain_id_device_latitude
   - action_by_domain_id_generation_time
-
 
 session_config:
   session_expiration_time: 60
