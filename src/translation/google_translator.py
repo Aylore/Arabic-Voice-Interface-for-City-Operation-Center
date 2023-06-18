@@ -1,24 +1,26 @@
 from google.cloud import translate_v2 as translate
 import os
 from src.translation.base import Translator
+from utils.detect_language import LanguageDetector
 
 
 class GoogleTranslator(Translator):
-    def __init__(self, text, target):
+    def __init__(self):
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "utils/google_model/google_secret_key.json"
+        ] = "/Users/aleedo/Coding/ITI/9-Months/Final Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
         self.translate_client = translate.Client()
-        self.text = text
-        self.target = target
 
-    def preprocess(self):
-        if isinstance(self.text, bytes):
-            self.text = self.text.decode("utf-8")
+    def preprocess(self, text):
+        text = text.lower()
 
-        response = self.translate_client.translate(
-            self.text, target_language=self.target
-        )
+        if isinstance(text, bytes):
+            text = text.decode("utf-8")
+
+        detected_language = LanguageDetector().detect_language(text).language
+        target = "ar-EG" if detected_language == "en" else "en-US"
+
+        response = self.translate_client.translate(text, target_language=target)
         return response
 
     def postprocess(self, response):
@@ -29,13 +31,13 @@ class GoogleTranslator(Translator):
         )
         return translation
 
-    def __translate(self):
-        response = self.preprocess()
+    def __translate(self, text):
+        response = self.preprocess(text)
         translation = self.postprocess(response)
         return translation
 
-    def translate(self):
-        return self.__translate().translated_text
+    def translate(self, text):
+        return self.__translate(text).translated_text
 
 
 class Translation:
@@ -46,14 +48,35 @@ class Translation:
 
 
 if __name__ == "__main__":
-    target_language = "ar-EG"  ## [ar-EG , en-US]
-    text_to_translate = "Hello, how are you?"
+    # if detected_language == "en":
+    # target_language = "ar-EG"  ## [ar-EG , en-US]
+    text_to_translate = "Domain ID for the alert id 3"
 
-    translator = GoogleTranslator(text_to_translate, target_language)
-    translation = translator.translate()
-    print("Translation: {}".format(translation))
+    with open('src/rasa/data/example-english.txt', 'r') as f:
+        text_to_translate = f.read()
+    # else:
+    # target_language = "en-US"
+    # text_to_translate = "معرف النطاق لمعرف التنبيه 3"
+
+    translator = GoogleTranslator()
+    translation = translator.translate(text_to_translate)
+
+    with open('src/rasa/data/google_example-arabic.txt', 'w') as f:
+        f.write(translation)
+
+    # print("Translation: {}".format(translation))
+
+    with open('src/rasa/data/google_example-arabic.txt', 'r') as f:
+        text_to_translate = f.read()
+
+    translator = GoogleTranslator()
+    translation = translator.translate(text_to_translate)
+    # print(translation)
+
+    with open('src/rasa/data/google-example-english-after-arabic.txt', 'w') as f:
+        f.write(translation)
 
     # translation = translate.__translate()
-    # # print("Text: {}".format(translation.input_text))
-    # # print("Translation: {}".format(translation.translated_text))
-    # # print("Detected source language: {}".format(translation.detected_source_language))
+    # print("Text: {}".format(translation.input_text))
+    # print("Translation: {}".format(translation.translated_text))
+    # print("Detected source language: {}".format(translation.detected_source_language))

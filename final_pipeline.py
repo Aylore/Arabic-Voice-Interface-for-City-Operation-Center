@@ -15,10 +15,13 @@ def main(path=None):
 
     # 1.1 - Assert the question in English For the chatbot
     user_language, english_question = assert_english(question)
+
+    # return user_language, english_question
     print(f"User Language: {user_language}\nEnglishQuestion: {english_question}")
 
     # 2- Bot Answer
     answer = RasaChatbot().response(english_question)
+
 
     # 2.2- Assert the Answer in User Language
     answer_user_language = assert_user_language(user_language, answer)

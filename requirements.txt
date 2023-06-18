@@ -2,3 +2,4 @@ azure-cognitiveservices-speech
 wave
 pyaudio
 google-cloud-speech
+try.py
