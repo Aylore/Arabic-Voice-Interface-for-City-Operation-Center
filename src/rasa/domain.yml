@@ -4,7 +4,7 @@ intents:
   - get_domain_count
   - get_domain_id
   - by_alert_id_alert_status
-  - by_alert_id_domain_id_associated_alert
+  - by_alert_id_associated_domain
   - by_alert_id_closure_reason
   - by_alert_id_message_id
   - by_alert_id_last_update
@@ -42,17 +42,17 @@ intents:
   - get_last_modified_by_control_kpi
   - get_last_modified_time_control_kpi
   - get_last_calculated_time_control_kpi
-  - wm_device_open_status
-  - wm_criticality_status
-  - wm_closure_reason
-  - wm_reading_value
-  - wm_device_attributes
-  - wm_removal_time
-  - wm_device_id
-  - wm_device_name
-  - wm_device_longitude
-  - wm_device_latitude
-  - wm_generation_time
+  - domain_device_open_status
+  - domain_criticality_status
+  - domain_closure_reason
+  - domain_reading_value
+  - domain_device_attributes
+  - domain_removal_time
+  - domain_device_id
+  - domain_device_name
+  - domain_device_longitude
+  - domain_device_latitude
+  - domain_generation_time
   - by_domain_id_device_status
   - by_domain_id_criticality_status
   - by_domain_id_closure_reason
@@ -67,131 +67,491 @@ intents:
 
 responses:
   utter_get_domain_count:
-  - text: "The domain count of the [domainName] is [domainCount]."
+    - text: "The domain count of the {domain_name} is {domain_count}."
   utter_get_domain_id:
-  - text: "The domain ID of the [domainName] domain is [domainId]."
+    - text: "The domain ID of the {domain_name} domain is {domain_id}."
   utter_by_alert_id_alert_status:
-  - text: "The alert with id [alertId] is currently [opened]."
-  utter_by_alert_id_domain_id_associated_alert:
-  - text: "The domain ID associated with the alert with id [alertId] is [domainId]."
+    - text: "The alert with id {alert_id} is currently {opened}."
   utter_by_alert_id_closure_reason:
-  - text: "The closure reason for the alert is [closureReason]."
+    - text: "The closure reason for the alert {alert_id} is {closure_reason}."
+  utter_by_alert_id_associated_domain:
+    - text: "The domain ID associated with the alert with id {alert_id} is {domain_id}."
   utter_by_alert_id_message_id:
-  - text: "The message ID of the alert is [messageId]."
+    - text: "The message ID of the alert id {alert_id} is {message_id}."
   utter_by_alert_id_last_update:
-  - text: "The last update to the alert with id [alertId] was on [lastUpdatedDate]."
+    - text: "The last update to the alert with id {alert_id} was on {last_updated_date}."
   utter_by_alert_id_vertical_id:
-  - text: "The vertical ID of the alert is [verticalId]."
+    - text: "The vertical ID of the alert id {alert_id} is {vertical_id}."
   utter_by_alert_id_sop_ids:
-  - text: "The SOP IDs associated with the alert are [sopIds]."
+    - text: "The SOP IDs associated with the alert id {alert_id} are {sop_ids}."
   utter_by_alert_id_device_attribute:
-  - text: "The device attribute of the alert is [deviceAttribute]."
+    - text: "The device attribute of the alert id {alert_id} is {device_attribute}."
   utter_by_alert_id_criticality_level:
-  - text: "The criticality level of the alert with id [alertId] is [criticality]"
+    - text: "The criticality level of the alert id {alert_id} is {criticality}"
   utter_by_alert_id_reading_value:
-  - text: "The reading value associated with the alert with id [alertId] is [readingValue]"
+    - text: "The reading value associated with the alert {alert_id} id is {reading_value}"
   utter_by_alert_id_removal_time:
-  - text: "The removal time scheduled for the alert with id [alertId] is [removalTime]"
+    - text: "The removal time scheduled for the alert {alert_id} id is {removal_time}"
   utter_by_alert_id_generation_time:
-  - text: "The alert with id [alertId] was generated on [generationTime]"
+    - text: "The alert with id {alert_id} was generated on {generation_time}"
   utter_meta_features_dataset_instances:
-  - text: "The dataset for job [Job] and asset [Asset] contains [num_instances] instances."
+    - text: "The dataset for job {job_id} contains {num_instances} instances."
   utter_meta_features_dataset_ratio:
-  - text: "The dataset ratio for job [Job] and asset [Asset] is [dataset_ratio]."
+    - text: "The dataset ratio for job {job_id} is {dataset_ratio}."
   utter_meta_features_ratio_num_to_cat:
-  - text: "The ratio of numerical features to categorical features for job [Job] and asset [Asset] is [ratio_num_to_cat]."
+    - text: "The ratio of numerical features to categorical features for job {job_id} is {ratio_num_to_cat}."
   utter_meta_features_total_missing_values:
-  - text: "The dataset for job [Job] and asset [Asset] has a total of  [total_missing_Values] missing values."
+    - text: "The dataset for job {job_id} has a total of {total_missing_Values} missing values."
   utter_meta_features_avg_missing_values:
-  - text: "The average number of missing values per instance for job [Job] and asset [Asset] is [avg_missing_values]"
+    - text: "The average number of missing values per instance for job {job_id} is {avg_missing_values}"
   utter_meta_features_num_cat_features:
-  - text: "The dataset for job [Job] and asset [Asset] has [num_cat] categorical features."
+    - text: "The dataset for job {job_id} has {num_cat} categorical features."
   utter_meta_features_sum_symbols:
-  - text: "The sum of symbols in the dataset for job [Job] and asset [Asset] is [sum_symbols]."
+    - text: "The sum of symbols in the dataset for job {job_id} is {sum_symbols}."
   utter_meta_features_avg_symbols:
-  - text: "The average number of symbols in the dataset for job [Job] and asset [Asset] is [avg_symbols]."
+    - text: "The average number of symbols in the dataset for job {job_id} is {avg_symbols}."
   utter_meta_features_std_symbols:
-  - text: "The standard deviation of symbols in the dataset for job [Job] and asset [Asset] is [std_symbols]."
+    - text: "The standard deviation of symbols in the dataset for job {job_id} is {std_symbols}."
   utter_meta_features_num_stati_features:
-  - text: "The dataset for job [Job] and asset [Asset] has  [num_stati_features] stationary features."
+    - text: "The dataset for job {job_id} has {num_stati_features} stationary features."
   utter_meta_features_num_non_stati_features:
-  - text: "The dataset for job [Job] and asset [Asset] has  [num_non_stati_features] nonstationary features."
+    - text: "The dataset for job {job_id} has {num_non_stati_features} nonstationary features."
   utter_meta_features_num_first_differences:
-  - text: "The dataset for job [Job] and asset [Asset] has [num_1st_diff] first differences."
+    - text: "The dataset for job {job_id} has {num_1st_diff} first differences."
   utter_meta_features_num_second_differences:
-  - text: "The dataset for job [Job] and asset [Asset] has [num_2st_diff] second differences."
+    - text: "The dataset for job {job_id} has {num_2st_diff} second differences."
   utter_meta_features_num_lagged_features:
-  - text: "The dataset for job [Job] and asset [Asset] has [num_lagged_features] lagged features."
+    - text: "The dataset for job {job_id} has {num_lagged_features} lagged features."
   utter_meta_features_pacf:
-  - text: "The partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset] is [pacf]."
+    - text: "The partial autocorrelation function {pacf} in the dataset for job {job_id} is {pacf}."
   utter_meta_features_sampling_rate:
-  - text: "The sampling rate used in the dataset for job [Job] and asset [Asset] is [sampling_rate]."
+    - text: "The sampling rate used in the dataset for job {job_id} is {sampling_rate}."
   utter_meta_features_fractal_dimension:
-  - text: "The fractal dimension of the dataset for job [Job] and asset [Asset] is [fractal_dim]."
+    - text: "The fractal dimension of the dataset for job {job_id} is {fractal_dim}."
   utter_check_control_kpi_enabled:
-  - text: "The control KPI [control_kpi] is [is_enabled]."
+    - text: "The control KPI {control_kpi} is {is_enabled}."
   utter_describe_control_kpi:
-  - text: "[description]."
+    - text: "The control KPI {control_kpi} description is {description}."
   utter_get_expression_control_kpi:
-  - text: "The expression used to calculate the control KPI [control_kpi] is [expression]."
+    - text: "The expression used to calculate the control KPI {control_kpi} is {expression}."
   utter_get_output_attribute_control_kpi:
-  - text: "The output of the control KPI [control_kpi] calculation is stored in the attribute [output_attribute_id]."
+    - text: "The output of the control KPI {control_kpi} calculation is stored in the attribute {output_attribute_id}."
   utter_get_calendar_unit_control_kpi:
-  - text: "the unit of time used in the control KPI [control_kpi]  calendar is [calendar_unit]"
+    - text: "the unit of time used in the control KPI {control_kpi}  calendar is {calendar_unit}"
   utter_get_created_time_control_kpi:
-  - text: "the control KPI [control_kpi] was created at [created_at]"
+    - text: "the control KPI {control_kpi} was created at {created_at}"
   utter_get_created_by_control_kpi:
-  - text: "The control KPI [control_kpi] was created by [created_by]."
+    - text: "The control KPI {control_kpi} was created by {created_by}."
   utter_get_last_modified_by_control_kpi:
-  - text: "The control KPI [control_kpi] was last modified by [last_modified_by]."
+    - text: "The control KPI {control_kpi} was last modified by {last_modified_by}."
   utter_get_last_modified_time_control_kpi:
-  - text: "The control KPI [control_kpi] was last modified on [last_modified_at]."
+    - text: "The control KPI {control_kpi} was last modified on {last_modified_at}."
   utter_get_last_calculated_time_control_kpi:
-  - text: "The control KPI [control_kpi] was last calculated on [last_calculated_at]."
-  utter_wm_device_open_status:
-  - text: "The devices in the Water Management domain are [opened]."
-  utter_wm_criticality_status:
-  - text: "The devices in the Water Management domain have a criticality status of [criticality]."
-  utter_wm_closure_reason:
-  - text: "The closure reason for devices in the Water Management domain is [closureReason]."
-  utter_wm_reading_value:
-  - text: "The reading value of the device in the Water Management domain is [readingValue]."
-  utter_wm_device_attributes:
-  - text: "The device attributes of the device in the Water Management domain are [deviceAttribute]."
-  utter_wm_removal_time:
-  - text: "The removal time for the device in the Water Management domain is [removalTime]."
-  utter_wm_device_id:
-  - text: "The ID of the device in the Water Management domain is [id]."
-  utter_wm_device_name:
-  - text: "The name associated with the device in the Water Management domain is [name]."
-  utter_wm_device_longitude:
-  - text: "The longitude of the device mentioned in the result is [deviceLongitude]."
-  utter_wm_device_latitude:
-  - text: "The latitude of the device mentioned in the result is [deviceLatitude]."
-  utter_wm_generation_time:
-  - text: "The generation time of the result was [generationTime]."
-  utter_by_domain_id_device_open_status:
-  - text: "The devices in the domain [domainId] are [opened]."
+    - text: "The control KPI {control_kpi} was last calculated on {last_calculated_at}."
+  utter_domain_device_open_status:
+    - text: "The devices in the {domain_name} domain are {opened}."
+  utter_domain_criticality_status:
+    - text: "The devices in the {domain_name} domain have a criticality status of {criticality}."
+  utter_domain_closure_reason:
+    - text: "The closure reason for devices in the {domain_name} domain is {closure_reason}."
+  utter_domain_reading_value:
+    - text: "The reading value of the device in the {domain_name} domain is {reading_value}."
+  utter_domain_device_attributes:
+    - text: "The device attributes of the device in the {domain_name} domain are {device_attribute}."
+  utter_domain_removal_time:
+    - text: "The removal time for the device in the {domain_name} domain is {removal_time}."
+  utter_domain_device_id:
+    - text: "The ID of the device in the {domain_name} domain is {device_id}."
+  utter_domain_device_name:
+    - text: "The name associated with the device in the {domain_name} domain is {device_name}."
+  utter_domain_device_longitude:
+    - text: "The longitude of the device mentioned in the domain {domain_name} is {device_longitude}."
+  utter_domain_device_latitude:
+    - text: "The latitude of the device mentioned in the domain {domain_name} is {device_latitude}."
+  utter_domain_generation_time:
+    - text: "The generation time in the domain {domain_name} was {generation_time}."
+  utter_by_domain_id_device_status:
+    - text: "The devices in the domain {domain_id} are {opened}."
   utter_by_domain_id_criticality_status:
-  - text: "The devices in the domain [domainId] have a criticality status of [criticality]."
+    - text: "The devices in the domain {domain_id} have a criticality status of {criticality}."
   utter_by_domain_id_closure_reason:
-  - text: "The closure reason for devices in the domain [domainId] is [closureReason]."
+    - text: "The closure reason for devices in the domain {domain_id} is {closure_reason}."
   utter_by_domain_id_reading_value:
-  - text: "The reading value of the device in the domain [domainId] is [readingValue]."
+    - text: "The reading value of the device in the domain {domain_id} is {reading_value}."
   utter_by_domain_id_device_attributes:
-  - text: "The device attributes of the device in the domain [domainId] is [deviceAttribute]."
+    - text: "The device attributes of the device in the domain {domain_id} is {device_attribute}."
   utter_by_domain_id_removal_time:
-  - text: "The removal time for the device in the domain [domainId] is [removalTime]."
+    - text: "The removal time for the device in the domain {domain_id} is {removal_time}."
   utter_by_domain_id_device_id:
-  - text: "The ID of the device in the domain [domainId] is [id]."
+    - text: "The ID of the device in the domain {domain_id} is {device_id}."
   utter_by_domain_id_device_name:
-  - text: "The name associated with the device in the domain [domainId] is [name]."
+    - text: "The name associated with the device in the domain {domain_id} is {device_name}."
   utter_by_domain_id_device_longitude:
-  - text: "The longitude of the device mentioned in the result is [deviceLongitude]."
+    - text: "The longitude of the device mentioned in the domain {domain_id}  is {device_longitude}."
   utter_by_domain_id_device_latitude:
-  - text: "The latitude of the device mentioned in the result is [deviceLatitude]."
+    - text: "The latitude of the device mentioned in the domain {domain_id} {is {device_latitude}."
   utter_by_domain_id_generation_time:
-  - text: "The generation time of the result was [generationTime]."
+    - text: "The generation time of the domain {domain_id} was {generation_time}."
+
+entities:
+  - alert_id
+  - closure_reason
+  - domain_name
+  - domain_id
+  - domain_count
+  - opened
+  - message_id
+  - last_updated_date
+  - vertical_id
+  - sop_ids
+  - device_attribute
+  - criticality
+  - reading_value
+  - removal_time
+  - generation_time
+  - job_id
+  - num_instances
+  - dataset_ratio
+  - ratio_num_to_cat
+  - total_missing_Values
+  - avg_missing_values
+  - num_cat
+  - sum_symbols
+  - avg_symbols
+  - std_symbols
+  - num_stati_features
+  - num_non_stati_features
+  - num_1st_diff
+  - num_2st_diff
+  - num_lagged_features
+  - pacf
+  - fractal_dim
+  - sampling_rate
+  - control_kpi
+  - is_enabled
+  - description
+  - expression
+  - output_attribute_id
+  - calendar_unit
+  - created_at
+  - last_modified_by
+  - last_modified_at
+  - created_by
+  - last_calculated_at
+  - device_id
+  - name
+  - device_longitude
+  - device_latitude
+  - device_name
+
+# Define the entities and slots
+slots:
+  domain_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: domain_name
+  domain_count:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: domain_count
+  domain_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: domain_id
+  alert_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: alert_id
+  opened:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: opened
+  closure_reason:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: closure_reason
+  message_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: message_id
+  last_updated_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: last_updated_date
+  vertical_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: vertical_id
+  sop_ids:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sop_ids
+  device_attribute:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device_attribute
+  criticality:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: criticality
+  reading_value:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: reading_value
+  removal_time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: removal_time
+  generation_time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: generation_time
+  num_instances:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_instances
+  job_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: job_id
+  dataset_ratio:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: dataset_ratio
+  ratio_num_to_cat:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ratio_num_to_cat
+  total_missing_Values:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: total_missing_Values
+  avg_missing_values:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: avg_missing_values
+  num_cat:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_cat
+  sum_symbols:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sum_symbols
+  avg_symbols:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: avg_symbols
+  std_symbols:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: std_symbols
+  num_stati_features:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_stati_features
+  num_non_stati_features:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_non_stati_features
+  num_1st_diff:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_1st_diff
+  num_2st_diff:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_2st_diff
+  num_lagged_features:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: num_lagged_features
+  pacf:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pacf
+  sampling_rate:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sampling_rate
+  fractal_dim:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fractal_dim
+  control_kpi:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: control_kpi
+  is_enabled:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: is_enabled
+  description:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: description
+  expression:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: expression
+  output_attribute_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: output_attribute_id
+  calendar_unit:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: calendar_unit
+  created_at:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: created_at
+  created_by:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: created_by
+  last_modified_by:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: last_modified_by
+  last_modified_at:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: last_modified_at
+  last_calculated_at:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: last_calculated_at
+  device_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device_id
+  device_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device_name
+  device_longitude:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device_longitude
+  device_latitude:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device_latitude
+
+# Define the custom action
+actions:
+  - action_get_domain_count
+  - action_get_domain_id
+  - action_by_alert_id_alert_status
+  - action_by_alert_closure_reason
+  - action_by_alert_id_associated_domain
+  - action_by_alert_id_message_id
+  - action_by_alert_id_last_update
+  - action_by_alert_id_vertical_id
+  - action_by_alert_id_sop_ids
+  - action_by_alert_id_device_attribute
+  - action_by_alert_id_criticality_level
+  - action_by_alert_id_reading_value
+  - action_by_alert_id_removal_time
+  - action_by_alert_id_generation_time
+  - action_meta_features_dataset_instances
+  - action_meta_features_dataset_ratio
+  - action_meta_features_ratio_num_to_cat
+  - action_meta_features_total_missing_values
+  - action_meta_features_avg_missing_values
+  - action_meta_features_num_cat_features
+  - action_meta_features_sum_symbols
+  - action_meta_features_avg_symbols
+  - action_meta_features_std_symbols
+  - action_meta_features_num_stati_features
+  - action_meta_features_num_non_stati_features
+  - action_meta_features_num_first_differences
+  - action_meta_features_num_second_differences
+  - action_meta_features_num_lagged_features
+  - action_meta_features_pacf
+  - action_meta_features_sampling_rate
+  - action_meta_features_fractal_dimension
+  - action_check_control_kpi_enabled
+  - action_describe_control_kpi
+  - action_get_expression_control_kpi
+  - action_get_output_attribute_control_kpi
+  - action_get_calendar_unit_control_kpi
+  - action_get_created_time_control_kpi
+  - action_get_created_by_control_kpi
+  - action_get_last_modified_by_control_kpi
+  - action_get_last_modified_time_control_kpi
+  - action_get_last_calculated_time_control_kpi
+  - action_domain_device_open_status
+  - action_domain_criticality_status
+  - action_domain_closure_reason
+  - action_domain_reading_value
+  - action_domain_device_attributes
+  - action_domain_removal_time
+  - action_domain_device_id
+  - action_domain_device_name
+  - action_domain_device_longitude
+  - action_domain_device_latitude
+  - action_domain_generation_time
+  - action_by_domain_id_device_status
+  - action_by_domain_id_criticality_status
+  - action_by_domain_id_closure_reason
+  - action_by_domain_id_reading_value
+  - action_by_domain_id_device_attributes
+  - action_by_domain_id_removal_time
+  - action_by_domain_id_device_id
+  - action_by_domain_id_device_name
+  - action_by_domain_id_device_longitude
+  - action_by_domain_id_device_latitude
+  - action_by_domain_id_generation_time
 
 session_config:
   session_expiration_time: 60

@@ -1,0 +1,23 @@
+[
+    {
+    "domain_id": 1,
+    "domain_name": "Parent Domain",
+    "domain_count": 5
+    },
+    {
+    "domain_id": 2,
+    "domain_name": "Security Vehicles",
+    "domain_count": 8
+    },
+    {
+    "domain_id": 3,
+    "domain_name": "Cleaning Car",
+    "domain_count": 7
+    },
+    {
+    "domain_id": 4,
+    "domain_name": "Piston Car",
+    "domain_count": 9
+    }
+]
+  

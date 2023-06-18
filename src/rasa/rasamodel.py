@@ -40,7 +40,10 @@ class RasaChatbot:
 
     def response(self, text):
         response = self.send_message(text)
-        bot_response = response[0]["text"]
+        try:
+            bot_response = response[0]["text"]
+        except:
+            bot_response = 'Sorry, Can you repeat the question?'
         return bot_response
 
 

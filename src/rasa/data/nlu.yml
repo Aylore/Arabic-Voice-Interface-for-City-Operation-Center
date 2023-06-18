@@ -1,427 +1,438 @@
 version: "3.1"
 
 nlu:
-- intent: get_domain_count
-  examples: |
-    - What is the domain count of the [domainName]?
-    - How many domains are there for the [domainName]?
-    - Provide the count of domains for the [domainName]
-    - Number of domains in the [domainName]?
-    - Total domains in the [domainName]?
-    - Count of [domainName] domains?
-- intent: get_domain_id
-  examples: |
-    - What is the domain ID of the [domainName]?
-    - Can you tell me the ID of the [domainName] domain?
-    - Provide the ID for the [domainName] domain
-    - ID of the [domainName] domain?
-    - [domainName] domain ID?
-    - Tell me the ID for [domainName] domain
-- intent: by_alert_id_alert_status
-  examples: |
-    - Is the alert with id [alertId] currently open?
-    - Can you confirm if the alert with id [alertId] is open?
-    - What is the status of the alert with id [alertId]?
-    - Provide the current status of the alert with id [alertId]
-    - Is the with id [alertId] alert active?
-    - Status of with id [alertId] alert?
-- intent: by_alert_id_domain_id_associated_alert
-  examples: |
-    - What is the domain ID associated with the alert with id [alertId]?
-    - Provide the domain ID linked to the alert with id [alertId]
-    - Domain ID for the alert with id [alertId]?
-    - Which domain is associated with the alert with id [alertId]?
-    - Tell me the domain ID for with id [alertId] alert
-    - Alert with id [alertId] domain ID?
-- intent: by_alert_id_closure_reason
-  examples: |
-    - What is the closure reason for the alert with id [alertId]?
-    - Can you tell me the reason for closing the alert with id [alertId]?
-    - Reason for closing the alert with id [alertId]?
-    - Why was the alert with id [alertId] closed?
-    - Closure reason of with id [alertId] alert?
-    - Tell me the reason behind closing with id [alertId] alert
-- intent: by_alert_id_message_id
-  examples: |
-    - What is the message ID of the alert with id [alertId]?
-    - Provide the message ID associated with the alert with id [alertId]
-    - Message ID for the alert with id [alertId]?
-    - Which message is linked to the alert with id [alertId]?
-    - Tell me the message ID for with id [alertId] alert
-    - Alert with id [alertId] message ID?
-- intent: by_alert_id_last_update
-  examples: |
-    - When was the last update made to the alert with id [alertId]?
-    - Can you tell me the date of the last update for the alert with id [alertId]?
-    - Last update date for the alert with id [alertId]?
-    - When was the with id [alertId] alert last updated?
-    - Date of the latest update for with id [alertId] alert?
-    - Tell me the last update date for with id [alertId] alert
-- intent: by_alert_id_vertical_id
-  examples: |
-    - What is the vertical ID of the alert with id [alertId]?
-    - Provide the vertical ID associated with the alert with id [alertId]
-    - Vertical ID for the alert with id [alertId]?
-    - Which vertical is linked to the alert with id [alertId]?
-    - Tell me the vertical ID for with id [alertId] alert
-    - Alert with id [alertId] vertical ID?
-- intent: by_alert_id_sop_ids
-  examples: |
-    - Which standard operating procedure (SOP) IDs are associated with the alert with id [alertId]?
-    - Can you list the SOP IDs linked to the alert with id [alertId]?
-    - SOP IDs for the alert with id [alertId]?
-    - Provide the SOP IDs for with id [alertId] alert
-    - Tell me the SOP IDs associated with with id [alertId] alert
-    - Alert with id [alertId] SOP IDs?
-- intent: by_alert_id_device_attribute
-  examples: |
-    - What is the device attribute of the alert with id [alertId]?
-    - Provide the device attribute for the alert with id [alertId]
-    - Device attribute for the alert with id [alertId]?
-    - Which device attribute is associated with the alert with id [alertId]?
-    - Tell me the device attribute for with id [alertId] alert
-    - Alert with id [alertId] device attribute?
-- intent: by_alert_id_criticality_level
-  examples: |
-    - What is the criticality level of the alert with id [alertId]?
-    - Can you tell me the criticality level for the alert with id [alertId]?
-    - Criticality level of the alert with id [alertId]?
-    - Which criticality level is assigned to the alert with id [alertId]?
-    - Tell me the criticality level for with id [alertId] alert
-    - Alert with id [alertId] criticality level?
-- intent: by_alert_id_reading_value
-  examples: |
-    - What is the reading value associated with the alert with id [alertId]?
-    - Provide the reading value for the alert with id [alertId]
-    - Reading value for the alert with id [alertId]?
-    - Tell me the reading value for with id [alertId] alert
-    - Value of the reading associated with with id [alertId] alert?
-    - Alert with id [alertId] reading value?
-- intent: by_alert_id_removal_time
-  examples: |
-    - When is the removal time scheduled for the alert with id [alertId]?
-    - Can you tell me the scheduled removal time for the alert with id [alertId]?
-    - Removal time for the alert with id [alertId]?
-    - When is the with id [alertId] alert going to be removed?
-    - Tell me the removal time for with id [alertId] alert
-    - Alert with id [alertId] removal time?
-- intent: by_alert_id_generation_time
-  examples: |
-    - When was the alert with id [alertId] generated?
-    - Can you provide the generation time of the alert with id [alertId]?
-    - Generation time of the alert with id [alertId]?
-    - When was the with id [alertId] alert created?
-    - Tell me the generation time for with id [alertId] alert
-    - Alert with id [alertId] generation time?
-- intent: meta_features_dataset_instances
-  examples: |
-    - How many instances are present in the dataset for job [Job] and asset [Asset]?
-    - Can you tell me the number of instances in the dataset for job [Job] and asset [Asset]?
-    - Number of instances in the dataset for job [Job] and asset [Asset]?
-    - Total instances for job [Job] and asset [Asset] in the dataset?
-    - Instances count in the dataset for job [Job] and asset [Asset]?
-    - Tell me the number of instances in the dataset for job [Job] and asset [Asset]
-- intent: meta_features_dataset_ratio
-  examples: |
-    - What is the dataset ratio for job [Job] and asset [Asset]?
-    - Provide the dataset ratio for job [Job] and asset [Asset]
-    - Dataset ratio for job [Job] and asset [Asset]?
-    - Ratio of the dataset for job [Job] and asset [Asset]?
-    - Tell me the dataset ratio for job [Job] and asset [Asset]
-    - Ratio of instances in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_ratio_num_to_cat
-  examples: |
-    - What is the ratio of numerical features to categorical features for job [Job] and asset [Asset]?
-    - Provide the ratio of numerical features to categorical features for job [Job] and asset [Asset]
-    - Numerical to categorical features ratio for job [Job] and asset [Asset]?
-    - Ratio of numerical to categorical features for job [Job] and asset [Asset]?
-    - Tell me the ratio of numerical to categorical features for job [Job] and asset [Asset]
-    - Ratio of numerical features to categorical features in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_total_missing_values
-  examples: |
-    - How many missing values are there in the dataset for job [Job] and asset [Asset] in total?
-    - Provide the total number of missing values in the dataset for job [Job] and asset [Asset]
-    - Total missing values in the dataset for job [Job] and asset [Asset]?
-    - Missing values count in the dataset for job [Job] and asset [Asset]?
-    - Tell me the total number of missing values in the dataset for job [Job] and asset [Asset]
-    - Number of missing values in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_avg_missing_values
-  examples: |
-    - What is the average number of missing values per instance for job [Job] and asset [Asset]?
-    - Provide the average number of missing values per instance for job [Job] and asset [Asset]
-    - Average missing values per instance for job [Job] and asset [Asset]?
-    - Tell me the average number of missing values per instance for job [Job] and asset [Asset]
-    - Average missing values count for each instance in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_num_cat_features
-  examples: |
-    - How many categorical features are there in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of categorical features in the dataset for job [Job] and asset [Asset]
-    - Number of categorical features in the dataset for job [Job] and asset [Asset]?
-    - Categorical features count in the dataset for job [Job] and asset [Asset]?
-    - Tell me the number of categorical features in the dataset for job [Job] and asset [Asset]
-    - Count of categorical features in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_sum_symbols
-  examples: |
-    - What is the sum of symbols in the dataset for job [Job] and asset [Asset]?
-    - Provide the sum of symbols in the dataset for job [Job] and asset [Asset]
-    - Sum of symbols in the dataset for job [Job] and asset [Asset]?
-    - Total symbols count in the dataset for job [Job] and asset [Asset]?
-    - Tell me the sum of symbols in the dataset for job [Job] and asset [Asset]
-    - Symbols sum in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_avg_symbols
-  examples: |
-    - What is the average number of symbols in the dataset for job [Job] and asset [Asset]?
-    - Provide the average number of symbols in the dataset for job [Job] and asset [Asset]
-    - Average number of symbols in the dataset for job [Job] and asset [Asset]?
-    - Tell me the average number of symbols in the dataset for job [Job] and asset [Asset]
-    - Average symbols count in the dataset for job [Job] and asset [Asset]?
-- intent: meta_features_std_symbols
-  examples: |
-    - What is the standard deviation of symbols in the dataset for job [Job] and asset [Asset]?
-    - Provide the standard deviation of symbols in the dataset for job [Job] and asset [Asset]
-    - How can I calculate the standard deviation of symbols for job [Job] and asset [Asset]?
-    - Show me the standard deviation of symbols for job [Job] and asset [Asset]
-- intent: meta_features_num_stati_features
-  examples: |
-    - How many stationary features are there in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of stationary features in the dataset for job [Job] and asset [Asset]
-    - Can you tell me the count of stationary features for job [Job] and asset [Asset]?
-    - Show the total number of stationary features for job [Job] and asset [Asset]
-- intent: meta_features_num_non_stati_features
-  examples: |
-    - How many nonstationary features are there in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of nonstationary features in the dataset for job [Job] and asset [Asset]
-    - What is the count of nonstationary features for job [Job] and asset [Asset]?
-    - Show me the total number of nonstationary features for job [Job] and asset [Asset]
-- intent: meta_features_num_first_differences
-  examples: |
-    - How many first differences are there in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of first differences in the dataset for job [Job] and asset [Asset]
-    - Can you tell me the count of first differences for job [Job] and asset [Asset]?
-    - Show the total number of first differences for job [Job] and asset [Asset]
-- intent: meta_features_num_second_differences
-  examples: |
-    - How many second differences are there in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of second differences in the dataset for job [Job] and asset [Asset]
-    - What is the count of second differences for job [Job] and asset [Asset]?
-    - Show me the total number of second differences for job [Job] and asset [Asset]
-- intent: meta_features_num_lagged_features
-  examples: |
-    - How many lagged features are present in the dataset for job [Job] and asset [Asset]?
-    - Provide the number of lagged features in the dataset for job [Job] and asset [Asset]
-    - Can you tell me the count of lagged features for job [Job] and asset [Asset]?
-    - Show the total number of lagged features for job [Job] and asset [Asset]
-- intent: meta_features_pacf
-  examples: |
-    - What is the partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset]?
-    - Provide the partial autocorrelation function (PACF) in the dataset for job [Job] and asset [Asset]
-    - How can I calculate the PACF for job [Job] and asset [Asset]?
-    - Show me the partial autocorrelation function (PACF) for job [Job] and asset [Asset]
-- intent: meta_features_sampling_rate
-  examples: |
-    - What is the sampling rate used in the dataset for job [Job] and asset [Asset]?
-    - Provide the sampling rate used in the dataset for job [Job] and asset [Asset]
-    - Can you tell me the sampling rate for job [Job] and asset [Asset]?
-    - Show me the sampling rate used for job [Job] and asset [Asset]
-- intent: meta_features_fractal_dimension
-  examples: |
-    - What is the fractal dimension of the dataset for job [Job] and asset [Asset]?
-    - Provide the fractal dimension of the dataset for job [Job] and asset [Asset]
-    - How can I calculate the fractal dimension for job [Job] and asset [Asset]?
-    - Show me the fractal dimension for job [Job] and asset [Asset]
-- intent: check_control_kpi_enabled
-  examples: |
-    - Is the control KPI [control_kpi] enabled or not?
-    - Can you confirm if the control KPI [control_kpi] is enabled?
-    - Is the control KPI [control_kpi] currently enabled?
-    - Show me the status of the control KPI [control_kpi]
-- intent: describe_control_kpi
-  examples: |
-    - How would you describe the control KPI [control_kpi]?
-    - Can you provide a description of the control KPI [control_kpi]?
-    - Give me a brief overview of the control KPI [control_kpi]
-    - Explain the control KPI [control_kpi] in simple terms
-- intent: get_expression_control_kpi
-  examples: |
-    - What is the expression used to calculate the control KPI [control_kpi]?
-    - Provide the expression used to calculate the control KPI [control_kpi]
-    - How can I calculate the control KPI [control_kpi] using an expression?
-    - Show me the calculation expression for the control KPI [control_kpi]
-- intent: get_output_attribute_control_kpi
-  examples: |
-    - Which attribute is used to store the output or result of the control KPI [control_kpi] calculation?
-    - Provide the attribute used to store the output of the control KPI [control_kpi] calculation
-    - What is the output attribute for the control KPI [control_kpi]?
-    - Show me the attribute that stores the result of the control KPI [control_kpi] calculation
-- intent: get_calendar_unit_control_kpi
-  examples: |
-    - What is the unit of time used in the control KPI [control_kpi] calendar?
-    - Provide the unit of time used in the control KPI [control_kpi] calendar
-    - Which time unit is used in the control KPI [control_kpi] calendar?
-    - Show me the calendar time unit for the control KPI [control_kpi]
-- intent: get_created_time_control_kpi
-  examples: |
-    - When was the control KPI [control_kpi] created?
-    - Can you provide the creation time of the control KPI [control_kpi]?
-    - What is the creation date and time of the control KPI [control_kpi]?
-    - Show me the timestamp when the control KPI [control_kpi] was created
-- intent: get_created_by_control_kpi
-  examples: |
-    - Who created the control KPI [control_kpi]?
-    - Provide the creator of the control KPI [control_kpi]
-    - Can you tell me the person or entity that created the control KPI [control_kpi]?
-    - Show me the creator of the control KPI [control_kpi]
-- intent: get_last_modified_by_control_kpi
-  examples: |
-    - Who was the last person to modify the control KPI [control_kpi]?
-    - Provide the last person who modified the control KPI [control_kpi]
-    - Can you tell me the person or entity that last modified the control KPI [control_kpi]?
-    - Show me the last modifier of the control KPI [control_kpi]
-- intent: get_last_modified_time_control_kpi
-  examples: |
-    - When was the control KPI [control_kpi] last modified?
-    - Can you provide the last modification time of the control KPI [control_kpi]?
-    - What is the timestamp of the last modification of the control KPI [control_kpi]?
-    - Show me the last modification time of the control KPI [control_kpi]
-- intent: get_last_calculated_time_control_kpi
-  examples: |
-    - When was the control KPI [control_kpi] last calculated?
-    - Can you provide the last calculation time of the control KPI [control_kpi]?
-    - What is the timestamp of the last calculation of the control KPI [control_kpi]?
-    - Show me the last calculation time of the control KPI [control_kpi]
-- intent: wm_device_open_status
-  examples: |
-    - Are the devices in the Water Management domain open or not?
-    - Are the devices open in the Water Management domain?
-    - What is the open status of devices in the Water Management domain?
-    - Are the devices in the Water Management domain currently open?
-    - Open status of devices in the Water Management domain?
-- intent: wm_criticality_status
-  examples: |
-    - What is the criticality status of the devices in the Water Management domain?
-    - What is the criticality of devices in the Water Management domain?
-    - Criticality status of devices in the Water Management domain?
-- intent: wm_closure_reason
-  examples: |
-    - For the closed devices in the Water Management domain, what is the reason?
-    - What is the closure reason for devices in the Water Management domain?
-    - Reason for closure of devices in the Water Management domain?
-    - Closure reason of devices in the Water Management domain?
-- intent: wm_reading_value
-  examples: |
-    - What is the reading value of the devices in the Water Management domain?
-    - Reading value of devices in the Water Management domain?
-    - Reading value of the devices in the Water Management domain?
-- intent: wm_device_attributes
-  examples: |
-    - What are the device attributes in the Water Management domain?
-    - Device attributes of devices in the Water Management domain?
-    - Device attributes in the Water Management domain?
-- intent: wm_removal_time
-  examples: |
-    - For the removed devices in the Water Management domain, what is the removal time?
-    - What is the removal time for devices in the Water Management domain?
-    - Removal time of devices in the Water Management domain?
-- intent: wm_device_id
-  examples: |
-    - What is the ID of the device in Water Management domain?
-    - ID of the device in the Water Management domain?
-    - Device ID in the Water Management domain?
-- intent: wm_device_name
-  examples: |
-    - What is the name associated with the device in Water Management domain?
-    - Name of the device in the Water Management domain?
-    - Device name in the Water Management domain?
-- intent: wm_device_longitude
-  examples: |
-    - What is the longitude of the device in Water Management domain?
-    - Longitude of the device in the Water Management domain?
-    - Device longitude in the Water Management domain?
-- intent: wm_device_latitude
-  examples: |
-    - What is the latitude of the device in Water Management domain?
-    - Latitude of the device in the Water Management domain?
-    - Device latitude in the Water Management domain?
-- intent: wm_generation_time
-  examples: |
-    - What is the generation time of the device in Water Management domain?
-    - Generation time of the device in the Water Management domain?
-    - Device generation time in the Water Management domain?
-- intent: by_domain_id_device_status
-  examples: |
-    - Are the devices in the domain [domainId] open or not?
-    - What is the status of the devices in the domain [domainId]?
-    - Are the devices in the domain [domainId] currently active?
-    - Are the devices in the domain [domainId] operational?
-    - Can you tell me if the devices in the domain [domainId] are online or offline?
-- intent: by_domain_id_criticality_status
-  examples: |
-    - What is the criticality status of the devices in the domain [domainId]?
-    - Are the devices in the domain [domainId] classified as critical?
-    - How important are the devices in the domain [domainId]?
-    - Do the devices in the domain [domainId] have any critical issues?
-    - Are there any high-priority devices in the domain [domainId]?
-- intent: by_domain_id_closure_reason
-  examples: |
-    - For the closed devices in the domain [domainId], what is the reason?
-    - Can you provide the closure reason for the devices in the domain [domainId]?
-    - Why were the devices in the domain [domainId] closed?
-    - What caused the devices in the domain [domainId] to be marked as closed?
-    - Is there any specific explanation for closing the devices in the domain [domainId]?
-- intent: by_domain_id_reading_value
-  examples: |
-    - What is the reading value of the devices in the domain [domainId]?
-    - Can you provide the current readings for the devices in the domain [domainId]?
-    - What are the sensor readings for the devices in the domain [domainId]?
-    - Give me the latest readings of the devices in the domain [domainId].
-    - I'm interested in knowing the measured values of the devices in the domain [domainId].
-- intent: by_domain_id_device_attributes
-  examples: |
-    - What are the device attributes in the domain [domainId]?
-    - Can you list the characteristics of the devices in the domain [domainId]?
-    - What information is available about the devices in the domain [domainId]?
-    - Provide details about the attributes of the devices in the domain [domainId].
-    - I want to know the specific properties of the devices in the domain [domainId].
-- intent: by_domain_id_removal_time
-  examples: |
-    - For the removed devices in the domain [domainId], what is the removal time?
-    - When were the devices in the domain [domainId] removed?
-    - Can you tell me the timestamp when the devices in the domain [domainId] were taken out?
-    - Provide the time of removal for the devices in the domain [domainId].
-    - I need to know the exact moment the devices in the domain [domainId] were removed.
-- intent: by_domain_id_device_id
-  examples: |
-    - What is the ID of the device in the domain [domainId]?
-    - Provide me with the device ID in the domain [domainId].
-    - Can you give me the unique identifier of the device in the domain [domainId]?
-    - I'm looking for the device ID associated with the domain [domainId].
-    - What is the specific identification number of the device in the domain [domainId]?
-- intent: by_domain_id_device_name
-  examples: |
-    - What is the name associated with the device in the domain [domainId]?
-    - Give me the device name in the domain [domainId].
-    - Can you provide the assigned name of the device in the domain [domainId]?
-    - I want to know the label or title of the device in the domain [domainId].
-    - What is the specific name given to the device in the domain [domainId]?
-- intent: by_domain_id_device_longitude
-  examples: |
-    - What is the longitude of the device in the domain [domainId]?
-    - Provide me with the geographic longitude of the device in the domain [domainId].
-    - Can you give me the precise longitude coordinates of the device in the domain [domainId]?
-    - I need the specific longitudinal position of the device in the domain [domainId].
-    - What is the longitude value associated with the device in the domain [domainId]?
-- intent: by_domain_id_device_latitude
-  examples: |
-    - What is the latitude of the device in the domain [domainId]?
-    - Provide me with the geographic latitude of the device in the domain [domainId].
-    - Can you give me the precise latitude coordinates of the device in the domain [domainId]?
-    - I need the specific latitudinal position of the device in the domain [domainId].
-    - What is the latitude value associated with the device in the domain [domainId]?
-- intent: by_domain_id_generation_time
-  examples: |
-    - What is the generation time of the device in the domain [domainId]?
-    - Provide me with the timestamp when the device in the domain [domainId] was generated.
-    - Can you give me the time when the device in the domain [domainId] was created?
-    - I'm interested in knowing the moment the device in the domain [domainId] was generated.
-    - What is the specific time of generation for the device in the domain [domainId]?
-
+  # Define the intent and examples
+  - intent: get_domain_count ### First Endpoint
+    examples: |
+      - What is the domain count of the [Cleaning Car](domain_name) domain?
+      - How many domains are there for the [Piston Car](domain_name) domain?
+      - Provide the count of domains for the [Cleaning Car](domain_name) domain.
+      - Number of domains in the [Piston Car](domain_name) domain?
+      - Total domains in the [Security Vehicles](domain_name) domain?
+      - Count of [Parent Domain](domain_name) domains?
+      - (domain_name)ما هو عدد نطاقات نطاق [تنظيف السيارة] (domain_name)؟
+      - (domain_name)كم عدد المجالات الموجودة لنطاق [سيارة المكبس] (domain_name)؟
+      - (domain_name)توفير عدد النطاقات لمجال [تنظيف السيارة] (domain_name).
+      - (domain_name)[عدد المجالات في مجال [تنظيف السيارة (domain_name)؟
+      - (domain_nameإجمالي المجالات في مجال [مركبات الأمن] (domain_name)؟
+      - عدد نطاقات [المجال الرئيسي](domain_name) (domain_name)؟
+  - intent: get_domain_id
+    examples: |
+      - What is the domain id of the [Cleaning Car](domain_name)?
+      - Can you tell me the id of the [Piston Car](domain_name) domain?
+      - Provide the id for the [Security Vehicles](domain_name) domain
+      - id of the [Cleaning Car](domain_name) domain?
+      - [Piston Car](domain_name) domain id?
+      - Tell me the id for [Parent Domain](domain_name) domain
+      - ما هو معرف المجال الخاص ب [تنظيف السيارة] (domain_name)؟
+      - هل يمكن أن تخبرني معرف نطاق [سيارة المكبس] (domain_name)؟
+      - توفير معرف لمجال [مركبات الأمن] (domain_name)
+      - معرف المجال [تنظيف السيارة] (domain_name)؟
+      - [مكبس السيارة] (domain_name) معرف المجال؟
+      - قل لي معرف المجال [المجال الأصل] (domain_name)
+  - intent: by_alert_id_alert_status ### Second Endpoint
+    examples: |
+      - Is the alert id [1234](alert_id) currently open?
+      - Can you confirm if the alert id [53431](alert_id) is open?
+      - What is the status of the alert id [77343](alert_id)?
+      - Provide the current status of the alert id [103434](alert_id).
+      - Is the alert id [989838](alert_id) active?
+      - Status of the alert id [34343](alert_id)?
+  - intent: by_alert_id_closure_reason
+    examples: |
+      - What is the closure reason for the alert id [1234](alert_id)?
+      - Can you tell me the closure reason for the alert id [567](alert_id)?
+      - What is the status of alert id [9876](alert_id)?
+      - Can you provide details for alert id [5555](alert_id)?
+  - intent: by_alert_id_associated_domain
+    examples: |
+      - What is the domain id associated with the alert id [13431](alert_id)?
+      - Provide the domain id linked to the alert id [91134](alert_id)
+      - Domain id for the alert id [23412](alert_id)?
+      - Which domain is associated with the alert id [531423](alert_id)?
+      - Tell me the domain id for alert id [54523](alert_id).
+      - Alert id [33534](alert_id) domain id?
+  - intent: by_alert_id_message_id
+    examples: |
+      - What is the message id of the alert id [5555](alert_id)?
+      - Provide the message id associated with the alert id [5555](alert_id)
+      - Message id for the alert id [5555](alert_id)?
+      - Which message is linked to the alert id [5555](alert_id)?
+      - Tell me the message id for alert id [5555](alert_id) alert
+      - Alert id [5555](alert_id) message id?
+  - intent: by_alert_id_last_update
+    examples: |
+      - When was the last update made to the alert id [5555](alert_id)?
+      - Can you tell me the date of the last update for the alert id [5555](alert_id)?
+      - Last update date for the alert id [5555](alert_id)?
+      - When was the alert id [5555](alert_id) last updated?
+      - Date of the latest update for alert id [5555](alert_id) ?
+      - Tell me the last update date for alert id [5555](alert_id)
+  - intent: by_alert_id_vertical_id
+    examples: |
+      - What is the vertical id of the alert id [5555](alert_id)?
+      - Provide the vertical id associated with the alert id [5555](alert_id)
+      - Vertical id for the alert id [5555](alert_id)?
+      - Which vertical is linked to the alert id [5555](alert_id)?
+      - Tell me the vertical id for alert id [5555](alert_id)
+      - Alert id [5555](alert_id) vertical id?
+  - intent: by_alert_id_sop_ids
+    examples: |
+      - Which standard operating procedure (SOP) ids are associated with the alert id [5555][5555](alert_id)?
+      - Can you list the SOP ids linked to the alert id [5555](alert_id)?
+      - SOP ids for the alert id ([5555]alert_id)?
+      - Provide the SOP ids for alert id [5555](alert_id) 
+      - Tell me the SOP ids associated for alert id [5555](alert_id)
+      - Alert id [5555](alert_id) SOP ids?
+  - intent: by_alert_id_device_attribute
+    examples: |
+      - What is the device attribute of the alert id [5555](alert_id)?
+      - Provide the device attribute for the alert id [5555](alert_id)
+      - Device attribute for the alert id [5555](alert_id)?
+      - Which device attribute is associated with the alert id (alert_id)?
+      - Tell me the device attribute for alert id [5555](alert_id). 
+      - Alert id [5555](alert_id) device attribute?
+  - intent: by_alert_id_criticality_level
+    examples: |
+      - What is the criticality level of the alert id [5555](alert_id)?
+      - Can you tell me the criticality level for the alert id [5555](alert_id)?
+      - Criticality level of the alert id [5555](alert_id)?
+      - Which criticality level is assigned to the alert id [5555](alert_id)?
+      - Tell me the criticality level for alert id [5555](alert_id). 
+      - Alert id [5555](alert_id) criticality level?
+  - intent: by_alert_id_reading_value
+    examples: |
+      - What is the reading value associated with the alert id [5555](alert_id)?
+      - Provide the reading value for the alert id [5555](alert_id)
+      - Reading value for the alert id [5555](alert_id)?
+      - Tell me the reading value for alert id [5555](alert_id)
+      - Value of the reading associated for alert id [5555](alert_id)?
+      - Alert id [5555](alert_id) reading value?
+  - intent: by_alert_id_removal_time
+    examples: |
+      - When is the removal time scheduled for the alert id [5555](alert_id)?
+      - Can you tell me the scheduled removal time for the alert id [5555](alert_id)?
+      - Removal time for the alert id [5555](alert_id)?
+      - When is the id [5555](alert_id) alert going to be removed?
+      - Tell me the removal time for alert id [5555](alert_id).
+      - Alert id [5555](alert_id) removal time?
+  - intent: by_alert_id_generation_time
+    examples: |
+      - When was the alert id [5555](alert_id) generated?
+      - Can you provide the generation time of the alert id [5555](alert_id)?
+      - Generation time of the alert id [5555](alert_id)?
+      - When was the id [5555](alert_id) alert created?
+      - Tell me the generation time for alert id (alert_id) 
+      - Alert id [5555](alert_id) generation time?
+  - intent: meta_features_dataset_instances ##### 3rd Endpoint
+    examples: |
+      - How many instances are present in the dataset for job [1](job_id)?
+      - Can you tell me the number of instances in the dataset for job [1](job_id)?
+      - Number of instances in the dataset for job [1](job_id)?
+      - Total instances for job [1](job_id) in the dataset?
+      - Instances count in the dataset for job [1](job_id)?
+      - Tell me the number of instances in the dataset for job [1](job_id)
+  - intent: meta_features_dataset_ratio
+    examples: |
+      - What is the dataset ratio for job [1](job_id)?
+      - Provide the dataset ratio for job [1](job_id)
+      - Dataset ratio for job [1](job_id)?
+      - Ratio of the dataset for job [1](job_id)?
+      - Tell me the dataset ratio for job [1](job_id)
+      - Ratio of instances in the dataset for job [1](job_id)?
+  - intent: meta_features_ratio_num_to_cat
+    examples: |
+      - What is the ratio of numerical features to categorical features for job [1](job_id)?
+      - Provide the ratio of numerical features to categorical features for job [1](job_id)
+      - Numerical to categorical features ratio for job [1](job_id)?
+      - Ratio of numerical to categorical features for job [1](job_id)?
+      - Tell me the ratio of numerical to categorical features for job [1](job_id)
+      - Ratio of numerical features to categorical features in the dataset for job [1](job_id)?
+  - intent: meta_features_total_missing_values
+    examples: |
+      - How many missing values are there in the dataset for job [1](job_id) in total?
+      - Provide the total number of missing values in the dataset for job [1](job_id)
+      - Total missing values in the dataset for job [1](job_id)?
+      - Missing values count in the dataset for job [1](job_id)?
+      - Tell me the total number of missing values in the dataset for job [1](job_id)
+      - Number of missing values in the dataset for job [1](job_id)?
+  - intent: meta_features_avg_missing_values
+    examples: |
+      - What is the average number of missing values per instance for job [1](job_id)?
+      - Provide the average number of missing values per instance for job [1](job_id)
+      - Average missing values per instance for job [1](job_id)?
+      - Tell me the average number of missing values per instance for job [1](job_id)
+      - Average missing values count for each instance in the dataset for job [1](job_id)?
+  - intent: meta_features_num_cat_features
+    examples: |
+      - How many categorical features are there in the dataset for job [1](job_id)?
+      - Provide the number of categorical features in the dataset for job [1](job_id)
+      - Number of categorical features in the dataset for job [1](job_id)?
+      - Categorical features count in the dataset for job [1](job_id)?
+      - Tell me the number of categorical features in the dataset for job [1](job_id)
+      - Count of categorical features in the dataset for job [1](job_id)?
+  - intent: meta_features_sum_symbols
+    examples: |
+      - What is the sum of symbols in the dataset for job [1](job_id)?
+      - Provide the sum of symbols in the dataset for job [1](job_id)
+      - Sum of symbols in the dataset for job [1](job_id)?
+      - Total symbols count in the dataset for job [1](job_id)?
+      - Tell me the sum of symbols in the dataset for job [1](job_id)
+      - Symbols sum in the dataset for job [1](job_id)?
+  - intent: meta_features_avg_symbols
+    examples: |
+      - What is the average number of symbols in the dataset for job [1](job_id)?
+      - Provide the average number of symbols in the dataset for job [1](job_id)
+      - Average number of symbols in the dataset for job [1](job_id)?
+      - Tell me the average number of symbols in the dataset for job [1](job_id)
+      - Average symbols count in the dataset for job [1](job_id)?
+  - intent: meta_features_std_symbols
+    examples: |
+      - What is the standard deviation of symbols in the dataset for job [1](job_id)?
+      - Provide the standard deviation of symbols in the dataset for job [1](job_id)
+      - How can I calculate the standard deviation of symbols for job [1](job_id)?
+      - Show me the standard deviation of symbols for job [1](job_id)
+  - intent: meta_features_num_stati_features
+    examples: |
+      - How many stationary features are there in the dataset for job [1](job_id)?
+      - Provide the number of stationary features in the dataset for job [1](job_id)
+      - Can you tell me the count of stationary features for job [1](job_id)?
+      - Show the total number of stationary features for job [1](job_id)
+  - intent: meta_features_num_non_stati_features
+    examples: |
+      - How many nonstationary features are there in the dataset for job [1](job_id)?
+      - Provide the number of nonstationary features in the dataset for job [1](job_id)
+      - What is the count of nonstationary features for job [1](job_id)?
+      - Show me the total number of nonstationary features for job [1](job_id)
+  - intent: meta_features_num_first_differences
+    examples: |
+      - How many first differences are there in the dataset for job [1](job_id)?
+      - Provide the number of first differences in the dataset for job [1](job_id)
+      - Can you tell me the count of first differences for job [1](job_id)?
+      - Show the total number of first differences for job [1](job_id)
+  - intent: meta_features_num_second_differences
+    examples: |
+      - How many second differences are there in the dataset for job [1](job_id)?
+      - Provide the number of second differences in the dataset for job [1](job_id)
+      - What is the count of second differences for job [1](job_id)?
+      - Show me the total number of second differences for job [1](job_id)
+  - intent: meta_features_num_lagged_features
+    examples: |
+      - How many lagged features are present in the dataset for job [1](job_id)?
+      - Provide the number of lagged features in the dataset for job [1](job_id)
+      - Can you tell me the count of lagged features for job [1](job_id)?
+      - Show the total number of lagged features for job [1](job_id)
+  - intent: meta_features_pacf
+    examples: |
+      - What is the partial autocorrelation function pacf in the dataset for job [1](job_id)?
+      - Provide the partial autocorrelation function pacf in the dataset for job [1](job_id)
+      - How can I calculate the pacf for job [1](job_id)?
+      - Show me the partial autocorrelation function pacf for job [1](job_id)
+  - intent: meta_features_sampling_rate
+    examples: |
+      - What is the sampling rate used in the dataset for job [1](job_id)?
+      - Provide the sampling rate used in the dataset for job [1](job_id)
+      - Can you tell me the sampling rate for job [1](job_id)?
+      - Show me the sampling rate used for job [1](job_id)
+  - intent: meta_features_fractal_dimension
+    examples: |
+      - What is the fractal dimension of the dataset for job [1](job_id)?
+      - Provide the fractal dimension of the dataset for job [1](job_id)
+      - How can I calculate the fractal dimension for job [1](job_id)?
+      - Show me the fractal dimension for job [1](job_id)
+  - intent: check_control_kpi_enabled #### 4th Endpoint
+    examples: |
+      - Is the control KPI [3](control_kpi) enabled or not?
+      - Can you confirm if the control KPI [3](control_kpi) is enabled?
+      - Is the control KPI [3](control_kpi) currently enabled?
+      - Show me the status of the control KPI [3](control_kpi)
+  - intent: describe_control_kpi
+    examples: |
+      - How would you describe the control KPI [3](control_kpi)?
+      - Can you provide a description of the control KPI [3](control_kpi)?
+      - Give me a brief overview of the control KPI [3](control_kpi)
+      - Explain the control KPI [3](control_kpi) in simple terms
+  - intent: get_expression_control_kpi
+    examples: |
+      - What is the expression used to calculate the control KPI [3](control_kpi)?
+      - Provide the expression used to calculate the control KPI [3](control_kpi)
+      - How can I calculate the control KPI [3](control_kpi) using an expression?
+      - Show me the calculation expression for the control KPI [3](control_kpi)
+  - intent: get_output_attribute_control_kpi
+    examples: |
+      - Which attribute is used to store the output or result of the control KPI [3](control_kpi) calculation?
+      - Provide the attribute used to store the output of the control KPI [3](control_kpi) calculation
+      - What is the output attribute for the control KPI [3](control_kpi)?
+      - Show me the attribute that stores the result of the control KPI [3](control_kpi) calculation
+  - intent: get_calendar_unit_control_kpi
+    examples: |
+      - What is the unit of time used in the control KPI [3](control_kpi) calendar?
+      - Provide the unit of time used in the control KPI [3](control_kpi) calendar
+      - Which time unit is used in the control KPI [3](control_kpi) calendar?
+      - Show me the calendar time unit for the control KPI [3](control_kpi)
+  - intent: get_created_time_control_kpi
+    examples: |
+      - When was the control KPI [3](control_kpi) created?
+      - Can you provide the creation time of the control KPI [3](control_kpi)?
+      - What is the creation date and time of the control KPI [3](control_kpi)?
+      - Show me the timestamp when the control KPI [3](control_kpi) was created
+  - intent: get_created_by_control_kpi
+    examples: |
+      - Who created the control KPI [3](control_kpi)?
+      - Provide the creator of the control KPI [3](control_kpi)
+      - Can you tell me the person or entity that created the control KPI [3](control_kpi)?
+      - Show me the creator of the control KPI [3](control_kpi)
+  - intent: get_last_modified_by_control_kpi
+    examples: |
+      - Who was the last person to modify the control KPI [3](control_kpi)?
+      - Provide the last person who modified the control KPI [3](control_kpi)
+      - Can you tell me the person or entity that last modified the control KPI [3](control_kpi)?
+      - Show me the last modifier of the control KPI [3](control_kpi)
+  - intent: get_last_modified_time_control_kpi
+    examples: |
+      - When was the control KPI [3](control_kpi) last modified?
+      - Can you provide the last modification time of the control KPI [3](control_kpi)?
+      - What is the timestamp of the last modification of the control KPI [3](control_kpi)?
+      - Show me the last modification time of the control KPI [3](control_kpi)
+  - intent: get_last_calculated_time_control_kpi
+    examples: |
+      - When was the control KPI [3](control_kpi) last calculated?
+      - Can you provide the last calculation time of the control KPI [3](control_kpi)?
+      - What is the timestamp of the last calculation of the control KPI [3](control_kpi)?
+      - Show me the last calculation time of the control KPI [3](control_kpi)
+  - intent: domain_device_open_status ### Domain Name End Point
+    examples: |
+      - Are the devices in the [Water Management](domain_name) domain open or not?
+      - Are the devices open in the [Energy Management](domain_name) domain?
+      - What is the open status of devices in the [Security Management](domain_name) domain?
+      - Are the devices in the [Energy Management](domain_name) domain currently open?
+      - Open status of devices in the [Energy Management](domain_name) domain?
+  - intent: domain_criticality_status
+    examples: |
+      - What is the criticality status of the devices in the [Water Management](domain_name) domain?
+      - What is the criticality of devices in the [Security Management](domain_name) domain?
+      - Criticality status of devices in the [Energy Management](domain_name) domain?
+      - How critical are the devices in the [Energy Management](domain_name) domain?
+  - intent: domain_closure_reason
+    examples: |
+      - For the closed devices in the [Water Management](domain_name) domain, what is the reason?
+      - What is the closure reason for devices in the [Energy Management](domain_name) domain?
+      - Reason for closure of devices in the [Security Management](domain_name) domain?
+      - Closure reason of devices in the [Security Management](domain_name) domain?
+  - intent: domain_reading_value
+    examples: |
+      - What is the reading value of the devices in the [Energy Management](domain_name) domain?
+      - Reading value of devices in the [Water Management](domain_name) domain?
+      - Reading value of the devices in the [Security Management](domain_name) domain?
+  - intent: domain_device_attributes
+    examples: |
+      - What are the device attributes in the [Water Management](domain_name) domain?
+      - Device attributes of devices in the [Energy Management](domain_name) domain?
+      - Device attributes in the [Security Management](domain_name) domain?
+  - intent: domain_removal_time
+    examples: |
+      - For the removed devices in the [Energy Management](domain_name) domain, what is the removal time?
+      - What is the removal time for devices in the [Water Management](domain_name) domain?
+      - Removal time of devices in the [Security Management](domain_name) domain?
+  - intent: domain_device_id
+    examples: |
+      - What is the id of the device in [Energy Management](domain_name) domain?
+      - id of the device in the [Energy Management](domain_name) domain?
+      - Device id in the [Security Management](domain_name) domain?
+  - intent: domain_device_name
+    examples: |
+      - What is the name associated with the device in [Energy Management](domain_name) domain?
+      - Name of the device in the [Energy Management](domain_name) domain?
+      - Device name in the [Security Management](domain_name) domain?
+  - intent: domain_device_longitude
+    examples: |
+      - What is the longitude of the device in [Water Management](domain_name) domain?
+      - Longitude of the device in the [Security Management](domain_name) domain?
+      - Device longitude in the [Energy Management](domain_name) domain?
+  - intent: domain_device_latitude
+    examples: |
+      - What is the latitude of the device in [Energy Management](domain_name) domain?
+      - Latitude of the device in the [Water Management](domain_name) domain?
+      - Device latitude in the [Security Management](domain_name) domain?
+  - intent: domain_generation_time
+    examples: |
+      - What is the generation time of the device in [Water Management](domain_name) domain?
+      - Generation time of the device in the [Energy Management](domain_name) domain?
+      - Device generation time in the [Security Managementt](domain_name) domain?
+  - intent: by_domain_id_device_status #### Last Endpoint
+    examples: |
+      - Are the devices in the domain id [3](domain_id) open or not?
+      - What is the status of the devices in the domain id [3](domain_id)?
+      - Are the devices in the domain id [3](domain_id) currently active?
+      - Are the devices in the domain id [3](domain_id) operational?
+      - Can you tell me if the devices in the domain id [3](domain_id) are online or offline?
+  - intent: by_domain_id_criticality_status
+    examples: |
+      - What is the criticality status of the devices in the domain id [3](domain_id)?
+      - Are the devices in the domain id [3](domain_id) classified as critical?
+      - How important are the devices in the domain id [3](domain_id)?
+      - Do the devices in the domain id [3](domain_id) have any critical issues?
+      - Are there any high-priority devices in the domain id [3](domain_id)?
+  - intent: by_domain_id_closure_reason
+    examples: |
+      - For the closed devices in the domain id [3](domain_id), what is the reason?
+      - Can you provide the closure reason for the devices in the domain id [3](domain_id)?
+      - Why were the devices in the domain id [3](domain_id) closed?
+      - What caused the devices in the domain id [3](domain_id) to be marked as closed?
+      - Is there any specific explanation for closing the devices in the domain id [3](domain_id)?
+  - intent: by_domain_id_reading_value
+    examples: |
+      - What is the reading value of the devices in the domain id [3](domain_id)?
+      - Can you provide the current readings for the devices in the domain id [3](domain_id)?
+      - What are the sensor readings for the devices in the domain id [3](domain_id)?
+      - Give me the latest readings of the devices in the domain id [3](domain_id).
+      - I'm interested in knowing the measured values of the devices in the domain id [3](domain_id).
+  - intent: by_domain_id_device_attributes
+    examples: |
+      - What are the device attributes in the domain id [3](domain_id)?
+      - Can you list the characteristics of the devices in the domain id [3](domain_id)?
+      - What information is available about the devices in the domain id [3](domain_id)?
+      - Provide details about the attributes of the devices in the domain id [3](domain_id).
+      - I want to know the specific properties of the devices in the domain id [3](domain_id).
+  - intent: by_domain_id_removal_time
+    examples: |
+      - For the removed devices in the domain id [3](domain_id), what is the removal time?
+      - When were the devices in the domain id [3](domain_id) removed?
+      - Can you tell me the timestamp when the devices in the domain id [3](domain_id) were taken out?
+      - Provide the time of removal for the devices in the domain id [3](domain_id).
+      - I need to know the exact moment the devices in the domain id [3](domain_id) were removed.
+  - intent: by_domain_id_device_id
+    examples: |
+      - What is the id of the device in the domain id [3](domain_id)?
+      - Provide me with the device id in the domain id [3](domain_id).
+      - Can you give me the unique identifier of the device in the domain id [3](domain_id)?
+      - I'm looking for the device id associated with the domain id [3](domain_id).
+      - What is the specific identification number of the device in the domain id [3](domain_id)?
+  - intent: by_domain_id_device_name
+    examples: |
+      - What is the name associated with the device in the domain id [3](domain_id)?
+      - Give me the device name in the domain id [3](domain_id).
+      - Can you provide the assigned name of the device in the domain id [3](domain_id)?
+      - I want to know the label or title of the device in the domain id [3](domain_id).
+      - What is the specific name given to the device in the domain id [3](domain_id)?
+  - intent: by_domain_id_device_longitude
+    examples: |
+      - What is the longitude of the device in the domain id [3](domain_id)?
+      - Provide me with the geographic longitude of the device in the domain id [3](domain_id).
+      - Can you give me the precise longitude coordinates of the device in the domain id [3](domain_id)?
+      - I need the specific longitudinal position of the device in the domain id [3](domain_id).
+      - What is the longitude value associated with the device in the domain id [3](domain_id)?
+  - intent: by_domain_id_device_latitude
+    examples: |
+      - What is the latitude of the device in the domain id [3](domain_id)?
+      - Provide me with the geographic latitude of the device in the domain id [3](domain_id).
+      - Can you give me the precise latitude coordinates of the device in the domain id [3](domain_id)?
+      - I need the specific latitudinal position of the device in the domain id [3](domain_id).
+      - What is the latitude value associated with the device in the domain id [3](domain_id)?
+  - intent: by_domain_id_generation_time
+    examples: |
+      - What is the generation time of the device in the domain id [3](domain_id)?
+      - Provide me with the timestamp when the device in the domain id [3](domain_id) was generated.
+      - Can you give me the time when the device in the domain id [3](domain_id) was created?
+      - I'm interested in knowing the moment the device in the domain id [3](domain_id) was generated.
+      - What is the specific time of generation for the device in the domain id [3](domain_id)?

@@ -47,9 +47,26 @@ class AzureTranslator(Translator):
 
 
 if __name__ == "__main__":
-    text_to_translate = "Hello, how are you?"
+    # text_to_translate = "Hello, how are you?"
+
+    with open("src/rasa/data/english-questions.txt", "r") as f:
+        text_to_translate = f.read()
 
     translator = AzureTranslator()
     translation = translator.translate(text_to_translate)
-    print("Translation: {}".format(translation))
 
+    with open("src/rasa/data/azure-arabic-questions.txt", "w") as f:
+        f.write(translation)
+
+    # with open('src/rasa/data/example-arabic.txt', 'r') as f:
+    #     text_to_translate = f.read()
+
+    # translator = AzureTranslator()
+    # translation = translator.translate(text_to_translate)
+
+    # with open('src/rasa/data/azure-example-english-after-arabic.txt', 'w') as f:
+    #     f.write(translation)
+
+    # translation = translator.translate(text_to_translate)
+
+    # print("Translation: {}".format(translation))
