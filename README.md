@@ -1,6 +1,7 @@
 # Arabic-Voice-Interface-for-City-Operation-Center
 
 
+
 ## you need to download the following models to their corresponding locations
 
 1. wav2lip model to **src/wav2lip/models** <br>  
@@ -11,3 +12,4 @@
 2. face detection model to **src/wav2lip/face_detection/detection/sfd**<br>
 
 `!wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "src/wav2lip/face_detection/detection/sfd/s3fd.pth"`
+
