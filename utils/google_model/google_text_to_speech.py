@@ -36,3 +36,8 @@ class GoogleTextToSpeech:
         with open("dataset/google_tts/output.wav", "wb") as out:
             out.write(response.audio_content)
             print(f'Audio content written to file ')
+
+
+tts = GoogleTextToSpeech()
+
+tts.synthesize_speech("hello all I am hungry" , "en-US")
