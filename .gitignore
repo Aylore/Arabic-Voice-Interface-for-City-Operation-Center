@@ -31,5 +31,5 @@ try.py
 benchmark/wav_recs.zip
 benchmark/wav_recs.zip
 models/*
-
-
+src/wav2lip/models/wav2lip_gan.pth
+src/wav2lip/face_detection/detection/sfd/s3fd.pth
