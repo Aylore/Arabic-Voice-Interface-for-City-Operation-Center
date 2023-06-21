@@ -1,7 +1,0 @@
-azure-cognitiveservices-speech
-wave
-pyaudio==0.2.13
-google-cloud-speech
-rasa-sdk==3.5.1
-rasa[transformers]
-

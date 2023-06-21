@@ -83,4 +83,4 @@ if __name__ == "__main__":
     tts_english = AzureTextToSpeech(english_input_text).read_aloud()
 
     # To save an audio file of the given text
-    # print(AzureTextToSpeech(english_input_text, speak=False).synthesize())
+    print(AzureTextToSpeech(english_input_text, speak=False).synthesize())

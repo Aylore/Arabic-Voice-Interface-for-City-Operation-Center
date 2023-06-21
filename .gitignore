@@ -32,8 +32,10 @@ models/*
 src/wav2lip/models/wav2lip_gan.pth
 src/wav2lip/checkpoints/wav2lip_gan.pth
 src/wav2lip/face_detection/detection/sfd/s3fd.pth
+src/wav2lip/face_restoration/CodeFormer
+src/wav2lip/face_restoration/weights
+src/wav2lip/videos/
+src/wav2lip/results/enhanced/*
 result.avi
-test-old.mp4
-test-new.mp4
-result_voice.mp4
-answer.wav
+*.mp4
+*.wav

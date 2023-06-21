@@ -7,19 +7,19 @@ from glob import glob
 import platform
 import torch
 
-
-# wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth'
-# wget 'https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_detection/detection/sfd/s3fd.pth'
-
 from src.wav2lip.models import Wav2Lip
 import src.wav2lip.face_detection as face_detection
 import src.wav2lip.audio as audio
+from utils.cv_face_detection import detect_batch
+
+# wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth'
+# wget 'https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_detection/detection/sfd/s3fd.pth'
 
 
 class Args:
     def __init__(self):
         self.checkpoint_path = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth"
-        self.face = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/test-old.mp4"
+        self.face = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4"
         self.audio = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/audio_samples/audio1.wav"
         self.outfile = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4"
         self.static = False
@@ -53,9 +53,9 @@ def get_smoothened_boxes(boxes, T):
 
 
 def face_detect(images):
-    detector = face_detection.FaceAlignment(
-        face_detection.LandmarksType._2D, flip_input=False, device=device
-    )
+    # detector = face_detection.FaceAlignment(
+    #     face_detection.LandmarksType._2D, flip_input=False, device=device
+    # )
 
     batch_size = args.face_det_batch_size
 
@@ -63,11 +63,14 @@ def face_detect(images):
         predictions = []
         try:
             for i in tqdm(range(0, len(images), batch_size)):
-                predictions.extend(
-                    detector.get_detections_for_batch(
-                        np.array(images[i : i + batch_size])
-                    )
-                )
+                # predictions.extend(
+                #     detector.get_detections_for_batch(
+                #         np.array(images[i : i + batch_size])
+                #     )
+                # )
+
+                predictions.extend(detect_batch(np.array(images[i : i + batch_size])))
+
         except RuntimeError:
             if batch_size == 1:
                 raise RuntimeError(
@@ -104,7 +107,7 @@ def face_detect(images):
         for image, (x1, y1, x2, y2) in zip(images, boxes)
     ]
 
-    del detector
+    # del detector
     return results
 
 
@@ -192,7 +195,7 @@ def load_model(path):
 
 def main(
     checkpoint_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth",
-    face="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/test-old.mp4",
+    face="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4",
     audio_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/audio_samples/audio1.wav",
     outfile="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4",
     static=False,
@@ -339,4 +342,7 @@ def main(
 
 
 if __name__ == "__main__":
-    main()
+    main(
+        face="src/wav2lip/videos/test-new.mp4",
+        outfile="src/wav2lip/results/final_video.mp4",
+    )
