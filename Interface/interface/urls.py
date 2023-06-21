@@ -23,22 +23,13 @@ from google_app.views import Index, transcribe, transcribe_audio
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-<<<<<<< HEAD
     # path('', Index, name='index'),
     path('transcribe/', transcribe, name='transcribe'),
     path('', transcribe_audio, name='transcribe_audio'),
-=======
-    path('', Index, name='index'),
-    path('transcribe/', transcribe, name='transcribe'),
-    path('transcribe_audio/', transcribe_audio, name='transcribe_audio'),
->>>>>>> amgadooz
+   
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> amgadooz
