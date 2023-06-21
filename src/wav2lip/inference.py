@@ -12,7 +12,7 @@ import torch
 from src.wav2lip.models import Wav2Lip
 import src.wav2lip.face_detection as face_detection
 import src.wav2lip.audio as audio
-
+from utils.cv_face_detection import detect_batch
 
 class Args:
     def __init__(self):
@@ -51,8 +51,8 @@ def get_smoothened_boxes(boxes, T):
 	return boxes
 
 def face_detect(images):
-	detector = face_detection.FaceAlignment(face_detection.LandmarksType._2D, 
-											flip_input=False, device=device)
+	# detector = face_detection.FaceAlignment(face_detection.LandmarksType._2D, 
+	# 										flip_input=False, device=device)
 
 	batch_size = args.face_det_batch_size
 	
@@ -60,7 +60,13 @@ def face_detect(images):
 		predictions = []
 		try:
 			for i in tqdm(range(0, len(images), batch_size)):
-				predictions.extend(detector.get_detections_for_batch(np.array(images[i:i + batch_size])))
+				## Change face detection model to open-cv for speed
+
+				# predictions.extend(detector.get_detections_for_batch(np.array(images[i:i + batch_size])))
+
+				predictions.extend(detect_batch(np.array(images[i:i + batch_size])))
+
+
 		except RuntimeError:
 			if batch_size == 1: 
 				raise RuntimeError('Image too big to run face detection on GPU. Please use the --resize_factor argument')
