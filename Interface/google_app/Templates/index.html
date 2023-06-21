@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 
+
 <fieldset>
     <legend>Arabic-Voice-Interface-for-City-Operation-Center</legend>
 
@@ -13,7 +14,6 @@
     </head>
 
     <body>
-
         <!-- Just Record -->
         <h1>Speech to Text Live</h1>
 
@@ -21,7 +21,7 @@
             {% csrf_token %}
             <button id="record-button">Start Recording</button>
         </form>
-        <textarea id="transcription-textarea" rows="10" cols="50">{{ live_transcript }}</textarea>
+        <textarea id="transcription-textarea" rows="4">{{ live_transcript }}</textarea>
 
         <br>
 
@@ -36,11 +36,20 @@
         </form>
 
         <!-- Show Transcription -->
-        <textarea>{{ transcript }}</textarea>
+
+        <textarea rows="4">{{ transcript }}</textarea>
+
+        {% if transcript or live_transcript %}
+        <div style="text-align: center;">
+            <video width="500" autoplay controls>
+                <source src="{% static 'result_voice.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        {% endif %}
 
     </body>
 
     <!-- Scripts -->
     <script src="{% static 'google_app/listener.js' %}"></script>
-
 </fieldset>

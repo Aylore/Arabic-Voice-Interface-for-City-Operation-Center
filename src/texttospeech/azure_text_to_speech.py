@@ -8,14 +8,15 @@ class AzureTextToSpeech(TextToSpeech):
     def __init__(
         self,
         text,
+        speak=True,
         speech_synthesis_language="ar-EG",
         speech_synthesis_voice_name="ar-EG-SalmaNeural",
-        output_file=None,
+        output_file="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/answer.wav",
     ):
         self.__speech_key, self.__service_region = os.getenv("AZURE_KEY"), "eastus"
         self.text = text
         self.output_file = output_file
-
+        self.speak = speak
         self.language = LanguageDetector().detect_language(self.text).language
 
         if self.language == "en":
@@ -37,26 +38,40 @@ class AzureTextToSpeech(TextToSpeech):
             self.speech_synthesis_voice_name
         )  # Arabic voice
 
-        speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
-        return speech_synthesizer
+        if not self.speak:
+            audio_config = speechsdk.audio.PullAudioOutputStream()
+            self.speech_synthesizer = speechsdk.SpeechSynthesizer(
+                speech_config=speech_config, audio_config=audio_config
+            )
+        else:
+            self.speech_synthesizer = speechsdk.SpeechSynthesizer(
+                speech_config=speech_config,
+            )
 
-    def postprocess(self, speech_synthesizer):
-        result = speech_synthesizer.speak_text_async(self.text).get()
+    def postprocess(self):
+        result = self.speech_synthesizer.speak_text_async(self.text).get()
         return result
 
     def save_file(self, result):
         if result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
             audio_data = result.audio_data
-            with open(output_file, "wb") as file:
+            with open(self.output_file, "wb") as file:
                 file.write(audio_data)
-            print("Speech synthesized successfully. Audio saved to:", output_file)
+            return self.output_file
+            print("Speech synthesized successfully. Audio saved to:", self.output_file)
         else:
             print("Speech synthesis failed:", result.reason)
 
     def read_aloud(self):
-        speech_synthesizer = self.preprocess()
-        result = self.postprocess(speech_synthesizer)
+        self.preprocess()
+        result = self.postprocess()
         return result
+
+    def synthesize(self):
+        self.preprocess()
+        result = self.postprocess()
+        audio_path = self.save_file(result)
+        return audio_path
 
 
 if __name__ == "__main__":
@@ -67,11 +82,5 @@ if __name__ == "__main__":
     tts_arabic = AzureTextToSpeech(arabic_input_text).read_aloud()
     tts_english = AzureTextToSpeech(english_input_text).read_aloud()
 
-    # # Provide the Arabic text you want to convert to speech
-    # input_text = "اهلا انا سلمى كيف يمكنني مساعدتك"
-
-    # # Specify the output file path
-    # output_file_path = "output.wav"
-
-    # # Synthesize speech and save the output to the file
-    # tts.synthesize_speech(input_text, output_file_path)
+    # To save an audio file of the given text
+    # print(AzureTextToSpeech(english_input_text, speak=False).synthesize())
