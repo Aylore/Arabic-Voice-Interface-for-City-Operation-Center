@@ -4,9 +4,7 @@ import os
 
 class LanguageDetector:
     def __init__(self):
-        os.environ[
-            "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'utils/google_model/google_secret_key.json'
         self.translate_client = translate.Client()
 
     def detect_language(self, text):

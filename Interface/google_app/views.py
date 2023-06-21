@@ -20,6 +20,8 @@ def transcribe(request):
     return render(request, "index.html")
 
 
+    # return render(request, "index.html")
+
 def transcribe_audio(request):
     if request.method == "POST":
         live_transcript = main()

@@ -37,3 +37,11 @@ test-old.mp4
 test-new.mp4
 result_voice.mp4
 answer.wav
+src/rasa/.rasa
+src/rasa/data/text_data
+try.py
+benchmark/wav_recs.zip
+benchmark/wav_recs.zip
+models/*
+src/wav2lip/models/wav2lip_gan.pth
+src/wav2lip/face_detection/detection/sfd/s3fd.pth
