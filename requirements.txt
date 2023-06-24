@@ -8,3 +8,4 @@ rasa==3.5.10
 rasa-sdk==3.5.1
 rasa[transformers]
 try.py
+ffmpeg
