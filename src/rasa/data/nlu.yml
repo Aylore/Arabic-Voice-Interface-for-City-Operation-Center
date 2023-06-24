@@ -10,12 +10,6 @@ nlu:
       - Number of domains in the [Piston Car](domain_name) domain?
       - Total domains in the [Security Vehicles](domain_name) domain?
       - Count of [Parent Domain](domain_name) domains?
-      - (domain_name)ما هو عدد نطاقات نطاق [تنظيف السيارة] (domain_name)؟
-      - (domain_name)كم عدد المجالات الموجودة لنطاق [سيارة المكبس] (domain_name)؟
-      - (domain_name)توفير عدد النطاقات لمجال [تنظيف السيارة] (domain_name).
-      - (domain_name)[عدد المجالات في مجال [تنظيف السيارة (domain_name)؟
-      - (domain_nameإجمالي المجالات في مجال [مركبات الأمن] (domain_name)؟
-      - عدد نطاقات [المجال الرئيسي](domain_name) (domain_name)؟
   - intent: get_domain_id
     examples: |
       - What is the domain id of the [Cleaning Car](domain_name)?
@@ -24,12 +18,6 @@ nlu:
       - id of the [Cleaning Car](domain_name) domain?
       - [Piston Car](domain_name) domain id?
       - Tell me the id for [Parent Domain](domain_name) domain
-      - ما هو معرف المجال الخاص ب [تنظيف السيارة] (domain_name)؟
-      - هل يمكن أن تخبرني معرف نطاق [سيارة المكبس] (domain_name)؟
-      - توفير معرف لمجال [مركبات الأمن] (domain_name)
-      - معرف المجال [تنظيف السيارة] (domain_name)؟
-      - [مكبس السيارة] (domain_name) معرف المجال؟
-      - قل لي معرف المجال [المجال الأصل] (domain_name)
   - intent: by_alert_id_alert_status ### Second Endpoint
     examples: |
       - Is the alert id [1234](alert_id) currently open?

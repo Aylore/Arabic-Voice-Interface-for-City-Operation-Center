@@ -16,7 +16,7 @@ class GoogleSpeechToText(SpeechToText):
         # You will need the absolute path to be properly used when running django server
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "utils/google_model/google_secret_key.json"
+        ] = "/utils/google_model/google_secret_key.json"
 
         self.path = path
         self.audio_data = audio_data

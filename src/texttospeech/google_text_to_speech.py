@@ -5,7 +5,7 @@ from src.texttospeech.base import TextToSpeech
 
 os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
-] = "utils/google_model/google_secret_key.json"
+] = "/utils/google_model/google_secret_key.json"
 
 
 # def transcribe_streaming(stream_file):

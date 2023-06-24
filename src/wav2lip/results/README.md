@@ -1,1 +1,0 @@
-Generated results will be placed in this static folder of django by default.

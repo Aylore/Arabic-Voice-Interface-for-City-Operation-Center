@@ -9,7 +9,7 @@ from utils.main_helper import assert_english, assert_user_language
 from src.wav2lip.inference import main as Wav2LipDiscriminator
 from src.wav2lip.face_restoration.video_enhance import main as EnhanceVideo
 
-def main(path=None, enhance=False):
+def main(path=None, enhance=True):
     # 1- Speech to Text (getting the client question)
     question = AzureSpeechToText(path).transcribe()
     print(f"User: {question}")

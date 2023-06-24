@@ -18,10 +18,10 @@ from utils.cv_face_detection import detect_batch
 
 class Args:
     def __init__(self):
-        self.checkpoint_path = "src/wav2lip/checkpoints/wav2lip_gan.pth"
-        self.face = "src/wav2lip/videos/test-new.mp4"
-        self.audio = "utils/audio_samples/audio1.wav"
-        self.outfile = "Interface/google_app/static/result_voice.mp4"
+        self.checkpoint_path = "/src/wav2lip/checkpoints/wav2lip_gan.pth"
+        self.face = "/src/wav2lip/videos/test-new.mp4"
+        self.audio = "/utils/audio_samples/audio1.wav"
+        self.outfile = "/Interface/google_app/static/result_voice.mp4"
         self.static = False
         self.fps = 25.0
         self.pads = [0, 10, 0, 0]
@@ -194,10 +194,10 @@ def load_model(path):
 
 
 def main(
-    checkpoint_path="src/wav2lip/checkpoints/wav2lip_gan.pth",
-    face="src/wav2lip/videos/test-new.mp4",
-    audio_path="utils/audio_samples/audio1.wav",
-    outfile="Interface/google_app/static/result_voice.mp4",
+    checkpoint_path="/src/wav2lip/checkpoints/wav2lip_gan.pth",
+    face="/src/wav2lip/videos/test-new.mp4",
+    audio_path="/utils/audio_samples/audio1.wav",
+    outfile="/Interface/google_app/static/result_voice.mp4",
     static=False,
     fps=25.0,
     pads=[0, 10, 0, 0],
