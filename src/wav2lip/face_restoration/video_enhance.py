@@ -5,7 +5,7 @@ import subprocess
 
 
 def codeformer_init():
-    model_path = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_restoration/CodeFormer"
+    model_path = "src/wav2lip/face_restoration/CodeFormer"
 
     if not os.path.exists(model_path):
         print("CodeFormer Setup Started ...")
@@ -36,13 +36,13 @@ def codeformer_init():
 
 
 def enhance(video_path, output_path):
-    command = f"python /Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_restoration/CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler /Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_restoration/weights/realesrgan -o {output_path}"
+    command = f"python src/wav2lip/face_restoration/CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler src/wav2lip/face_restoration/weights/realesrgan -o {output_path}"
     subprocess.call(command, shell=True)
 
 
 def main(
-    video_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4",
-    output_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/enhancement",
+    video_path="Interface/google_app/static/result_voice.mp4",
+    output_path="Interface/google_app/static/enhancement",
 ):
     # codeformer_init()
 
@@ -53,6 +53,6 @@ def main(
 
 if __name__ == "__main__":
     main(
-        # video_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4"
-        video_path='/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-old.mp4'
+        # video_path="Interface/google_app/static/result_voice.mp4"
+        video_path="src/wav2lip/videos/test-old.mp4"
     )

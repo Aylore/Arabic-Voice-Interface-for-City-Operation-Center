@@ -12,16 +12,16 @@ import src.wav2lip.face_detection as face_detection
 import src.wav2lip.audio as audio
 from utils.cv_face_detection import detect_batch
 
-# wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth'
-# wget 'https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth' -O '/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/face_detection/detection/sfd/s3fd.pth'
+# wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O 'src/wav2lip/checkpoints/wav2lip_gan.pth'
+# wget 'https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth' -O 'src/wav2lip/face_detection/detection/sfd/s3fd.pth'
 
 
 class Args:
     def __init__(self):
-        self.checkpoint_path = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth"
-        self.face = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4"
-        self.audio = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/audio_samples/audio1.wav"
-        self.outfile = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4"
+        self.checkpoint_path = "src/wav2lip/checkpoints/wav2lip_gan.pth"
+        self.face = "src/wav2lip/videos/test-new.mp4"
+        self.audio = "utils/audio_samples/audio1.wav"
+        self.outfile = "Interface/google_app/static/result_voice.mp4"
         self.static = False
         self.fps = 25.0
         self.pads = [0, 10, 0, 0]
@@ -194,10 +194,10 @@ def load_model(path):
 
 
 def main(
-    checkpoint_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth",
-    face="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4",
-    audio_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/audio_samples/audio1.wav",
-    outfile="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4",
+    checkpoint_path="src/wav2lip/checkpoints/wav2lip_gan.pth",
+    face="src/wav2lip/videos/test-new.mp4",
+    audio_path="utils/audio_samples/audio1.wav",
+    outfile="Interface/google_app/static/result_voice.mp4",
     static=False,
     fps=25.0,
     pads=[0, 10, 0, 0],
@@ -310,7 +310,7 @@ def main(
 
             frame_h, frame_w = full_frames[0].shape[:-1]
             out = cv2.VideoWriter(
-                "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/result.avi",
+                "result.avi",
                 cv2.VideoWriter_fourcc(*"DIVX"),
                 fps,
                 (frame_w, frame_h),
@@ -335,7 +335,7 @@ def main(
 
     command = "ffmpeg -y -i {} -i {} -strict -2 -q:v 1 {}".format(
         args.audio,
-        "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/result.avi",
+        "result.avi",
         args.outfile,
     )
     subprocess.call(command, shell=platform.system() != "Windows")
