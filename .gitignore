@@ -34,8 +34,10 @@ src/wav2lip/checkpoints/wav2lip_gan.pth
 src/wav2lip/face_detection/detection/sfd/s3fd.pth
 src/wav2lip/face_restoration/CodeFormer
 src/wav2lip/face_restoration/weights
+src/wav2lip/results
 src/wav2lip/videos/
-src/wav2lip/results/enhanced/*
 result.avi
 *.mp4
 *.wav
+Interface/weights
+Interface/google_app/static/enhancement

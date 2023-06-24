@@ -35,7 +35,7 @@ def main(path=None):
     Wav2LipDiscriminator(audio_path=audio_path)
 
     # 5- Enhance Wav2lip Discriminator Output
-    # EnhanceVideo()
+    EnhanceVideo()
 
     response = f"Your Question: {question}\nAnswer: {answer_user_language}"
     return response
