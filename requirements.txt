@@ -1,0 +1,12 @@
+azure-cognitiveservices-speech
+wave
+pyaudio==0.2.13
+google-cloud-speech
+rasa-sdk==3.5.1
+rasa[transformers]
+google-cloud-speech
+ChatterBot==1.0.5
+chatterbot-corpus==1.2.0
+rasa==3.5.10
+try.py
+ffmpeg

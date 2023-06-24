@@ -55,6 +55,11 @@ class AzureSpeechToText(SpeechToText):
 
         final_result = words_to_numbers(result.text.lower())
 
+        # Parse numbers using the NumberParser class and replace with integer values
+
+        final_result = words_to_numbers(result.text.lower())
+        print(final_result)
+
         # returning results
         if self.live:
             if result.reason == speechsdk.ResultReason.RecognizedSpeech:
