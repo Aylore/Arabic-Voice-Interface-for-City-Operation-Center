@@ -7,8 +7,6 @@ from glob import glob
 import platform
 import torch
 
-
-
 from src.wav2lip.models import Wav2Lip
 import src.wav2lip.face_detection as face_detection
 import src.wav2lip.audio as audio

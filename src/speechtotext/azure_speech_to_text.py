@@ -37,21 +37,23 @@ class AzureSpeechToText(SpeechToText):
             audio_config = speechsdk.audio.AudioConfig(filename=self.path)
 
         # Create a recognizer with the given settings.
-        speech_recognizer = speechsdk.SpeechRecognizer(
+        self.speech_recognizer = speechsdk.SpeechRecognizer(
             speech_config=self.speech_config,
             auto_detect_source_language_config=self.auto_detect_source_language_config,
             audio_config=audio_config,
         )
 
-        return speech_recognizer
-
-    def postprocess(self, speech_recognizer):
+    def postprocess(self):
         if self.live:
             print("--Start Talking---")
         else:
             print("--Record Uploaded--")
 
-        result = speech_recognizer.recognize_once()
+        result = self.speech_recognizer.recognize_once()
+
+        # Parse numbers using the NumberParser class and replace with integer values
+
+        final_result = words_to_numbers(result.text.lower())
 
         # Parse numbers using the NumberParser class and replace with integer values
 
@@ -84,8 +86,8 @@ class AzureSpeechToText(SpeechToText):
                     )
 
     def transcribe(self) -> str:
-        speech_recognizer = self.preprocess()
-        transcripton = self.postprocess(speech_recognizer)
+        self.preprocess()
+        transcripton = self.postprocess()
         return transcripton
 
 

@@ -26,7 +26,6 @@ urlpatterns = [
     # path('', Index, name='index'),
     path('transcribe/', transcribe, name='transcribe'),
     path('', transcribe_audio, name='transcribe_audio'),
-   
 ]
 
 if settings.DEBUG:

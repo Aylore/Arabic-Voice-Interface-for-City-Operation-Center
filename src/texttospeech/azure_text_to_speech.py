@@ -11,7 +11,7 @@ class AzureTextToSpeech(TextToSpeech):
         speak=True,
         speech_synthesis_language="ar-EG",
         speech_synthesis_voice_name="ar-EG-SalmaNeural",
-        output_file="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/answer.wav",
+        output_file="Interface/google_app/static/answer.wav",
     ):
         self.__speech_key, self.__service_region = os.getenv("AZURE_KEY"), "eastus"
         self.text = text
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     tts_english = AzureTextToSpeech(english_input_text).read_aloud()
 
     # To save an audio file of the given text
-    # print(AzureTextToSpeech(english_input_text, speak=False).synthesize())
+    print(AzureTextToSpeech(english_input_text, speak=False).synthesize())
