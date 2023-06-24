@@ -8,7 +8,7 @@ class GoogleTranslator(Translator):
     def __init__(self):
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "/Users/aleedo/Coding/ITI/9-Months/Final Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
+        ] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
         self.translate_client = translate.Client()
 
     def preprocess(self, text):
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # target_language = "ar-EG"  ## [ar-EG , en-US]
     text_to_translate = "Domain ID for the alert id 3"
 
-    with open('src/rasa/data/example-english.txt', 'r') as f:
+    with open("src/rasa/data/example-english.txt", "r") as f:
         text_to_translate = f.read()
     # else:
     # target_language = "en-US"
@@ -61,19 +61,19 @@ if __name__ == "__main__":
     translator = GoogleTranslator()
     translation = translator.translate(text_to_translate)
 
-    with open('src/rasa/data/google_example-arabic.txt', 'w') as f:
+    with open("src/rasa/data/google_example-arabic.txt", "w") as f:
         f.write(translation)
 
     # print("Translation: {}".format(translation))
 
-    with open('src/rasa/data/google_example-arabic.txt', 'r') as f:
+    with open("src/rasa/data/google_example-arabic.txt", "r") as f:
         text_to_translate = f.read()
 
     translator = GoogleTranslator()
     translation = translator.translate(text_to_translate)
     # print(translation)
 
-    with open('src/rasa/data/google-example-english-after-arabic.txt', 'w') as f:
+    with open("src/rasa/data/google-example-english-after-arabic.txt", "w") as f:
         f.write(translation)
 
     # translation = translate.__translate()
