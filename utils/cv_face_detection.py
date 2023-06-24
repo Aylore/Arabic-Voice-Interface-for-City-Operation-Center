@@ -21,7 +21,8 @@ def detect(img):
     # # Display the output/url
     # plt.imshow(img)
 
-    return True if faces else False
+    return faces
+
 
 
 

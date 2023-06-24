@@ -45,3 +45,8 @@ benchmark/wav_recs.zip
 models/*
 src/wav2lip/models/wav2lip_gan.pth
 src/wav2lip/face_detection/detection/sfd/s3fd.pth
+src/wav2lip/*.mp4
+src/wav2lip/*.wav
+src/wav2lip/temp/*.avi
+src/wav2lip/results/*.mp4
+src/face_restoration/CodeFormer/
