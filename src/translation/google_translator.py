@@ -8,7 +8,7 @@ class GoogleTranslator(Translator):
     def __init__(self):
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "/utils/google_model/google_secret_key.json"
+        ] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
         self.translate_client = translate.Client()
 
     def preprocess(self, text):

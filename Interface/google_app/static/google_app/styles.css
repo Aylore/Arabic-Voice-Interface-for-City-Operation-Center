@@ -18,15 +18,6 @@ label {
     line-height: 1.9rem;
 }
 
-/* button {
-   transform: translate(2.2%);
-   padding: 3px;
-   margin-top: 0.6rem;
-   font-family: cursive;
-   font-weight: bold;
-   width: 40%;
-  } */
-
 .btn {
     display: block;
     width: 140px;
@@ -155,4 +146,14 @@ h1 {
 .btn:hover {
     background: rebeccapurple;
     box-shadow: 0 3px 0 0 deeppink;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+.animate-flicker {
+    animation: fadeIn 1s infinite alternate;
 }

@@ -18,10 +18,10 @@ from utils.cv_face_detection import detect_batch
 
 class Args:
     def __init__(self):
-        self.checkpoint_path = "/src/wav2lip/checkpoints/wav2lip_gan.pth"
-        self.face = "/src/wav2lip/videos/test-new.mp4"
-        self.audio = "/utils/audio_samples/audio1.wav"
-        self.outfile = "/Interface/google_app/static/result_voice.mp4"
+        self.checkpoint_path = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth"
+        self.face = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4"
+        self.audio = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/answer.wav"
+        self.outfile = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4"
         self.static = False
         self.fps = 25.0
         self.pads = [0, 10, 0, 0]
@@ -194,10 +194,10 @@ def load_model(path):
 
 
 def main(
-    checkpoint_path="/src/wav2lip/checkpoints/wav2lip_gan.pth",
-    face="/src/wav2lip/videos/test-new.mp4",
-    audio_path="/utils/audio_samples/audio1.wav",
-    outfile="/Interface/google_app/static/result_voice.mp4",
+    checkpoint_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/checkpoints/wav2lip_gan.pth",
+    face="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/src/wav2lip/videos/test-new.mp4",
+    audio_path="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/answer.wav",
+    outfile="/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/Interface/google_app/static/result_voice.mp4",
     static=False,
     fps=25.0,
     pads=[0, 10, 0, 0],
