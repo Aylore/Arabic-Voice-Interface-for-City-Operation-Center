@@ -17,6 +17,18 @@ textarea {
 label {
     line-height: 1.9rem;
 }
+<<<<<<< HEAD
+=======
+
+/* button {
+   transform: translate(2.2%);
+   padding: 3px;
+   margin-top: 0.6rem;
+   font-family: cursive;
+   font-weight: bold;
+   width: 40%;
+  } */
+>>>>>>> main
 
 .btn {
     display: block;
@@ -146,6 +158,7 @@ h1 {
 .btn:hover {
     background: rebeccapurple;
     box-shadow: 0 3px 0 0 deeppink;
+<<<<<<< HEAD
 }
 
 @keyframes fadeIn {
@@ -156,4 +169,6 @@ h1 {
 
 .animate-flicker {
     animation: fadeIn 1s infinite alternate;
+=======
+>>>>>>> main
 }
