@@ -19,9 +19,15 @@ def transcribe(request):
         delete_audio_file(audio_path)
         return render(request, "index.html", {"transcript": transcript, 'enhance': enhance})
 =======
+<<<<<<< HEAD
+        transcript, enhance = main(audio_path)
+        delete_audio_file(audio_path)
+        return render(request, "index.html", {"transcript": transcript, 'enhance': enhance})
+=======
         transcript = main(audio_path)
         delete_audio_file(audio_path)
         return render(request, "index.html", {"transcript": transcript})
+>>>>>>> main
 >>>>>>> main
     return render(request, "index.html")
 
@@ -34,7 +40,12 @@ def transcribe_audio(request):
         live_transcript, enhance = main()
         return render(request, "index.html", {"live_transcript": live_transcript, 'enhance': enhance})
 =======
+<<<<<<< HEAD
+        live_transcript, enhance = main()
+        return render(request, "index.html", {"live_transcript": live_transcript, 'enhance': enhance})
+=======
         live_transcript = main()
         return render(request, "index.html", {"live_transcript": live_transcript})
+>>>>>>> main
 >>>>>>> main
     return render(request, "index.html")

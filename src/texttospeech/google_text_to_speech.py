@@ -8,7 +8,11 @@ os.environ[
 <<<<<<< HEAD
 ] = "utils/google_model/google_secret_key.json"
 =======
+<<<<<<< HEAD
+] = "utils/google_model/google_secret_key.json"
+=======
 ] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
+>>>>>>> main
 >>>>>>> main
 
 

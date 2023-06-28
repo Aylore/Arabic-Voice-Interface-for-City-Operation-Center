@@ -1,6 +1,6 @@
 import cv2
 import os
-
+import shutil
 import subprocess
 
 
@@ -11,23 +11,19 @@ def codeformer_init():
         print("CodeFormer Setup Started ...")
 
         command = "git clone https://github.com/sczhou/CodeFormer.git"
-        command_req = "cd CodeFormer && pip install -r requirements.txt"
+        command_req = "cd src/wav2lip/face_restoration/CodeFormer && pip install -r requirements.txt"
 
         subprocess.call(command, shell=True)
         subprocess.call(command_req, shell=True)
 
         # install basicsr
 
-        command_basicsr = "cd CodeFormer && python basicsr/setup.py develop"
+        command_basicsr = "cd src/wav2lip/face_restoration/CodeFormer && python basicsr/setup.py develop"
         subprocess.call(command_basicsr, shell=True)
 
         # get pretrained models
-        command_facelib = (
-            "cd CodeFormer && python scripts/download_pretrained_models.py facelib"
-        )
-        command_codeformer = (
-            "cd CodeFormer && python scripts/download_pretrained_models.py CodeFormer"
-        )
+        command_facelib = "cd src/wav2lip/face_restoration/CodeFormer && python scripts/download_pretrained_models.py facelib"
+        command_codeformer = "cd src/wav2lip/face_restoration/CodeFormer && python scripts/download_pretrained_models.py CodeFormer"
 
         subprocess.call(command_facelib, shell=True)
         subprocess.call(command_codeformer, shell=True)
@@ -36,7 +32,7 @@ def codeformer_init():
 
 
 def enhance(video_path, output_path):
-    command = f"python src/wav2lip/face_restoration/CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler src/wav2lip/face_restoration/weights/realesrgan -o {output_path}"
+    command = f"cd src/wav2lip/face_restoration && python CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler weights/realesrgan -o {output_path}"
     subprocess.call(command, shell=True)
 
 
@@ -44,15 +40,17 @@ def main(
     video_path="Interface/google_app/static/result_voice.mp4",
     output_path="Interface/google_app/static/enhancement",
 ):
-    # codeformer_init()
+    codeformer_init()
 
-    if not os.path.exists(output_path):
-        os.mkdir(output_path)
+    if os.path.exists(output_path):
+        shutil.rmtree(output_path)
+
     enhance(video_path, output_path)
 
 
 if __name__ == "__main__":
     main(
-        # video_path="Interface/google_app/static/result_voice.mp4"
-        video_path="src/wav2lip/videos/test-old.mp4"
+        video_path="Interface/google_app/static/result_voice.mp4"
+        # video_path="src/wav2lip/videos/test-old.mp4"
+        # output_path='src/wav2lip/face_restoration'
     )

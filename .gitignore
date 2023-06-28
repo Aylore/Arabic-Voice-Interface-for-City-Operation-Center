@@ -1,4 +1,5 @@
 __pycache__
+.DS_Store
 utils/google_model/google_secret_key.json
 utils/google_model/args.json
 dataset/samples/
@@ -22,6 +23,15 @@ benchmark/eng_records/
 benchmark/eng_wav.7z
 benchmark/eng_wav/
 benchmark/wav_recs.zip
+utils/google_model/google_secret_key.json
+utils/google_model/args.json
+utils/audio_samples/
+utils/google_model/args.json
+dataset/samples/
+dataset/google_tts/
+src/rasa/models
+src/rasa/.rasa/*
+src/rasa/data/text_data
 utils/chatbot/test.py
 .DS_Store
 src/rasa/models
@@ -39,6 +49,8 @@ src/wav2lip/videos/
 result.avi
 *.mp4
 *.wav
+Interface/db.sqlite3
+Interface/google_app/static/enhancement
 Interface/weights
 Interface/google_app/static/enhancement
 result.avi
