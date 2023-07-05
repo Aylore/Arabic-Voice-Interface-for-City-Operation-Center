@@ -119,3 +119,30 @@ class AudioRecorder:
         wf.writeframes(data)
 
         wf.close()
+
+
+
+
+        
+
+def rec(path):
+    """
+        Takes path for saving the file
+    """
+
+
+    record = AudioRecorder()
+    try :
+        record.record_to_file(path)
+        print("Record Finised")
+    except Exception as ex:
+        print(f"Record Failed : {ex}")
+
+
+
+
+if __name__ == "__main__":
+
+    path = "dataset/audio.wav"
+
+    rec(path)
