@@ -1,3 +1,20 @@
+"""
+        
+    This module provides an AzureSpeechToText class for converting speech to text using the Azure Cognitive Services Speech-to-Text API.
+
+    Classes:
+    - AzureSpeechToText: A speech-to-text class that uses the Azure Cognitive Services Speech-to-Text API for converting speech to text.
+
+        Methods:
+        - __init__(self, path: str = None): Initializes the AzureSpeechToText class by setting up the necessary credentials and input options.
+        - preprocess(self): Preprocesses the speech recognition by creating a recognizer with the given settings.
+        - postprocess(self): Processes the speech recognition result and returns the transcribed text.
+        - transcribe(self): Performs the speech-to-text conversion and returns the transcribed text.
+
+
+"""
+
+
 import azure.cognitiveservices.speech as speechsdk
 from src.speechtotext.base import SpeechToText
 import os

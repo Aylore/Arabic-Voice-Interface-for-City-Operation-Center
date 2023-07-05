@@ -1,3 +1,19 @@
+"""
+    This module provides an AzureTranslator class for translating text using the Azure Cognitive Services Translator Text API.
+
+    Classes:
+    - AzureTranslator: A translator class that uses the Azure Cognitive Services Translator Text API for text translation.
+
+        Methods:
+        - __init__(): Initializes the AzureTranslator class by setting up the necessary credentials and endpoint.
+        - preprocess(text): Preprocesses the text for translation, including language detection and language pair selection.
+        - postprocess(response): Postprocesses the translation response and returns the translated text.
+        - translate(text): Translates the given text and returns the translated text.
+
+"""
+
+
+
 import requests
 import uuid
 from langdetect import detect

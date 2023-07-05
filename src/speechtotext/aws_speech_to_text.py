@@ -1,3 +1,13 @@
+
+"""
+    This module provides a class for performing speech-to-text transcription using AWS Transcribe service.
+
+    Class:
+        AWSSpeechToText: A class for transcribing audio files using AWS Transcribe.
+"""
+
+
+
 import boto3
 import os
 import pandas as pd

@@ -1,3 +1,10 @@
+"""
+    This module provides the code to start the process of LIVE text to speech 
+"""
+
+
+
+
 import os
 
 from google.cloud import speech
@@ -5,61 +12,7 @@ from src.texttospeech.base import TextToSpeech
 
 os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
-<<<<<<< HEAD
 ] = "utils/google_model/google_secret_key.json"
-=======
-<<<<<<< HEAD
-] = "utils/google_model/google_secret_key.json"
-=======
-] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
->>>>>>> main
->>>>>>> main
-
-
-# def transcribe_streaming(stream_file):
-#     """Streams transcription of the given audio file."""
-
-#     client = speech.SpeechClient()
-
-#     with open(stream_file, "rb") as audio_file:
-#         content = audio_file.read()
-
-#     # In practice, stream should be a generator yielding chunks of audio data.
-#     stream = [content]
-
-#     requests = (
-#         speech.StreamingRecognizeRequest(audio_content=chunk) for chunk in stream
-#     )
-
-#     config = speech.RecognitionConfig(
-#         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
-#         sample_rate_hertz=16000,
-#         language_code="ar-EG",
-#         alternative_language_codes=["en-US"],
-#     )
-
-#     streaming_config = speech.StreamingRecognitionConfig(config=config)
-
-#     # streaming_recognize returns a generator.
-#     responses = client.streaming_recognize(
-#         config=streaming_config,
-#         requests=requests,
-#     )
-
-#     for response in responses:
-#         # Once the transcription has settled, the first result will contain the
-#         # is_final result. The other results will be for subsequent portions of
-#         # the audio.
-#         for result in response.results:
-#             print(f"Finished: {result.is_final}")
-#             print(f"Stability: {result.stability}")
-#             alternatives = result.alternatives
-#             # The alternatives are ordered from most likely to least.
-#             for alternative in alternatives:
-#                 print(f"Confidence: {alternative.confidence}")
-#                 print(f"Transcript: {alternative.transcript}")
-
-########
 
 
 import queue
@@ -291,38 +244,6 @@ class GoogleTextToSpeech(TextToSpeech):
                     break
 
                 num_chars_printed = 0
-
-
-# def main():
-#     # See http://g.co/cloud/speech/docs/languages
-#     # for a list of supported languages.
-#     language_code = "ar-EG"  # a BCP-47 language tag
-
-#     client = speech.SpeechClient()
-#     config = speech.RecognitionConfig(
-#         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
-#         sample_rate_hertz=RATE,
-#         language_code=language_code,
-#         alternative_language_codes=["en-US"],
-#     )
-
-#     streaming_config = speech.StreamingRecognitionConfig(
-#         config=config, interim_results=True
-#     )
-
-#     with MicrophoneStream(RATE, CHUNK) as stream:
-#         # print(stream. , "THIS IS STREAM")
-#         audio_generator = stream.generator()
-
-#         requests = (
-#             speech.StreamingRecognizeRequest(audio_content=content)
-#             for content in audio_generator
-#         )
-
-#         responses = client.streaming_recognize(streaming_config, requests)
-
-#         # Now, put the transcription responses to use.
-#         listen_print_loop(responses)
 
 
 if __name__ == "__main__":

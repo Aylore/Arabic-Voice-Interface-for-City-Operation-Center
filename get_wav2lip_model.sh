@@ -1,0 +1,1 @@
+!wget "https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA" -O "src/wav2lip/checkpoints/wav2lip_gan.pth"

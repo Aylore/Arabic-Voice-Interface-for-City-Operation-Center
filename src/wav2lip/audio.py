@@ -1,3 +1,32 @@
+"""
+    This module provides functions for audio processing and spectrogram generation.
+
+    Functions:
+    - load_wav(path, sr): Load an audio file from the given path and sample rate.
+    - save_wav(wav, path, sr): Save an audio waveform as a WAV file.
+    - save_wavenet_wav(wav, path, sr): Save an audio waveform as a WAV file (specifically for Wavenet).
+    - preemphasis(wav, k, preemphasize=True): Apply preemphasis to an audio waveform.
+    - inv_preemphasis(wav, k, inv_preemphasize=True): Perform inverse preemphasis on an audio waveform.
+    - get_hop_size(): Retrieve the hop size for spectrogram generation.
+    - linearspectrogram(wav): Compute the linear spectrogram of an audio waveform.
+    - melspectrogram(wav): Compute the mel spectrogram of an audio waveform.
+    - _lws_processor(): Create an instance of the LWS class for STFT computation.
+    - _stft(y): Compute the STFT of an audio waveform.
+    - num_frames(length, fsize, fshift): Compute the number of time frames in a spectrogram.
+    - pad_lr(x, fsize, fshift): Compute the left and right padding for an audio signal in the spectrogram.
+    - librosa_pad_lr(x, fsize, fshift): Compute the left and right padding for an audio signal (using librosa).
+    - _linear_to_mel(spectrogram): Convert a linear spectrogram to a mel spectrogram.
+    - _build_mel_basis(): Build the mel filter bank basis matrix.
+    - _amp_to_db(x): Convert an amplitude spectrogram to a dB-scaled spectrogram.
+    - _db_to_amp(x): Convert a dB-scaled spectrogram to an amplitude spectrogram.
+    - _normalize(S): Normalize a spectrogram.
+    - _denormalize(D): Denormalize a spectrogram.
+    
+"""
+
+
+
+
 import librosa
 import librosa.filters
 import numpy as np

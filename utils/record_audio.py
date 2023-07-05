@@ -1,3 +1,35 @@
+"""
+Module: audio_recorder
+
+    This module provides a class for recording audio from the microphone and saving it to a WAV file.
+
+    Classes:
+    - AudioRecorder: Class for recording audio from the microphone and saving it to a WAV file.
+
+    Functions:
+    - rec(path): Function to record audio and save it to a file.
+    - Parameters:
+        - path (str): The path to the file where the recorded audio will be saved.
+
+    Usage:
+    - Import the module: import audio_recorder
+    - Use the classes and functions:
+    - recorder = audio_recorder.AudioRecorder()
+    - recorder.record_to_file(path)
+    - audio_recorder.rec(path)
+
+    Note:
+    - The module requires the 'pyaudio', 'wave', 'array', and 'struct' modules to be installed.
+    - The 'AudioRecorder' class provides methods for recording audio and saving it to a WAV file.
+    - The 'record' method of the 'AudioRecorder' class records audio from the microphone, normalizes the audio, trims silence from the start and end, and adds padding with 0.5 seconds of blank sound to ensure compatibility with media players.
+    - The 'record_to_file' method of the 'AudioRecorder' class records audio and saves it to a specified file path in WAV format.
+    - The 'rec' function is a convenience function that calls the 'record_to_file' method of the 'AudioRecorder' class to record audio and save it to a file.
+    - The 'rec' function takes a 'path' parameter, which is the path where the recorded audio will be saved.
+
+    
+"""
+
+
 import pyaudio
 import wave
 from array import array

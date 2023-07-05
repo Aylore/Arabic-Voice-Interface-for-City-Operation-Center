@@ -1,3 +1,26 @@
+"""
+    This module provides a GoogleTranslator class for translating text using the Google Cloud Translation API.
+
+    Classes:
+    - GoogleTranslator: A translator class that uses the Google Cloud Translation API for text translation.
+
+        Methods:
+        - __init__(): Initializes the GoogleTranslator class by setting up the Google Cloud Translation client.
+        - preprocess(text): Preprocesses the text for translation, including language detection and target language selection.
+        - postprocess(response): Postprocesses the translation response and returns a Translation object.
+        - __translate(text): Private method that performs the translation process.
+        - translate(text): Translates the given text and returns the translated text.
+        
+    - Translation: A class representing a translation result.
+
+        Attributes:
+        - input_text: The input text to be translated.
+        - translated_text: The translated text.
+        - detected_source_language: The detected source language of the input text.
+"""
+
+
+
 from google.cloud import translate_v2 as translate
 import os
 from src.translation.base import Translator

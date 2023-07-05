@@ -1,3 +1,20 @@
+
+"""
+    This Module provides the required metrics to Evaluate the Speech To Text models 
+
+    - Methods:
+        - set_reference_column(reference_column): Sets the reference column name in the dataframe.
+        - set_hypothesis_column(hypothesis_column): Sets the hypothesis column name in the dataframe.
+        - calculate_wer(df): Calculates the Word Error Rate (WER) for the given dataframe.
+        - calculate_cer(df): Calculates the Character Error Rate (CER) for the given dataframe.
+        - calculate_accuracy(df): Calculates the accuracy of the STT system for the given dataframe.
+        - calculate_perplexity(df, language_model): Calculates the perplexity of the hypothesis using a language model.
+        - measure_latency(df, speech_input, stt_model): Measures the latency of the STT system for the given dataframe.
+        - measure_processing_speed(df, speech_input, num_iterations, stt_model): Measures the processing speed of the STT system for the given dataframe.
+
+"""
+
+
 import time
 from jiwer import wer
 from jiwer import mer

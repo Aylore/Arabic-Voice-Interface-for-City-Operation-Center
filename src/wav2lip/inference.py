@@ -1,3 +1,41 @@
+"""
+
+    This module provides utility functions for the Wav2Lip lip-syncing model.
+
+    Classes:
+    - Args: Represents the arguments for the Wav2Lip model.
+    - LanguageDetection: Represents the result of a language detection operation.
+
+    Functions:
+    - get_smoothened_boxes: Smoothes the bounding boxes over a window of frames.
+    - face_detect: Performs face detection on a batch of images using the Wav2Lip face detection model.
+    - datagen: Generates batches of images, mel-spectrograms, frames, and coordinates for inference.
+    - load_model: Loads the Wav2Lip model from a checkpoint.
+    - main: Main function to run the Wav2Lip lip-syncing process.
+
+    Usage:
+    - Import the module: import wav2lip_utils
+    - Create an instance of the Args class to configure the Wav2Lip model arguments.
+    - Use the main function to run the Wav2Lip lip-syncing process:
+    - wav2lip_utils.main(checkpoint_path, face, audio_path, outfile, static, fps, pads, face_det_batch_size, wav2lip_batch_size, resize_factor, crop, box, rotate, nosmooth)
+
+    Note:
+    - The module requires the 'numpy', 'scipy', 'cv2', 'os', 'sys', 'argparse', 'json', 'subprocess', 'random', 'string', 'tqdm', 'glob', 'platform', and 'torch' modules to be imported.
+    - The 'Args' class represents the arguments for the Wav2Lip model and provides attributes to configure the lip-syncing process.
+    - The 'LanguageDetection' class represents the result of a language detection operation and provides properties to access the language, confidence score, and original text.
+    - The 'get_smoothened_boxes' function smoothes the bounding boxes over a window of frames.
+    - The 'face_detect' function performs face detection on a batch of images using the Wav2Lip face detection model.
+    - The 'datagen' function generates batches of images, mel-spectrograms, frames, and coordinates for inference.
+    - The 'load_model' function loads the Wav2Lip model from a checkpoint.
+    - The 'main' function is the entry point to run the Wav2Lip lip-syncing process.
+
+"""
+
+
+
+
+
+
 from os import listdir, path
 import numpy as np
 import scipy, cv2, os, sys, argparse

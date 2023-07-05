@@ -1,3 +1,22 @@
+"""
+    This module provides an AzureTextToSpeech class for converting text to speech using the Azure Cognitive Services Text-to-Speech API.
+
+    Classes:
+    - AzureTextToSpeech: A text-to-speech class that uses the Azure Cognitive Services Text-to-Speech API for converting text to speech.
+
+        Methods:
+        - __init__(self, text, speak=True, speech_synthesis_language="ar-EG", speech_synthesis_voice_name="ar-EG-SalmaNeural", output_file="/Interface/google_app/static/answer.wav"): Initializes the AzureTextToSpeech class by setting up the necessary credentials and options.
+        - preprocess(self): Preprocesses the text-to-speech conversion by setting up the speech configuration.
+        - postprocess(self): Performs the text-to-speech conversion and returns the result.
+        - save_file(self, result): Saves the synthesized speech audio to a file and returns the file path.
+        - read_aloud(self): Performs the text-to-speech conversion and reads the synthesized speech aloud.
+        - synthesize(self): Performs the text-to-speech conversion and saves the synthesized speech audio to a file.
+
+
+"""
+
+
+
 import azure.cognitiveservices.speech as speechsdk
 import os
 from utils.detect_language import LanguageDetector

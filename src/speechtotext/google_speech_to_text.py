@@ -1,3 +1,19 @@
+"""
+    This module provides a GoogleSpeechToText class for converting speech to text using the Google Cloud Speech-to-Text API.
+
+    Classes:
+    - GoogleSpeechToText: A speech-to-text class that uses the Google Cloud Speech-to-Text API for converting speech to text.
+
+        Methods:
+        - __init__(self, path: str = None, audio_data=None): Initializes the GoogleSpeechToText class by setting up the necessary credentials and input options.
+        - preprocess(self): Preprocesses the speech recognition by configuring the speech recognition request.
+        - postprocess(self, response): Processes the speech recognition response and returns the transcript.
+        - transcribe(self): Performs the speech-to-text conversion and returns the transcribed text.
+
+
+"""
+
+
 from utils.record_audio import AudioRecorder
 from src.speechtotext.base import SpeechToText
 import os

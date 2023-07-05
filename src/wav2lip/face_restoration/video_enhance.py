@@ -1,3 +1,21 @@
+"""
+    This module provides functions for initializing and using the CodeFormer model for face restoration.
+
+    Functions:
+    - codeformer_init(): Initialize the CodeFormer model by setting up the required dependencies and downloading pretrained models.
+    - enhance(video_path, output_path): Enhance a video by applying the CodeFormer model to perform face restoration.
+    - main(video_path, output_path): The main function to run the face restoration process using the CodeFormer model.
+
+    Note: This module relies on external dependencies such as Git, pip, and specific scripts from the CodeFormer repository.
+    Make sure these dependencies are properly installed before using this module.
+    
+"""
+
+
+
+
+
+
 import cv2
 import os
 import shutil
@@ -32,6 +50,10 @@ def codeformer_init():
 
 
 def enhance(video_path, output_path):
+    """
+         Enhance a video by applying the CodeFormer model to perform face restoration.
+    """
+
     command = f"cd src/wav2lip/face_restoration && python CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler weights/realesrgan -o {output_path}"
     subprocess.call(command, shell=True)
 
