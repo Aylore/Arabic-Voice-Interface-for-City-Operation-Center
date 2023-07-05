@@ -1,1 +1,0 @@
-* you might want to install pyaudio 0.2.13 and python 3.10 for the realtime STT to work

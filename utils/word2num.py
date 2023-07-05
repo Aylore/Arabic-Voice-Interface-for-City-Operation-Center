@@ -1,8 +1,30 @@
-from string import punctuation
+"""
+This module provides a function for converting number words in a string to their numerical representation.
+
+Example Usage:
+    To convert number words in a string:
+text = "I want alert id one."
+        >>> words_to_numbers(text)
+        'I want alert id 1.'
+"""
+
 import re
+from string import punctuation
 
+def words_to_numbers(text: str) -> str:
+    """
+    Converts number words in a given string to their numerical representation.
 
-def words_to_numbers(text):
+    This function takes a string as input and replaces any number words (e.g., "one", "two", "three") with their numerical
+    representation (e.g., "1", "2", "3").
+
+    Args:
+        text: The string to convert.
+
+    Returns:
+        A new string with the number words replaced by their numerical representation.
+    """
+
     number_words = {
         "zero": 0,
         "one": 1,
@@ -40,11 +62,11 @@ def words_to_numbers(text):
     }
 
     words = re.sub(rf"[{punctuation}]", "", text).split()
-    
+
     return " ".join(
         str(number_words[word]) if word in number_words else word for word in words
     )
 
 
-if __name__ == "__main__":
+if name == "main":
     print(words_to_numbers("I want alert id one."))
