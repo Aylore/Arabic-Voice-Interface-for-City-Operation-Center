@@ -1,5 +1,9 @@
-pycache
+__pycache__
+.vscode
 .DS_Store
+result.avi
+result_voice.mp4
+*.wav
 benchmark/records-20230522T205605Z-001
 benchmark/wav_recs
 benchmark/eng_records.zip
@@ -7,12 +11,10 @@ benchmark/eng_records/
 benchmark/eng_wav.7z
 benchmark/eng_wav/
 benchmark/wav_recs.zip
-utils/google_model/google_secret_key.json
-utils/google_model/args.json
-utils/audio_samples/
-utils/google_model/args.json
 dataset/samples/
 dataset/google_tts/
+Interface/db.sqlite3
+Interface/google_app/static/enhancement
 src/rasa/models
 src/rasa/.rasa/*
 src/rasa/data/text_data
@@ -23,8 +25,6 @@ src/wav2lip/face_restoration/CodeFormer
 src/wav2lip/face_restoration/weights
 src/wav2lip/results
 src/wav2lip/videos/
-result.avi
-*.mp4
-*.wav
-Interface/db.sqlite3
-Interface/google_app/static/enhancement
+utils/google_model/google_secret_key.json
+utils/google_model/args.json
+utils/audio_samples/

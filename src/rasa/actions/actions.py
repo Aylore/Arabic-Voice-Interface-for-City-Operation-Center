@@ -7,7 +7,10 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-from typing import Any, Text, Dict, List
+'''
+Contains the custom actions used by the chatbot. Custom actions are Python functions that perform specific tasks in response to user inputs. 
+They can be used to retrieve data from an external API, perform calculations, or manipulate the conversation context.
+'''
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -15,12 +18,16 @@ from rasa_sdk.events import SlotSet
 import random
 import requests
 from utils.text_matcher import TextMatcher
+from typing import Any, Text, Dict, List
 
+
+# Create instances of the TextMatcher class for domain count and domain name endpoints
 tm_dc = TextMatcher(api_endpoint="domain_count")
 tm_dn = TextMatcher(api_endpoint="by_domain_name")
 
-
+### domain_count Endpoint
 class ActionDomainCount(Action):
+    """A custom action that retrieves the count of a specific domain from an API endpoint."""
     def name(self) -> Text:
         return "action_get_domain_count"
 
@@ -30,13 +37,20 @@ class ActionDomainCount(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
+        """Executes the custom action and returns the response to the user."""
+
+        # Extract the domain name entity from the user input
         domain_name = next(tracker.get_latest_entity_values("domain_name"), None)
+
+        # Use the TextMatcher class to find the best match for the extracted domain name
         domain_name = tm_dc.find_best_match(domain_name)
 
+        # Send a GET request to the API endpoint with the domain name as a parameter
         response = requests.get(
             f"http://127.0.0.1:8000/count/domain_name={domain_name}"
         )
 
+        # If the API returns a valid response, extract the domain count and return it to the user
         if response.status_code == 200:
             data = response.json()
             domain_count = data["domain_count"]
@@ -46,12 +60,14 @@ class ActionDomainCount(Action):
             )
             return []
 
+        #Send the domain count to the user using the utter_get_domain_count response
         dispatcher.utter_message(
             response="utter_get_domain_count",
             domain_name=domain_name,
             domain_count=domain_count,
         )
 
+        #Set the domain_name and domain_count slots to the extracted values
         return [
             SlotSet("domain_name", domain_name),
             SlotSet("domain_count", domain_count),
@@ -92,8 +108,8 @@ class ActionGetdomain_id(Action):
 
         return [SlotSet("domain_name", domain_name), SlotSet("domain_id", domain_id)]
 
-
-class ActionAlertStatus(Action): ########
+### alert_id Endpoint
+class ActionAlertStatus(Action):
     def name(self) -> Text:
         return "action_by_alert_id_alert_status"
 
@@ -649,7 +665,7 @@ class Alertgeneration_time(Action):
             SlotSet("generation_time", generation_time),
         ]
 
-
+### supervised_job_asset Endpoint
 class MetaDatasetInstances(Action):
     def name(self) -> Text:
         return "action_meta_features_dataset_instances"
@@ -1448,7 +1464,7 @@ class MetaDatasetFeaturesFractalDimension(Action):
         ]
 
 
-###############
+# control_kpi Endpoint
 class ControlKpiEnabled(Action):
     def name(self) -> Text:
         return "action_check_control_kpi_enabled"
@@ -1933,8 +1949,7 @@ class ControlKpiLastCalculatedTime(Action):
             SlotSet("last_calculated_at", last_calculated_at),
         ]
 
-
-#############
+### domain_name Endpoint
 class DeviceOpenStatus(Action):
     def name(self) -> Text:
         return "action_domain_device_open_status"
@@ -2371,8 +2386,7 @@ class generation_time(Action):
             SlotSet("generation_time", generation_time),
         ]
 
-
-#############
+# domain_id Endpoint
 class DomainDeviceStatus(Action):
     def name(self) -> Text:
         return "action_by_domain_id_device_status"

@@ -2,7 +2,7 @@ version: "3.1"
 
 nlu:
   # Define the intent and examples
-  - intent: get_domain_count ### First Endpoint
+  - intent: get_domain_count ### by_domain_count Endpoint
     examples: |
       - What is the domain count of the [Cleaning Car](domain_name) domain?
       - How many domains are there for the [Piston Car](domain_name) domain?
@@ -18,7 +18,7 @@ nlu:
       - id of the [Cleaning Car](domain_name) domain?
       - [Piston Car](domain_name) domain id?
       - Tell me the id for [Parent Domain](domain_name) domain
-  - intent: by_alert_id_alert_status ### Second Endpoint
+  - intent: by_alert_id_alert_status ### by_alert_id Endpoint
     examples: |
       - Is the alert id [1234](alert_id) currently open?
       - Can you confirm if the alert id [53431](alert_id) is open?
@@ -112,7 +112,7 @@ nlu:
       - When was the id [5555](alert_id) alert created?
       - Tell me the generation time for alert id (alert_id) 
       - Alert id [5555](alert_id) generation time?
-  - intent: meta_features_dataset_instances ##### 3rd Endpoint
+  - intent: meta_features_dataset_instances ### supervised_job_asset Endpoint
     examples: |
       - How many instances are present in the dataset for job [1](job_id)?
       - Can you tell me the number of instances in the dataset for job [1](job_id)?
@@ -228,7 +228,7 @@ nlu:
       - Provide the fractal dimension of the dataset for job [1](job_id)
       - How can I calculate the fractal dimension for job [1](job_id)?
       - Show me the fractal dimension for job [1](job_id)
-  - intent: check_control_kpi_enabled #### 4th Endpoint
+  - intent: check_control_kpi_enabled ### control_kpi Endpoint
     examples: |
       - Is the control KPI [3](control_kpi) enabled or not?
       - Can you confirm if the control KPI [3](control_kpi) is enabled?
@@ -288,7 +288,7 @@ nlu:
       - Can you provide the last calculation time of the control KPI [3](control_kpi)?
       - What is the timestamp of the last calculation of the control KPI [3](control_kpi)?
       - Show me the last calculation time of the control KPI [3](control_kpi)
-  - intent: domain_device_open_status ### Domain Name End Point
+  - intent: domain_device_open_status ### by_domain_name EndPoint
     examples: |
       - Are the devices in the [Water Management](domain_name) domain open or not?
       - Are the devices open in the [Energy Management](domain_name) domain?
@@ -347,7 +347,7 @@ nlu:
       - What is the generation time of the device in [Water Management](domain_name) domain?
       - Generation time of the device in the [Energy Management](domain_name) domain?
       - Device generation time in the [Security Managementt](domain_name) domain?
-  - intent: by_domain_id_device_status #### Last Endpoint
+  - intent: by_domain_id_device_status ### by_domain_id Endpoint
     examples: |
       - Are the devices in the domain id [3](domain_id) open or not?
       - What is the status of the devices in the domain id [3](domain_id)?
