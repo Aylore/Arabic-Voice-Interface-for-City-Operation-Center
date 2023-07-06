@@ -15,7 +15,8 @@
 6. [Examples](#examples)
 7. [Team Members](#team-members)
 8. [Contributing](#contributing)
-9. [Acknowledgments](#acknowledgements)
+9. [Future Work](#future-work)
+10. [Acknowledgments](#acknowledgements)
 
 
 ## **Introduction**
@@ -54,10 +55,8 @@ The repository is organized as follows:
 
 ## Getting Started
 
-### Before you start
-
 *   It is recommended to set up a virtual environment for this project using **python 3.8.16**
-*   you need provide API keys for `google_translation` and `azure_speech_to_text` , in the following modules:
+*   You need to provide API keys for **Google Cloud Services** and **Azure Cognitive Speech Services**, in the following modules:
     * utils/detect_language.py
     * src/translation/azure_translator.py
     * src/translation/google_translator.py
@@ -102,7 +101,7 @@ To get started with the project, follow these steps:
     The first step of the pipeline is to transcribe the user's spoken question into text using a speech-to-text system. We use the **Azure Speech Services API** to perform this task,
     for more information check [SST-online](https://github.com/Ayloretree/STT-online)  branch README, where we compare between speech-to-text services including **AWS** and **Google Cloud**.
 
-2. ### Rasa-chatbot
+2. ### Rasa Chatbot
 
     After getting the transcript of the question, The chatbot generates a response to the user's question based on the intent and entities identified in the question. it calls an API endpoint to retrieve the answer.
 
@@ -146,10 +145,12 @@ To get started with the project, follow these steps:
 
 ## **Execution Time**
 
-*   Speech to text  : ~ 2s
+*   Speech To Text  : ~ 2s
 *   Translation : ~ 2s
+*   Chatbot : ~ 250ms
+*   Text To Speech : ~ 2s
 *   Wav2Lip : ~ 30:40s
-*   Face restoration : ~ 4m
+*   Face restoration : ~ 4m:7m
 
 **These numbers were achieved on M1 macbook air with 16GB of RAM**
 
@@ -257,10 +258,10 @@ If you would like to contribute to this project, Feel Free to make a pull reques
 
 
 
-## **Future work**
+## **Future Work**
 * Edit the face restoration model to use a simpler model for face detection or combining it with wav2lip some how.  *needs further research*
 * Taking feedback from the user after receiving his answer to find areas of development and better enhance the pipeline.
-* Applying end to end arabic pipeline (Arabic chat bot - No translation)
+* Applying an end to end arabic pipeline with no no translation needed.
 
 
 ## **Acknowledgements**
