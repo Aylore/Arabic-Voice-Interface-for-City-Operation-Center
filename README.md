@@ -46,6 +46,9 @@ We ran the training script as found on the original repo with the following chan
 **Note that you might want to change the hyperparameters according to the capacity of your machine**
 
 
+> **We changed the face_detection model used in the original repo by open_cv model for better performence which was more than 10x faster**
+
+
 Training loss history for the discriminator:
 [expert_loss](expert_log)
 
