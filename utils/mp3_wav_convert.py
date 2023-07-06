@@ -42,5 +42,5 @@ def mp3_to_wav(src , dst):
     sound = AudioSegment.from_mp3(src)
     sound.export(dst, format="wav")
 
-for rec in records:
-    mp3_to_wav("benchmark/ar_records_mp3/" + rec , "benchmark/try/" + str(rec[:-4])  + ".wav" )
+# for rec in records:
+#     mp3_to_wav("benchmark/ar_records_mp3/" + rec , "benchmark/try/" + str(rec[:-4])  + ".wav" )

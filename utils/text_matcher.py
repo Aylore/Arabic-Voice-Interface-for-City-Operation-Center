@@ -43,6 +43,16 @@ class TextMatcher:
         self.api_endpoint = api_endpoint
 
     def find_best_match(self, input_text):
+        """
+              Finds the best match for the given input text.
+
+        Args:
+            input_text (str): The text to find the best match for.
+
+        Returns:
+            str: The closest matching text from the list associated with the API endpoint.
+        """
+  
         self.text_list = data[self.api_endpoint]
         distances = np.zeros(len(self.text_list))
 

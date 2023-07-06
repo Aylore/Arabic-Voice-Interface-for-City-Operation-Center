@@ -23,6 +23,10 @@ import subprocess
 
 
 def codeformer_init():
+    """
+        Initialize the CodeFormer model by setting up the required dependencies and downloading pretrained models.
+    """
+
     model_path = "src/wav2lip/face_restoration/CodeFormer"
 
     if not os.path.exists(model_path):

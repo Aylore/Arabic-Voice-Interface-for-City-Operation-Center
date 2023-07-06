@@ -247,6 +247,34 @@ def main(
     rotate=False,
     nosmooth=False,
 ):
+    
+
+    """
+        Main function to run the Wav2Lip lip-syncing process.
+
+        Args:
+            checkpoint_path (str): Path to the checkpoint file for the Wav2Lip model.
+            face (str): Path to the video or image file containing the face to be lip-synced.
+            audio_path (str): Path to the audio file containing the speech to be synchronized.
+            outfile (str): Path to save the output lip-synced video.
+            static (bool): Indicates whether the face is static (image) or dynamic (video).
+            fps (float): Frames per second of the output video.
+            pads (list): Padding values for the face region (top, bottom, left, right).
+            face_det_batch_size (int): Batch size for face detection.
+            wav2lip_batch_size (int): Batch size for Wav2Lip model inference.
+            resize_factor (int): Resize factor for input images.
+            crop (list): Crop values for the face region (top, bottom, left, right).
+            box (list): Bounding box values for the face region (top, bottom, left, right).
+            rotate (bool): Indicates whether to rotate the input images.
+            nosmooth (bool): Indicates whether to disable smoothing of bounding boxes.
+
+        Returns:
+            None
+
+        Note:
+            - The lip-syncing process will generate an output video with the lip-synced audio.
+    """
+
     args.checkpoint_path = checkpoint_path
     args.face = face
     args.audio = audio_path
