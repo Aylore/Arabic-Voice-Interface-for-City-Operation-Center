@@ -141,14 +141,20 @@ To get started with the project, follow these steps:
 
 ## English 
 
-https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/blob/main/examples/english-example.mp4
+
+https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/assets/125658326/13f86c65-f2eb-4510-9590-5bc98fcefa54
+
+
 
 <br>
 <br>
 
 ## Arabic
 
-https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/blob/main/examples/arabic-example.mp4
+
+https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/assets/125658326/2892bc35-f942-40b5-a665-1da1ec41a31b
+
+
 
 
 
