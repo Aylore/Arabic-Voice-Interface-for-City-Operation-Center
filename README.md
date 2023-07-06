@@ -22,7 +22,7 @@ this branch have the code for the implementation of wav2lip model in our project
 
 
 # Data Acquisition 
-This model requires was trained on the [lrs2 dataset](https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html) , but our goal was to finetune it and overfit the model on a specific agent of our chosen .
+This model requires was trained on the [lrs2 dataset](https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html) , but our goal was to finetune it and overfit the model on a specific agent of our choice .
 
 * The agent recorded several videos of herself speaking to the camera , this step was done twice once on Arabic speech and once on English
 
