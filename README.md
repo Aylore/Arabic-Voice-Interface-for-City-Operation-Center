@@ -140,19 +140,15 @@ To get started with the project, follow these steps:
 <br>
 
 ## English 
-<video width="640" height="480" controls>
-    <source src="examples/english-example.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+
+https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/blob/main/examples/english-example.mp4
 
 <br>
 <br>
 
 ## Arabic
-<video width="640" height="480" controls>
-    <source src="examples/arabic-example.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+
+https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/blob/main/examples/arabic-example.mp4
 
 
 
@@ -229,21 +225,17 @@ To get started with the project, follow these steps:
 If you would like to contribute to this project, Feel Free to make a pull request or contact one of our team members via the links above. 
 
 
+
+
+## **Future work**
+* Edit the face restoration model to use a simpler model for face detection or combining it with wav2lip some how.  *needs further research*
+* Taking feedback from the user after receiving his answer to find areas of development and better enhance the pipeline.
+* Applying end to end arabic pipeline (Arabic chat bot - No translation)
+
+
 ## **Acknowledgements**
 1. [wav2lip](https://github.com/Rudrabha/Wav2Lip), "A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild", published at ACM Multimedia 2020.
 
 2. [Code Former](https://github.com/sczhou/CodeFormer), [NeurIPS 2022] Towards Robust Blind Face Restoration with Codebook Lookup Transformer.
 
-[def]: #project-structure
 
-
-
-# Future work
-* Edit the face restoration model to use a simpler model for face detection or combining it with wav2lip some how.  *needs further research*
-* Taking feedback from the user after receiving his answer to find areas of development and better enhance the pipeline.
-
-
-# Acknowledgements
-1. [wav2lip](https://github.com/Rudrabha/Wav2Lip) ,"A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild", published at ACM Multimedia 2020.
-
-2. [code former](https://github.com/sczhou/CodeFormer) ,[NeurIPS 2022] Towards Robust Blind Face Restoration with Codebook Lookup Transformer.
