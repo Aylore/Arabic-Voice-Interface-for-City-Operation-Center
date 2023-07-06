@@ -151,6 +151,7 @@ To get started with the project, follow these steps:
 *   Wav2Lip : ~ 30:40s
 *   Face restoration : ~ 4m
 
+**These numbers were achieved on M1 macbook air with 16GB of RAM**
 
 
 ## **Examples**
