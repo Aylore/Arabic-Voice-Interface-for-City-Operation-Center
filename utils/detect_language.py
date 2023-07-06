@@ -25,27 +25,33 @@
 
 
 """
-
-
-
-
+from const import GOOGLE_SECRET_KEY 
 from google.cloud import translate_v2 as translate
 import os
 
 
 class LanguageDetector:
     def __init__(self):
+        """
+        Initializes a LanguageDetector instance with the Google Cloud Translate API client.
+
+        The Google Cloud Translate API requires authentication with a service account key file. The path to the key file
+        is set as an environment variable.
+        """
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "utils/google_model/google_secret_key.json"
+        ] = GOOGLE_SECRET_KEY
         self.translate_client = translate.Client()
 
-    def detect_language(self, text):
+    def detect_language(self, text: str):
         """
-            Text : the text you want to detect its langauge
-            -returns
-                the language of the text
+        Detects the language of the given text using the Google Cloud Translate API.
 
+        Args:
+            text: The text to detect the language for.
+
+        Returns:
+            A LanguageDetection object containing the detected language, the confidence score, and the original text.
         """
         result = self.translate_client.detect_language(text)
 
@@ -54,7 +60,15 @@ class LanguageDetector:
 
 
 class LanguageDetection:
-    def __init__(self, text, confidence, language):
+    def __init__(self, text: str, confidence: float, language: str) -> None:
+        """
+        Initializes a LanguageDetection object with the detected language, the confidence score, and the original text.
+
+        Args:
+            text: The original text that was analyzed.
+            confidence: A float representing the confidence score for the detected language.
+            language: The ISO 639-1 language code for the detected language.
+        """
         self.text = text
         self.confidence = confidence
         self.language = language

@@ -1,11 +1,5 @@
 """
 This module provides a function for converting number words in a string to their numerical representation.
-
-Example Usage:
-    To convert number words in a string:
-text = "I want alert id one."
-        >>> words_to_numbers(text)
-        'I want alert id 1.'
 """
 
 import re
@@ -68,5 +62,5 @@ def words_to_numbers(text: str) -> str:
     )
 
 
-if name == "main":
+if __name__ == "__main__":
     print(words_to_numbers("I want alert id one."))

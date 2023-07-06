@@ -40,9 +40,24 @@ data = {
 
 class TextMatcher:
     def __init__(self, api_endpoint: str):
+        """
+        Initializes a TextMatcher instance.
+
+        Args:
+            api_endpoint: The name of the API endpoint that corresponds to the list of texts to match against.
+        """
         self.api_endpoint = api_endpoint
 
-    def find_best_match(self, input_text):
+    def find_best_match(self, input_text: str) -> str:
+        """
+        Finds the closest matching text in the list of texts associated with the TextMatcher instance.
+
+        Args:
+            input_text: The text to match against the list of texts.
+
+        Returns:
+            The closest matching text in the list of texts.
+        """
         self.text_list = data[self.api_endpoint]
         distances = np.zeros(len(self.text_list))
 

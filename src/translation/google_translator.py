@@ -20,9 +20,9 @@
 """
 
 
-
-from google.cloud import translate_v2 as translate
 import os
+from const import GOOGLE_SECRET_KEY
+from google.cloud import translate_v2 as translate
 from src.translation.base import Translator
 from utils.detect_language import LanguageDetector
 
@@ -31,7 +31,7 @@ class GoogleTranslator(Translator):
     def __init__(self):
         os.environ[
             "GOOGLE_APPLICATION_CREDENTIALS"
-        ] = "/Users/aleedo/Coding/ITI/9-Months/Final-Project/Arabic-Voice-Interface-for-City-Operation-Center/utils/google_model/google_secret_key.json"
+        ] = GOOGLE_SECRET_KEY
         self.translate_client = translate.Client()
 
     def preprocess(self, text):

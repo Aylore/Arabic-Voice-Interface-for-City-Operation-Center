@@ -15,33 +15,33 @@
 
 
 
-
-import cv2
 import os
+import cv2
 import shutil
 import subprocess
+from const import ENHANCE_MODEL, GENERATED_VIDEO, ENHANCED_GENERATED_VIDEO
 
 
 def codeformer_init():
-    model_path = "src/wav2lip/face_restoration/CodeFormer"
+    model_path = ENHANCE_MODEL
 
     if not os.path.exists(model_path):
         print("CodeFormer Setup Started ...")
 
         command = "git clone https://github.com/sczhou/CodeFormer.git"
-        command_req = "cd src/wav2lip/face_restoration/CodeFormer && pip install -r requirements.txt"
+        command_req = f"cd {ENHANCE_MODEL} && pip install -r requirements.txt"
 
         subprocess.call(command, shell=True)
         subprocess.call(command_req, shell=True)
 
         # install basicsr
 
-        command_basicsr = "cd src/wav2lip/face_restoration/CodeFormer && python basicsr/setup.py develop"
+        command_basicsr = "cd {ENHANCE_MODEL} && python basicsr/setup.py develop"
         subprocess.call(command_basicsr, shell=True)
 
         # get pretrained models
-        command_facelib = "cd src/wav2lip/face_restoration/CodeFormer && python scripts/download_pretrained_models.py facelib"
-        command_codeformer = "cd src/wav2lip/face_restoration/CodeFormer && python scripts/download_pretrained_models.py CodeFormer"
+        command_facelib = "cd {ENHANCE_MODEL} && python scripts/download_pretrained_models.py facelib"
+        command_codeformer = "cd {ENHANCE_MODEL} && python scripts/download_pretrained_models.py CodeFormer"
 
         subprocess.call(command_facelib, shell=True)
         subprocess.call(command_codeformer, shell=True)
@@ -54,13 +54,13 @@ def enhance(video_path, output_path):
          Enhance a video by applying the CodeFormer model to perform face restoration.
     """
 
-    command = f"cd src/wav2lip/face_restoration && python CodeFormer/inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler weights/realesrgan -o {output_path}"
+    command = f"cd {ENHANCE_MODEL} && python inference_codeformer.py -w 0.95 --input_path {video_path} --bg_upsampler weights/realesrgan -o {output_path}"
     subprocess.call(command, shell=True)
 
 
 def main(
-    video_path="Interface/google_app/static/result_voice.mp4",
-    output_path="Interface/google_app/static/enhancement",
+    video_path=GENERATED_VIDEO,
+    output_path=ENHANCED_GENERATED_VIDEO,
 ):
     codeformer_init()
 

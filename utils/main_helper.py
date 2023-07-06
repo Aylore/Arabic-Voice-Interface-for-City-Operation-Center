@@ -14,22 +14,22 @@ Functions:
 
 """
 
-
-
-
+from typing import Tuple
 from utils.detect_language import LanguageDetector
 from src.translation.azure_translator import AzureTranslator
 from src.translation.google_translator import GoogleTranslator
 from utils.word2num import words_to_numbers
 
-def assert_english(question):
+def assert_english(question: str) -> Tuple[str, str]:
     """
-      - assert_english(question): Asserts that the question is in English and performs necessary language processing if it is not.
-      - Parameters:
-        - question (str): The input question.
-      - Returns:
-        - detected_language (str): The detected language of the question.
-        - processed_question (str): The processed question in English.
+    Checks if a given text input is in English. If it's not in English, the function translates the input to English 
+    and converts any words that represent numbers to their numerical values.
+
+    Args:
+        question: A string representing the input text.
+
+    Returns:
+        A tuple containing the detected language and the translated and converted input text.
     """
     detected_language = LanguageDetector().detect_language(question).language
     question = question.lower()
@@ -37,15 +37,19 @@ def assert_english(question):
         question = GoogleTranslator().translate(question).lower()
         question = words_to_numbers(question)
     return detected_language, question
+    
 
-def assert_user_language(detected_language, answer):
+def assert_user_language(detected_language: str, answer: str) -> str:
     """
-      - assert_user_language(detected_language, answer): Asserts the language of the user's answer and performs necessary language processing if it is not in English.
-      - Parameters:
-        - detected_language (str): The detected language of the user's question.
-        - answer (str): The user's answer.
-      - Returns:
-        - processed_answer (str): The processed answer in English.
+    Translates a given answer to the detected language (if it's not in English) and converts any words that represent 
+    numbers to their numerical values.
+
+    Args:
+        detected_language: A string representing the detected language of the input text.
+        answer: A string representing the answer to translate and convert.
+
+    Returns:
+        A string representing the translated and converted answer.
     """
     if detected_language != "en":
         answer = GoogleTranslator().translate(answer).lower()

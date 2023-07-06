@@ -16,9 +16,9 @@
 """
 
 
-
-import azure.cognitiveservices.speech as speechsdk
 import os
+from const import SYNTHESIZED_AUDIO
+import azure.cognitiveservices.speech as speechsdk
 from utils.detect_language import LanguageDetector
 from src.texttospeech.base import TextToSpeech
 
@@ -30,7 +30,7 @@ class AzureTextToSpeech(TextToSpeech):
         speak=True,
         speech_synthesis_language="ar-EG",
         speech_synthesis_voice_name="ar-EG-SalmaNeural",
-        output_file="/Interface/google_app/static/answer.wav",
+        output_file=SYNTHESIZED_AUDIO,
     ):
         self.__speech_key, self.__service_region = os.getenv("AZURE_KEY"), "eastus"
         self.text = text

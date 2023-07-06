@@ -1,23 +1,11 @@
 """
-This module contains a pipeline for a conversational chatbot that can answer user questions using the Rasa framework and generate video responses to those questions.
-
+This is the main module of the project which contains the pipeline of the chatbot that can answer user questions and generate video responses to those questions.
 The pipeline includes several steps, including speech-to-text transcription, language assertion, response generation using Rasa, text-to-speech synthesis, and Lip-syncing using SOTA Wav2lip
-
-Example usage:
-    To run the chatbot pipeline:
-        >>> response, enhance = main()
-
-    To run the chatbot pipeline with a specified audio file path:
-        >>> path = "utils/audio_samples/audio1.wav"
-        >>> main(path)
-
-    To run the chatbot pipeline with video enhancement:
-        >>> response, enhance = main(enhance=True)
 """
 
 import logging
-
 import datetime
+from typing import Tuple
 from utils.main_helper import assert_english, assert_user_language
 
 from src.speechtotext.google_speech_to_text import GoogleSpeechToText
@@ -31,7 +19,7 @@ from src.wav2lip.inference import main as Wav2LipDiscriminator
 from src.wav2lip.face_restoration.video_enhance import main as EnhanceVideo
 
 
-def log_step(logger, step_name, start_time):
+def log_step(logger: logging.Logger, step_name: str, start_time: datetime.datetime) -> datetime.datetime:    
     """
     Logs the elapsed time for a pipeline step.
 
@@ -49,9 +37,29 @@ def log_step(logger, step_name, start_time):
     return end_time
 
 
-def main(path=None, enhance=False):
+def main(path: str = None, enhance: bool = True) -> Tuple[str, bool]:
     """
-    Runs the chatbot pipeline.
+    Runs the pipeline.
+
+    1. Speech To Text
+
+        The first step of the pipeline is to transcribe the user's spoken question into text using a speech-to-text system. We use the Azure Speech Services API to perform this task. If an audio file path is provided, we use the Azure Speech SDK to transcribe the audio. If no audio file path is provided, we use the microphone on the user's device to capture their spoken question and transcribe it in real-time.
+
+    2. Assert Language and Translate
+
+        Once we have the user's question in text form, we assert that the text is in English. If it is not, we translate the text into English using the Google Translate API. This step ensures that the chatbot can process the user's question correctly.
+
+    3. Process Question with Chatbot
+
+        After the user's question has been transcribed and translated (if necessary), we process it using a chatbot. We use the Rasa framework to implement the chatbot. The chatbot generates a response to the user's question based on the intent and entities identified in the question.
+
+    4. Translate and Synthesize Response
+
+        Once we have the chatbot's response in English, we translate it into the user's language (if necessary) using the Google Translate API. We then use the Azure Speech SDK to synthesize the response into an audio file. The audio file can be played back to the user as the chatbot's spoken response.
+
+    5. Generate Video Response
+
+        Finally, we generate a video response to the user's question using the Wav2Lip model. The Wav2Lip model takes the synthesized audio file and generates a video of an agent speaking the response. If the `enhance` flag is set to `True`, we enhance the video using a neural network-based video enhancer (Code Former).
 
     Args:
         path: Optional. The path to an audio file containing the user's question.
