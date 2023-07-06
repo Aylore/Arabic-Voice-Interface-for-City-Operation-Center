@@ -98,9 +98,10 @@ To get started with the project, follow these steps:
     After getting the response from our chatbot We then use the Azure Speech SDK to synthesize the response into an audio file. The audio file can be played back to the user as the chatbot's spoken response.
 
 
-4. ### LipSync
-    After getting the audio response we had to present the answer to the user in a convenient way so we trained -on an agent of our chosing- a LipSync model using the current SOTA model [wav2lip](https://github.com/Rudrabha/Wav2Lip)
-    for more information refer to this [branch](https://github.com/Ayloretree/wav2lip)
+
+4. ## LipSync
+    After getting the audio response we had to present the answer to the user in a convenient way so we trained -on an agent of our chosing- a LipSync model using the current SOTA model [wav2lip](https://github.com/Rudrabha/Wav2Lip) , check the [training notebook](notebooks/AE_Expert_Discriminator.ipynb)
+    for more information refer to this [branch](https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/tree/wav2lip)
 
 
 5. ### Face Restoration
@@ -130,7 +131,6 @@ To get started with the project, follow these steps:
 
 
 ## **Examples**
-
 
 
 
@@ -213,3 +213,15 @@ If you would like to contribute to this project, Feel Free to make a pull reques
 2. [Code Former](https://github.com/sczhou/CodeFormer), [NeurIPS 2022] Towards Robust Blind Face Restoration with Codebook Lookup Transformer.
 
 [def]: #project-structure
+
+
+
+# Future work
+* Edit the face restoration model to use a simpler model for face detection or combining it with wav2lip some how.  *needs further research*
+* Taking feedback from the user after receiving his answer to find areas of development and better enhance the pipeline.
+
+
+# Acknowledgements
+1. [wav2lip](https://github.com/Rudrabha/Wav2Lip) ,"A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild", published at ACM Multimedia 2020.
+
+2. [code former](https://github.com/sczhou/CodeFormer) ,[NeurIPS 2022] Towards Robust Blind Face Restoration with Codebook Lookup Transformer.
