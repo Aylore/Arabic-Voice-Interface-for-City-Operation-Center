@@ -132,6 +132,28 @@ To get started with the project, follow these steps:
 
 ## **Examples**
 
+## Chatbot
+
+<img src="examples/chatbot-example.png" />
+
+<br>
+<br>
+
+## English 
+<video width="640" height="480" controls>
+    <source src="examples/english-example.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<br>
+<br>
+
+## Arabic
+<video width="640" height="480" controls>
+    <source src="examples/arabic-example.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
 
 
 
