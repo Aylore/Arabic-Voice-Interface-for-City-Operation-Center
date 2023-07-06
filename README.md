@@ -54,6 +54,19 @@ The repository is organized as follows:
 
 ## Getting Started
 
+### Before you start
+
+*   It is recommended to set up a virtual environment for this project using **python 3.8.16**
+*   you need provide API keys for `google_translation` and `azure_speech_to_text` , in the following modules:
+    * utils/detect_language.py
+    * src/translation/azure_translator.py
+    * src/translation/google_translator.py
+    * src/texttospeech/google_text_to_speech.py
+    * src/texttospeech/azure_text_to_speech.py
+    * src/speechtotext/google_speech_to_text.py
+    * src/speechtotext/azure_speech_to_text.py
+
+
 To get started with the project, follow these steps:
 
 1. Clone the repository: 
@@ -65,7 +78,7 @@ To get started with the project, follow these steps:
    cd Arabic-Voice-Interface-for-City-Operation-Center
    ```
 
-3. Install the **required** dependencies. It is recommended to set up a virtual environment for this project:
+3. Install the **required** dependencies:
      ```
      make install
      ```
@@ -112,6 +125,7 @@ To get started with the project, follow these steps:
    After the video response is generated, we send the response to a Django web application. The Django application can then display the video response to the user, along with any additional information or functionality needed.
 
 ## **Running The Pipeline**
+
 1. Run the uvicorn server of fastapi
    ``` 
    make fastapi
@@ -128,6 +142,15 @@ To get started with the project, follow these steps:
    ``` 
    make django
    ```
+
+
+## **Execution Time**
+
+*   Speech to text  : ~ 2s
+*   Translation : ~ 2s
+*   Wav2Lip : ~ 30:40s
+*   Face restoration : ~ 4m
+
 
 
 ## **Examples**
