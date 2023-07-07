@@ -109,26 +109,33 @@ To get started with the project, follow these steps:
     The first step of the pipeline is to transcribe the user's spoken question into text using a speech-to-text system. We use the **Azure Speech Services API** to perform this task,
     for more information check [SST-online](https://github.com/Ayloretree/STT-online)  branch README, where we compare between speech-to-text services including **AWS** and **Google Cloud**.
 
-2. ### Rasa Chatbot
+2. ### Text Translation
+
+    If the user asked the question in arabic, the text is translated to english before feeding the question to the chat bot.
+   
+3. ### Rasa Chatbot
 
     After getting the transcript of the question, The chatbot generates a response to the user's question based on the intent and entities identified in the question. it calls an API endpoint to retrieve the answer.
 
+4. ### Text Translation
 
-3. ### Text To Speech
+    If the user asked the question was in arabic, the text is translated from english to arabic after getting the answer from the chat bot and before generating audio file.
+
+5. ### Text To Speech
+   
     After getting the response from our chatbot We then use the Azure Speech SDK to synthesize the response into an audio file. The audio file can be played back to the user as the chatbot's spoken response.
-
-
-
-4. ## LipSync
+   
+6. ## LipSync
+   
     After getting the audio response we had to present the answer to the user in a convenient way so we trained -on an agent of our chosing- a LipSync model using the current SOTA model [wav2lip](https://github.com/Rudrabha/Wav2Lip) , check the [training notebook](notebooks/AE_Expert_Discriminator.ipynb)
     for more information refer to this [branch](https://github.com/Aylore/Arabic-Voice-Interface-for-City-Operation-Center/tree/wav2lip)
 
-
-5. ### Face Restoration
+7. ### Face Restoration
+   
     Due to the output result of the wav2lip model we used an image enhancement model to restore the quality using [Code Former](https://github.com/sczhou/CodeFormer)
 
-
-6. ### Django Integration
+8. ### Django Integration
+   
    After the video response is generated, we send the response to a Django web application. The Django application can then display the video response to the user, along with any additional information or functionality needed.
 
 ## **Running The Pipeline**
