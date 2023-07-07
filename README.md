@@ -1,11 +1,17 @@
 # **Arabic-Voice-Interface-for-City-Operation-Center**
 
 ## **About**
+
 A city operations center (COC) enables smart city operators to integrate data from different sectors and agencies, manage resources, relate to the citizens and address their concerns.
+
 Giza Systems offers a software platform for city operation center that enables the operators to manage IoT assets in smart cities by collecting data from these assets, create alarms based on the received data, calculate KPIs, configure schedulers, manage Standard Operation Procedures (SOPs), build dashboards, and train ML models. 
 
 ## **Description**
-In this project, we aimed to build a voice interface for the Asset-360 view screen. The COC operator can simply use this voice interface by asking questions related to the asset and the interface will reply with the answers to the operator questions. This can save time for the operators instead of navigating through the screens of different assets.
+
+In this project, we aimed to build a voice interface for the Asset-360 view screen. The COC operator can simply use this voice interface by asking questions related to the asset and the interface will reply with the answers to the operator questions.
+
+The answer to the operator's question will be in the same language of the question (AR -> AR) or (ENG -> ENG). This can save time for the operators instead of navigating through the screens of different assets.
+
 The target of this project is to map the operator questions to pieces of information related to the asset. 
 
 ## **Table of Contents**
