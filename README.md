@@ -20,11 +20,13 @@ The target of this project is to map the operator questions to pieces of informa
 3. [Getting Started](#getting-started)
 4. [Pipeline](#pipeline)
     1. [Speech to Text](#speech-to-text)
-    2. [Rasa Chatbot](#rasa-chatbot)
-    3. [Text to Speech](#text-to-speech)
-    4. [LipSync](#lipsync)
-    5. [Face Restoration](#face-restoration)
-    6. [Django Integration](#django-integration)
+    2. [Text Translation 1](#text-translation-1)
+    3. [Rasa Chatbot](#rasa-chatbot)
+    4. [Text Translation 2](#text-translation-2)
+    5. [Text to Speech](#text-to-speech)
+    6. [LipSync](#lipsync)
+    7. [Face Restoration](#face-restoration)
+    8. [Django Integration](#django-integration)
 5. [Running The Pipeline](#running-the-pipeline)
 6. [Examples](#examples)
 7. [Team Members](#team-members)
@@ -115,7 +117,7 @@ To get started with the project, follow these steps:
     The first step of the pipeline is to transcribe the user's spoken question into text using a speech-to-text system. We use the **Azure Speech Services API** to perform this task,
     for more information check [SST-online](https://github.com/Ayloretree/STT-online)  branch README, where we compare between speech-to-text services including **AWS** and **Google Cloud**.
 
-2. ### Text Translation
+2. ### Text Translation 1
 
     If the user asked the question in arabic, the text is translated to english before feeding the question to the chat bot.
    
@@ -123,7 +125,7 @@ To get started with the project, follow these steps:
 
     After getting the transcript of the question, The chatbot generates a response to the user's question based on the intent and entities identified in the question. it calls an API endpoint to retrieve the answer.
 
-4. ### Text Translation
+4. ### Text Translation 2
 
     If the user asked the question was in arabic, the text is translated from english to arabic after getting the answer from the chat bot and before generating audio file.
 
